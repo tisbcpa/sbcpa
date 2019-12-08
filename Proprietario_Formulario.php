@@ -70,7 +70,7 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 
 	ArrayForm[0] = document.FormularioProprietario.NoProprietario;
@@ -81,11 +81,11 @@ function ValidarCampo()
 	ArrayForm[5] = document.FormularioProprietario.NuCEP;
 	
 	ArrayMsg[0] = " - Preenchimento do Nome do Proprietario\n";
-	ArrayMsg[1] = " - Preenchimento do EndereÁo do Proprietario\n";
+	ArrayMsg[1] = " - Preenchimento do Endere√ßo do Proprietario\n";
 	ArrayMsg[2] = " - Preenchimento do Nome da Cidade\n";
 	ArrayMsg[3] = " - Preenchimento da UF\n";
 	ArrayMsg[4] = " - Preenchimento do Nome da Cidade\n";
-	ArrayMsg[5] = " - Preenchimento do N˙mero do CEP\n";
+	ArrayMsg[5] = " - Preenchimento do N√∫mero do CEP\n";
 
 	for (var i=0; i<=5; i++)
 	{
@@ -106,7 +106,7 @@ function ValidarCampo()
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0">
     <tr> 
-      <td colspan="4"><h3>Propriet·rios de C&atilde;es Pastores Alem„es</h3></td>
+      <td colspan="4"><h3>Propriet√°rios de C&atilde;es Pastores Alem√£es</h3></td>
     </tr>
     <tr> 
       <td>Nome</td>

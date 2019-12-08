@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<title>Relação de Súmulas por Juiz</title>
+<title>RelaÃ§Ã£o de SÃºmulas por Juiz</title>
 <Style>
 	h3{font-family: verdana; font-size: 14;}
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
@@ -43,7 +43,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Ano da Seleção:</td>
+			<td>Ano da SeleÃ§Ã£o:</td>
 			<td>
 			<Select name="NrAno" onChange="document.Formulario.submit()">
 			<option value="">Selecione o Ano</option>
@@ -70,7 +70,7 @@
 	
 	
 	
-	<h3>Súmulas por Juiz</h3>
+	<h3>SÃºmulas por Juiz</h3>
 <?
 	function FormatarData($Data)
 	{
@@ -141,13 +141,13 @@
 			echo("<tr><td>Juiz:</td><td>". NomeJuiz($row["IDJuiz"]) ."</td></tr>");
 			echo("<tr><td>Data:</td><td>". FormatarData($row["DTSumula"]) ."</td></tr>");
 			echo("<tr><td>Altura:</td><td>$row[NRAltura]</td></tr>");
-			echo("<tr><td>Pigmentação:</td><td>$row[NOPigmentacao]</td></tr>");
+			echo("<tr><td>PigmentaÃ§Ã£o:</td><td>$row[NOPigmentacao]</td></tr>");
 			echo("<tr><td>Pelagem:</td><td>$row[NOPelagem]</td></tr>");
 			echo("<tr><td>Vencida?</td><td>$row[InVencida]</td></tr>");
-			echo("<tr><td valign=top>Súmula:</td><td>$row[DSSumula]</td></tr>");
+			echo("<tr><td valign=top>SÃºmula:</td><td>$row[DSSumula]</td></tr>");
 			echo("<tr><td colspan=2><hr></td></tr>");
 			$c++;
 		}
 	echo("</table>");
 ?>
-	<table><tr><td><strong>Quntidade de Súmulas</strong>:</td><td><strong><? echo($c);?></strong></td></tr></table>
+	<table><tr><td><strong>Quntidade de SÃºmulas</strong>:</td><td><strong><? echo($c);?></strong></td></tr></table>

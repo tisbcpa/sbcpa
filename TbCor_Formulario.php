@@ -23,14 +23,14 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.Formulario.NoCor;
 	ArrayForm[1] = document.Formulario.DsCor;
 	
 	ArrayMsg[0] = " - Preenchimento do Nome da Cor\n";
-	ArrayMsg[1] = " - Preenchimento da DescriÁ„o da Cor\n";
+	ArrayMsg[1] = " - Preenchimento da Descri√ß√£o da Cor\n";
 
 	for (var i=0; i<=1; i++)
 	{
@@ -51,7 +51,7 @@ function ValidarCampo()
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0">
     <tr> 
-      <td colspan="4"><h3>Cores de C&atilde;es Pastores Alem„es</h3></td>
+      <td colspan="4"><h3>Cores de C&atilde;es Pastores Alem√£es</h3></td>
     </tr>
     <tr> 
       <td>Nome Cor</td>

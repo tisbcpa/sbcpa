@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Relação de Clubes por Ordem Alfabética</Title>
+<Title>RelaÃ§Ã£o de Clubes por Ordem AlfabÃ©tica</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC; text-align: center}
@@ -10,7 +10,7 @@
 </Style>
 
 
-<Span class=Titulo>Relação de Clubes em Ordem Alfabética</Span><br><br>
+<Span class=Titulo>RelaÃ§Ã£o de Clubes em Ordem AlfabÃ©tica</Span><br><br>
 
 <?
 	require("Funcoes/Conexao.php");
@@ -33,7 +33,7 @@
 			echo("<tr>");
 			echo("<td><B>Clube:</B></td><td>$row[NoClube]</td>");
 			echo("<tr>");
-			echo("<td><B>Endereço:</B></td><td>$row[EdClube]</td>");
+			echo("<td><B>EndereÃ§o:</B></td><td>$row[EdClube]</td>");
 			echo("<tr>");
 			echo("<td><B>Bairro:</B></td><td>$row[NoBairro]</td>");
 			echo("<tr>");
@@ -41,7 +41,7 @@
 			echo("<tr>");
 			echo("<td><B>Cidade / UF:</B></td><td>$row[NoCidade] / $row[SgUF]</td>");
 			echo("<tr>");
-			echo("<td><B>País:</B></td><td>$row[NoPais]</td>");
+			echo("<td><B>PaÃ­s:</B></td><td>$row[NoPais]</td>");
 			echo("<tr>");
 			echo("<td><B>E-Mail:</B></td><td>$row[NoEmail]</td>");
 			echo("<tr>");

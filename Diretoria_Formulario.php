@@ -79,7 +79,7 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos são obrigatórios para este Formulário:\n";
+	var Texto = "Os seguintes passos sÃ£o obrigatÃ³rios para este FormulÃ¡rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.FormularioDiretoria.NoDiretoria;
@@ -90,11 +90,11 @@ function ValidarCampo()
 	ArrayForm[5] = document.FormularioDiretoria.NuCEP;
 	
 	ArrayMsg[0] = " - Preenchimento do Nome do Diretor\n";
-	ArrayMsg[1] = " - Preenchimento do Endereço do Diretor\n";
+	ArrayMsg[1] = " - Preenchimento do EndereÃ§o do Diretor\n";
 	ArrayMsg[2] = " - Preenchimento do Nome da Cidade\n";
 	ArrayMsg[3] = " - Preenchimento da UF\n";
 	ArrayMsg[4] = " - Preenchimento do Nome da Cidade\n";
-	ArrayMsg[5] = " - Preenchimento do Número do CEP\n";
+	ArrayMsg[5] = " - Preenchimento do NÃºmero do CEP\n";
 
 	for (var i=0; i<=5; i++)
 	{

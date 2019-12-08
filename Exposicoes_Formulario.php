@@ -81,7 +81,7 @@ function ValidarCampo()
 /*
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.Formulario.SgClube;
@@ -94,7 +94,7 @@ function ValidarCampo()
 	
 	ArrayMsg[0] = " - Preenchimento do Nome da Criador\n";
 	ArrayMsg[1] = " - Preenchimento do Nome do Clube\n";
-	ArrayMsg[2] = " - Preenchimento do EndereÁo do Clube\n";
+	ArrayMsg[2] = " - Preenchimento do Endere√ßo do Clube\n";
 	ArrayMsg[3] = " - Preenchimento do Bairro\n";
 	ArrayMsg[4] = " - Preenchimento da Cidade\n";
 	ArrayMsg[5] = " - Preenchimento da UF\n";
@@ -186,9 +186,9 @@ function ValidarCampo()
     </tr>
     <tr> 
       <td colspan="4"><div align="center"> 
-          <input type="Submit" value="Gravar Dados da ExposiÁ„o">
+          <input type="Submit" value="Gravar Dados da Exposi√ß√£o">
 		<? if ($Id != "") {?>
-		<input type="button" value="Atualizar/Ver PontuaÁ„o" OnClick="GerarPontos(<? echo($Id)?>)">
+		<input type="button" value="Atualizar/Ver Pontua√ß√£o" OnClick="GerarPontos(<? echo($Id)?>)">
 		<!-- input type="button" value="Imprimir Dados" OnClick="Relatorio(<? echo($Id)?>)" -->
 		&nbsp;&nbsp; 
 		<? }?>

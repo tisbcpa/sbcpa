@@ -12,7 +12,7 @@
 	{
 		$Pagina = "Sumula_Listar.php";
 		$Texto = $Texto . "<option value='IDSumula'>Sumula</option>";
-		$Texto = $Texto . "<option value='NuRegistroNacional'>Número SBCPA</option>";
+		$Texto = $Texto . "<option value='NuRegistroNacional'>NÃºmero SBCPA</option>";
 		//$Texto = $Texto . "<option value='DTSumula'>Data</option>";
 	}
 
@@ -27,7 +27,7 @@
 	if ($_GET["Tipo"] == "Exposicao")
 	{
 		$Pagina = "Exposicoes_Listar.php";
-		$Texto = $Texto . "<option value='NoExposicao'>Exposições</option>";
+		$Texto = $Texto . "<option value='NoExposicao'>ExposiÃ§Ãµes</option>";
 		$Texto = $Texto . "<option value='SgUF'>UF</option>";
 		$Texto = $Texto . "<option value='NoCidade'>Cidade</option>";		
 		$Texto = $Texto . "<option value='DTInicio'>Ano</option>";
@@ -52,49 +52,49 @@
 	{
 		$Pagina = "TbCor_Listar.php";
 		$Texto = $Texto . "<option value='NoCor'>Nome da Cor</option>";
-		$Texto = $Texto . "<option value='IdCor'>Código da Cor</option>";
+		$Texto = $Texto . "<option value='IdCor'>CÃ³digo da Cor</option>";
 	}
 
 	if ($_GET["Tipo"] == "Categoria")
 	{
 		$Pagina = "TbCategoria_Listar.php";
 		$Texto = $Texto . "<option value='NoCategoria'>Nome da Categoria</option>";
-		$Texto = $Texto . "<option value='IdCategoria'>Código da Categoria</option>";
+		$Texto = $Texto . "<option value='IdCategoria'>CÃ³digo da Categoria</option>";
 	}
 
 	if ($_GET["Tipo"] == "RaioX")
 	{
 		$Pagina = "TbRaioX_Listar.php";
 		$Texto = $Texto . "<option value='NoRaioX'>Nome do RaioX</option>";
-		$Texto = $Texto . "<option value='IdRaioX'>Código do RaioX</option>";
+		$Texto = $Texto . "<option value='IdRaioX'>CÃ³digo do RaioX</option>";
 	}
 	
 	if ($_GET["Tipo"] == "Classificacao")
 	{
 		$Pagina = "TbClassificacao_Listar.php";
 		$Texto = $Texto . "<option value='NoClassificacao'>Nome da Classificacao</option>";
-		$Texto = $Texto . "<option value='IdClassificacao'>Código da Classificacao</option>";
+		$Texto = $Texto . "<option value='IdClassificacao'>CÃ³digo da Classificacao</option>";
 	}
 	
 	if ($_GET["Tipo"] == "Selecao")
 	{
 		$Pagina = "TbSelecao_Listar.php";
 		$Texto = $Texto . "<option value='NoSelecao'>Nome da Selecao</option>";
-		$Texto = $Texto . "<option value='IdSelecao'>Código da Selecao</option>";
+		$Texto = $Texto . "<option value='IdSelecao'>CÃ³digo da Selecao</option>";
 	}
 
 	if ($_GET["Tipo"] == "QualificacaoJuiz")
 	{
 		$Pagina = "TbQualificacaoJuiz_Listar.php";
 		$Texto = $Texto . "<option value='NoQualificacaoJuiz'>Nome da Qualificacao</option>";
-		$Texto = $Texto . "<option value='IdQualificacaoJuiz'>Código da Qualificacao</option>";
+		$Texto = $Texto . "<option value='IdQualificacaoJuiz'>CÃ³digo da Qualificacao</option>";
 	}
 	
 	if ($_GET["Tipo"] == "Canil")
 	{
 		$Pagina = "Canil_Listar.php";
 		$Texto = $Texto . "<option value='NoCanil'>Nome do Canil</option>";
-		$Texto = $Texto . "<option value='NoProprietarioCanil'>Nome da Proprietário</option>";
+		$Texto = $Texto . "<option value='NoProprietarioCanil'>Nome da ProprietÃ¡rio</option>";
 		$Texto = $Texto . "<option value='NoCidade'>Nome da Cidade</option>";
 		$Texto = $Texto . "<option value='SgUF'>Sigla UF</option>";
 	}
@@ -121,18 +121,18 @@
 	{
 		$Pagina = "Cachorro_Listar.php";
 		$Texto = $Texto . "<option value='NoCachorro'>Nome do Cachorro</option>";
-		$Texto = $Texto . "<option value='NuRegistroNacional'>Nº SBCPA</option>";
+		$Texto = $Texto . "<option value='NuRegistroNacional'>NÂº SBCPA</option>";
 		$Texto = $Texto . "<option value='NoTatuagem'>Tatuagem</option>";
 		$Texto = $Texto . "<option value='NoProprietario'>Nome do Proprietario</option>";
-		$Texto = $Texto . "<option value='NuRegistroRegional'>N° Regional</option>";
-		$Texto = $Texto . "<option value='NuRegistroInternacional'>N° Internacional</option>";
-		$Texto = $Texto . "<option value='NuCBKC'>N° CBKC</option>";
+		$Texto = $Texto . "<option value='NuRegistroRegional'>NÂ° Regional</option>";
+		$Texto = $Texto . "<option value='NuRegistroInternacional'>NÂ° Internacional</option>";
+		$Texto = $Texto . "<option value='NuCBKC'>NÂ° CBKC</option>";
 	}
 		
 	if ($_GET["Tipo"] == "Socio")
 	{
 		$Pagina = "Socio_Listar.php";
-		$Texto = $Texto . "<option value='NoSocio'>Nome do Sócio</option>";
+		$Texto = $Texto . "<option value='NoSocio'>Nome do SÃ³cio</option>";
 		$Texto = $Texto . "<option value='NoCidade'>Nome da Cidade</option>";
 		$Texto = $Texto . "<option value='SgUF'>Sigla UF</option>";
 	}

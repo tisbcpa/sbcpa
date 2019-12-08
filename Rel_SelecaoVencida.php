@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Sintético de Chapas</Title>
+<Title>SintÃ©tico de Chapas</Title>
 <Style>
 	span.Titulo{font-family: verdana; font-size: 14; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -31,13 +31,13 @@
 	$sql = "Select * From TBCachorro Where TPSexo = 'M' and DaSelecao > '0001-01-01' and  DaSelecao < '$Hoje' Order By $Ordem";
 	$sql_result = mysql_query($sql,$Conn);
 
-	echo("<center><span class=Titulo>Relatório de Cães com Seleção Vencida</span><br><br>");
-	echo("<span>* Seleção vencida antes de ". FormatarData($Hoje) . "</span><br><br>");
+	echo("<center><span class=Titulo>RelatÃ³rio de CÃ£es com SeleÃ§Ã£o Vencida</span><br><br>");
+	echo("<span>* SeleÃ§Ã£o vencida antes de ". FormatarData($Hoje) . "</span><br><br>");
 	echo("<table border=0>");
 	echo("<tr class=Titulo>");
 	echo("<td width=130><a href=javascript:Ordenar('NuRegistroNacional')>SBCPA</a></td>");
 	echo("<td width=330><a href=javascript:Ordenar('NoCachorro')>Animal</a></td>");
-	echo("<td width=40><a href=javascript:Ordenar('DaSelecao')>Vencimento Seleção</a></td>");
+	echo("<td width=40><a href=javascript:Ordenar('DaSelecao')>Vencimento SeleÃ§Ã£o</a></td>");
 	echo("</tr>");
 
 	$c = 0;

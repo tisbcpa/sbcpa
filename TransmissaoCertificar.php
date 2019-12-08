@@ -10,5 +10,5 @@ if ($DadosCertificado != "")
 }
 
 
-echo("<div style='font-family:verdana; font-size:12; font-weight:bold'><font color=blue>Site Atualizado com êxito</font></div>");
+echo("<div style='font-family:verdana; font-size:12; font-weight:bold'><font color=blue>Site Atualizado com Ãªxito</font></div>");
 ?>

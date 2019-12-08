@@ -46,11 +46,11 @@ function FormatarTextoMaiusculo($Texto)
 	{
 		$Cine = $rowTit["InCINENacional"];
 		$Cine = str_replace(1,"Sim",$Cine);
-		$Cine = str_replace(0,"Não",$Cine);
+		$Cine = str_replace(0,"NÃ£o",$Cine);
 		
 		$Pontos = $rowTit["InPontosDobrado"];
 		$Pontos = str_replace(1,"Sim",$Pontos);
-		$Pontos = str_replace(0,"Não",$Pontos);
+		$Pontos = str_replace(0,"NÃ£o",$Pontos);
 	
 		echo("<table width='100%'>");
 		echo("<tr class=tit><td align=center>$rowTit[NoExposicao]</td></tr>");	
@@ -58,8 +58,8 @@ function FormatarTextoMaiusculo($Texto)
 		echo("<tr class=tit><td align=center>$rowTit[NoClube]</td></tr>");	
 		echo("<tr class=tit><td align=center>$rowTit[EdExposicao]</td></tr>");	
 		echo("<tr class=tit><td align=center>$rowTit[NoCidade] / $rowTit[SgUF]</td></tr>");	
-		echo("<tr class=tit><td align=center>" . FormatarDataTela($rowTit["DTInicio"]) . " à " . FormatarDataTela($rowTit["DTTermino"]) . "</td></tr>");	
-		echo("<tr class=tit><td align=center>Juíz(es):</td></tr>");			
+		echo("<tr class=tit><td align=center>" . FormatarDataTela($rowTit["DTInicio"]) . " Ã  " . FormatarDataTela($rowTit["DTTermino"]) . "</td></tr>");	
+		echo("<tr class=tit><td align=center>JuÃ­z(es):</td></tr>");			
 		echo("<tr class=Ntit><td align=center>$rowTit[NoJuizes]</td></tr>");	
 		echo("</table>");
 	}
@@ -79,7 +79,7 @@ function FormatarTextoMaiusculo($Texto)
 		$sqlDet_result = mysql_query($sqlDet,$Conn);
 
 		echo("<table border=0>");
-		echo("<tr><th width=350>Cachorro</th><th width=100>Qualificação</th><th>Classificação</th><th>Pontos</th></tr>");
+		echo("<tr><th width=350>Cachorro</th><th width=100>QualificaÃ§Ã£o</th><th>ClassificaÃ§Ã£o</th><th>Pontos</th></tr>");
 		while ($rowDet = mysql_fetch_array($sqlDet_result))
 		{
 			echo("<tr class=txt><td>". FormatarTextoMaiusculo($rowDet["NoCachorro"]) ."</td><td align=center>$rowDet[NoQualificacaoCao]</td><td align=center>$rowDet[InClassificacao]</td><td align=center>$rowDet[NrPonto]</td></tr>");

@@ -14,7 +14,7 @@
 		while ($rowAB = mysql_fetch_array($sql_resultAB))
 		{
 			if (($c == 4) || ($c == 7)){$Texto = $Texto . "<tr>";}
-			$Texto = $Texto . "<td style='font-family: verdana; font-size:9'><strong>$c ª - $rowAB[NoExposicao]</strong></td>";	
+			$Texto = $Texto . "<td style='font-family: verdana; font-size:9'><strong>$c Âª - $rowAB[NoExposicao]</strong></td>";	
 			$c++;
 		}
 	$Texto = $Texto . "</table>";
@@ -42,7 +42,7 @@
 						?>
 						</select>
 						
-						<br><span id="Processar" class="Tit" style="display:none; color:red">Aguarde... O Sistema está Processando...</span>
+						<br><span id="Processar" class="Tit" style="display:none; color:red">Aguarde... O Sistema estÃ¡ Processando...</span>
 						
 						<script>document.Formulario.NrAno.value = '<?echo($Ano);?>';</script>
 </th></tr></table>
@@ -81,7 +81,7 @@
 			echo($Texto);
 			echo("<table width='100%' height='25' border='1' cellpadding='0' cellspacing='0'><tr><th class=Categoria><strong>&nbsp;&nbsp;Categoria: $row[NoCategoria]</strong></th></tr></table>");
 			echo("<table border=1 width='100%' cellpadding='0' cellspacing='0'>");
-			echo("<tr align=center><th align=center width=400>Animal</th><th width=40>1ª</th><th width=40>2ª</th><th width=40>3ª</th><th width=40>4ª</th><th width=40>5ª</th><th width=40>6ª</th><th width=40>7ª</th><th width=50>Total</th></tr>");
+			echo("<tr align=center><th align=center width=400>Animal</th><th width=40>1Âª</th><th width=40>2Âª</th><th width=40>3Âª</th><th width=40>4Âª</th><th width=40>5Âª</th><th width=40>6Âª</th><th width=40>7Âª</th><th width=50>Total</th></tr>");
 		}
 		
 		echo("<tr class=txt><td><table><tr class=txt>");
@@ -89,7 +89,7 @@
 		echo("<strong>$row[NuRegistroNacional]</strong><br>" . FormatarData($row["DaNascimento"]));
 		echo("</td>");
 		echo("<td align=left>");
-		echo(RetornarNomeCachorro($row["idCachorro"]) ."<br>Pai: ". RetornarNomeCachorro($row["idCachorroPai"]) . "<br>Mãe: ". RetornarNomeCachorro($row["idCachorroMae"]));
+		echo(RetornarNomeCachorro($row["idCachorro"]) ."<br>Pai: ". RetornarNomeCachorro($row["idCachorroPai"]) . "<br>MÃ£e: ". RetornarNomeCachorro($row["idCachorroMae"]));
 		echo("</td>");
 		echo("</tr></table>");
 		echo("<td align=center valign=top>&nbsp; $row[NrPontoCineExibir1]</td><td align=center valign=top>&nbsp; $row[NrPontoCineExibir2]</td><td align=center valign=top>&nbsp; $row[NrPontoCineExibir3]</td><td align=center valign=top>&nbsp; $row[NrPontoCineExibir4]</td><td align=center valign=top>&nbsp; $row[NrPontoCineExibir5]</td><td align=center valign=top>&nbsp; $row[NrPontoCineExibir6]</td><td align=center valign=top>&nbsp; $row[NrPontoCineExibir7]</td><td align=center valign=top>$row[Pontuacao]</td></tr>");
@@ -97,7 +97,7 @@
 	}
 	
 	if ($Categoria == ""){
-		echo("<p align='center' class='MsgErro'>Nenhuma exposição do CINE cadastrada para o ano selecionado.</p>");
+		echo("<p align='center' class='MsgErro'>Nenhuma exposiÃ§Ã£o do CINE cadastrada para o ano selecionado.</p>");
 	}
 		
 //mysql_close($Conn);

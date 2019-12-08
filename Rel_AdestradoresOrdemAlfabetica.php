@@ -2,7 +2,7 @@
  $menu = "false";
  require("Estilo/Estilo.php");?>
 
-<Title>Relação de Adestradores por Ordem Alfabética</Title>
+<Title>RelaÃ§Ã£o de Adestradores por Ordem AlfabÃ©tica</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC; text-align: center}
@@ -11,7 +11,7 @@
 </Style>
 
 
-<Span class=Titulo>Relação de Adestradores em Ordem Alfabética</Span><br><br>
+<Span class=Titulo>RelaÃ§Ã£o de Adestradores em Ordem AlfabÃ©tica</Span><br><br>
 
 <?
 	require("Funcoes/Conexao.php");
@@ -28,7 +28,7 @@
 			echo("<table width=100%><tr>");
 			echo("<td width=20%><B>Nome:</B></td><td>$row[NoAdestrador]</td>");
 			echo("<tr>");
-			echo("<td><B>Endereço:</B></td><td>$row[EdAdestrador]</td>");
+			echo("<td><B>EndereÃ§o:</B></td><td>$row[EdAdestrador]</td>");
 			echo("<tr>");
 			echo("<td><B>Cidade:</B></td><td>$row[NoCidade]</td>");
 			echo("<tr>");

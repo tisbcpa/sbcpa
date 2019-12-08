@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Sintético de Chapas</Title>
+<Title>SintÃ©tico de Chapas</Title>
 <Style>
 	span.Titulo{font-family: verdana; font-size: 14; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -56,8 +56,8 @@
 
 <Form name="Formulario" Method="POST">
         <table align="center" class="SemBorda">
-	<td colspan=2>Data Início Chapa: <input type="text" size="12" Name="DTInicio" value="<?echo($DTInicio);?>">
-	Data Término  Chapa: <input type="text" size="12" Name="DTTermino" value="<?echo($DTTermino);?>"></td>
+	<td colspan=2>Data InÃ­cio Chapa: <input type="text" size="12" Name="DTInicio" value="<?echo($DTInicio);?>">
+	Data TÃ©rmino  Chapa: <input type="text" size="12" Name="DTTermino" value="<?echo($DTTermino);?>"></td>
           </tr>
           <tr> 
             <td colspan="2" align="center"><input type="submit" value="Pesquisar"></td>
@@ -67,7 +67,7 @@
 
 <?
 	$DaNascimentoInicio = date("Y") - 1 ."-". date("m") ."-". date("d");
-	//Data que serve como parâmetro para a pesquisa dos cães com mais de 12 meses sem chapa
+	//Data que serve como parÃ¢metro para a pesquisa dos cÃ£es com mais de 12 meses sem chapa
 
 	$sql = "select * from TBRaioX Order By NORaioX";
 	$sql_result = mysql_query($sql,$Conn);
@@ -161,7 +161,7 @@
 	$sql = "select NOAnimal, QTRaioX1, QTRaioX2, QTRaioX3, QTRaioX4, QTRaioX5, QTRaioX6, (QTRaioX1 + QTRaioX2 + QTRaioX3 + QTRaioX4 + QTRaioX5 + QTRaioX6) as Total, QTSemRaioX  from tbraioxtemp Order By $Ordem DESC";
 	$sql_result = mysql_query($sql,$Conn);
 	
-	echo("<center><span class=Titulo>Relatório sintético de chapas </span><br><br>");
+	echo("<center><span class=Titulo>RelatÃ³rio sintÃ©tico de chapas </span><br><br>");
 	echo("<span>* Cachorros com mais de 12 meses, nascidos antes de ". FormatarDataTelaCachorro($DaNascimentoInicio) . "</span><br><br>");
 	echo("<table border=0>");
 	echo("<tr class=Titulo>");

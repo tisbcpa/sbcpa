@@ -56,7 +56,7 @@
 
 	echo("<center><br><span class=Titulo>Mapa de Ninhada em $Ano</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=120>N° da Ninhada</td><td align=Center Width=120>Data da Ninhada</td><td align=Center Width=120>N° de Machos</td><td align=center Width=120>N° de Fêmeas</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=120>NÂ° da Ninhada</td><td align=Center Width=120>Data da Ninhada</td><td align=Center Width=120>NÂ° de Machos</td><td align=center Width=120>NÂ° de FÃªmeas</td></tr>");
 
 	$Soma = 0;
 	$Macho = 0;

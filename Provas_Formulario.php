@@ -78,7 +78,7 @@ function ValidarCampo()
 /*
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.Formulario.SgClube;
@@ -91,7 +91,7 @@ function ValidarCampo()
 	
 	ArrayMsg[0] = " - Preenchimento do Nome da Criador\n";
 	ArrayMsg[1] = " - Preenchimento do Nome do Clube\n";
-	ArrayMsg[2] = " - Preenchimento do EndereÁo do Clube\n";
+	ArrayMsg[2] = " - Preenchimento do Endere√ßo do Clube\n";
 	ArrayMsg[3] = " - Preenchimento do Bairro\n";
 	ArrayMsg[4] = " - Preenchimento da Cidade\n";
 	ArrayMsg[5] = " - Preenchimento da UF\n";

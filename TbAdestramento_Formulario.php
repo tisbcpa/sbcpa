@@ -25,14 +25,14 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.Formulario.NoAdestramento;
 	ArrayForm[1] = document.Formulario.DsAdestramento;
 	
 	ArrayMsg[0] = " - Preenchimento do Nome da Adestramento\n";
-	ArrayMsg[1] = " - Preenchimento da DescriÁ„o da Adestramento\n";
+	ArrayMsg[1] = " - Preenchimento da Descri√ß√£o da Adestramento\n";
 
 	for (var i=0; i<=1; i++)
 	{
@@ -53,7 +53,7 @@ function ValidarCampo()
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0">
     <tr> 
-      <td colspan="4"><h3>Adestramento de C&atilde;es Pastores Alem„es</h3></td>
+      <td colspan="4"><h3>Adestramento de C&atilde;es Pastores Alem√£es</h3></td>
     </tr>
     <tr> 
       <td>Nome Adestramento</td>
@@ -62,7 +62,7 @@ function ValidarCampo()
     <tr> 
       <td colspan="4">Adestramento Alem&atilde;o? 
         <input type="radio" name="InAdestramento" value="0">
-        N„o 
+        N√£o 
         <input type="radio" name="InAdestramento" value="1">
         Sim </td>
     </tr>

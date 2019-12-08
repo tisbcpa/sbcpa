@@ -97,7 +97,7 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos são obrigatórios para este Formulário:\n";
+	var Texto = "Os seguintes passos sÃ£o obrigatÃ³rios para este FormulÃ¡rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.FormularioAdestrador.NoAdestrador;
@@ -108,11 +108,11 @@ function ValidarCampo()
 	ArrayForm[5] = document.FormularioAdestrador.NuCEP;
 	
 	ArrayMsg[0] = " - Preenchimento do Nome do Figurante\n";
-	ArrayMsg[1] = " - Preenchimento do Endereço do Figurante\n";
+	ArrayMsg[1] = " - Preenchimento do EndereÃ§o do Figurante\n";
 	ArrayMsg[2] = " - Preenchimento do Nome da Cidade\n";
 	ArrayMsg[3] = " - Preenchimento da UF\n";
 	ArrayMsg[4] = " - Preenchimento do Nome da Cidade\n";
-	ArrayMsg[5] = " - Preenchimento do Número do CEP\n";
+	ArrayMsg[5] = " - Preenchimento do NÃºmero do CEP\n";
 
 	for (var i=0; i<=5; i++)
 	{
@@ -184,13 +184,13 @@ function ValidarCampo()
       <td colspan="3"><textarea name="NuTelefones" cols="59" rows="3" id="NuTelefones"><? echo($NuTelefones)?></textarea></td>
     </tr>
     <tr> 
-      <td>Qualificação</td>
+      <td>QualificaÃ§Ã£o</td>
       <td colspan="3">
-      	<input type="checkbox" name="chCriacao" id="chCriacao">Criação &nbsp;&nbsp;&nbsp;&nbsp;
+      	<input type="checkbox" name="chCriacao" id="chCriacao">CriaÃ§Ã£o &nbsp;&nbsp;&nbsp;&nbsp;
       	<input type="checkbox" name="chTrabalho" id="chTrabalho">Trabalho
 	</td>
     <tr> 
-      <td>Nível</td>
+      <td>NÃ­vel</td>
       <td colspan="3">
       	<input type="checkbox" name="chLocal" id="chLocal">Local &nbsp;&nbsp;&nbsp;
         <input type="checkbox" name="chRegional" id="chRegional">Regional &nbsp;&nbsp;&nbsp;
@@ -216,7 +216,7 @@ function ValidarCampo()
     		echo("<script>document.getElementById('chInternacional').checked=true;</script>");
     ?>
     <tr> 
-      <td>Observação</td>
+      <td>ObservaÃ§Ã£o</td>
       <td colspan="3"><textarea name="DsObservacao" cols="59" rows="3" id="DsObservacao"><? echo($DsObservacao)?></textarea></td>
     </tr>
     <tr> 

@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Propriet·rios Por UF</Title>
+<Title>Propriet√°rios Por UF</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -42,12 +42,12 @@
 	//$sql = "Select SgUFRegistro, Count(SgUFRegistro) as Total from TBCachorro Where Year(DaRegistro) = $Ano and SgUFRegistro is Not Null and SgUFRegistro <> '' Group By SgUFRegistro";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
-	echo("<center><br><span class=Titulo>Propriet·rio por UF</span><br><br></center>");
+	echo("<center><br><span class=Titulo>Propriet√°rio por UF</span><br><br></center>");
 
 	echo("<table border=0 align=center>");
 	echo("<tr class=Titulo>");
 	echo("	<td>Nome</td>");
-	echo("	<td>EndereÁo</td>");
+	echo("	<td>Endere√ßo</td>");
 	echo("	<td>Bairro</td>");
 	echo("	<td>Cidade</td>");
 	echo("	<td>UF</td>");
@@ -59,7 +59,7 @@
 	while ($row = mysql_fetch_array($sql_result))
 	{
 		$Tipo = str_replace("1","Sim",$row["TPAssociado"]);
-		$Tipo = str_replace("0","N„o",$Tipo);
+		$Tipo = str_replace("0","N√£o",$Tipo);
 
 		echo("<tr class=texto>");
 		echo("	<td>$row[NoProprietario]</td>");

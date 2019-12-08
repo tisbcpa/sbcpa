@@ -6,14 +6,14 @@
 </style>
 
 <body>
-<font color=red>Atenção!!!</font><br><br>
+<font color=red>AtenÃ§Ã£o!!!</font><br><br>
 
-O Sistema possui um nível elevado de atualizações.<br><br>
+O Sistema possui um nÃ­vel elevado de atualizaÃ§Ãµes.<br><br>
 
 Deseja atualizar agora?<br><br><br>
 
 <center>
-<input type="button" value="    Sim    " OnClick="window.location.href='TransmissaoEnviar.php?Popup=1';">  <input type="button" value="    Não    " OnClick="window.close()">
+<input type="button" value="    Sim    " OnClick="window.location.href='TransmissaoEnviar.php?Popup=1';">  <input type="button" value="    NÃ£o    " OnClick="window.close()">
 </center>
 
 

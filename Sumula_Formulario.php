@@ -98,7 +98,7 @@ function ValidarCampos()
 	ArrayCampos[1] = document.Formulario.IDCachorro;
 	ArrayMsg[1] = " - Informar o Cachorro Analisado;\n";
 	ArrayCampos[2] = document.Formulario.DSSumula;
-	ArrayMsg[2] = " - Informar a Descrição da Súmula;\n";	
+	ArrayMsg[2] = " - Informar a DescriÃ§Ã£o da SÃºmula;\n";	
 	
 	return ValidarCamposGlobal(ArrayCampos,ArrayMsg);
 }
@@ -194,7 +194,7 @@ function ValidarCampos()
             <td>Vencida</td>
             <td>&nbsp;&nbsp; 
               <input name="InVencida" type="radio" value="0">
-              Não&nbsp; 
+              NÃ£o&nbsp; 
               <input type="radio" name="InVencida" value="1">
               Sim</td>
           </tr>

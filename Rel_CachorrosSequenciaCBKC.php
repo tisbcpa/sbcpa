@@ -2,7 +2,7 @@
  $menu = "false";
  require("Estilo/Estilo.php");?>
 
-<Title>Cachorros por Intervalo de N° CBKC</Title>
+<Title>Cachorros por Intervalo de NÂ° CBKC</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -48,8 +48,8 @@ function AtualizarPagina()
 <Form name="Formulario" Method="POST">
         <table align="center" class="SemBorda">
           <tr> 
-            <td>N° Inicial:</td><td><input type="text" size="12" name="NuInicio" value="<?echo($NuInicio);?>"></td>
-	<td>N° Final:</td><td> <input type="text" size="12" name="NuFinal" value="<?echo($NuFinal);?>"></td>
+            <td>NÂ° Inicial:</td><td><input type="text" size="12" name="NuInicio" value="<?echo($NuInicio);?>"></td>
+	<td>NÂ° Final:</td><td> <input type="text" size="12" name="NuFinal" value="<?echo($NuFinal);?>"></td>
           </tr>
 	<tr><td colspan=4 align=center><input type="submit" value="Pesquisar"</td></tr>
         </table>
@@ -67,9 +67,9 @@ function AtualizarPagina()
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 
-	echo("<center><br><span class=Titulo>Relação de Cachorros por Intervalo de N° CBKC</span><br><br></center>");
+	echo("<center><br><span class=Titulo>RelaÃ§Ã£o de Cachorros por Intervalo de NÂ° CBKC</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=150>N° CBKC</td><td align=Center Width=300>Nome</td><td align=Center Width=100>Data de Nascimento</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=150>NÂ° CBKC</td><td align=Center Width=300>Nome</td><td align=Center Width=100>Data de Nascimento</td></tr>");
 
 	$SomaMachos = 0;
 	while ($row = mysql_fetch_array($sql_result))

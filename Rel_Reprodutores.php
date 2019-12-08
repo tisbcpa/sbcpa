@@ -56,7 +56,7 @@
 
 	echo("<center><br><span class=Titulo>Reprodutores em $Ano</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=250>Nome do Cachorro</td><td align=Center Width=100>Machos</td><td align=Center Width=100>Fêmeas</td><td align=center width=100>Ninhadas</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=250>Nome do Cachorro</td><td align=Center Width=100>Machos</td><td align=Center Width=100>FÃªmeas</td><td align=center width=100>Ninhadas</td></tr>");
 
 	$SomaMachos = 0;
 	$SomaFemeas = 0;

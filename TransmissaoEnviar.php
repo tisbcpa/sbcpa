@@ -40,7 +40,7 @@ is_writable($arquivo2);
 $handle = fopen($arquivo2, 'a');
 fwrite($handle, $Texto);
 
-echo("Gerado com êxito!");
+echo("Gerado com Ãªxito!");
 */
 
 
@@ -50,9 +50,9 @@ echo("Gerado com êxito!");
 <Form name="Formulario" method="post" action="http://www.sbcpa.com.br/des/consultas/LerXML.asp">
 	<textarea name="DadosNovos" rows="20" Cols="100" style="display: none"><? echo($Texto);?></textarea>
 	<br><Br>
-	<div id="Mensagem" style="font-family:verdana; font-size:12; font-weight:bold"><font color="#FF0000">Conexão com o SITE ainda NÃO foi estabelecida<br><Br> Aguarde...</font></div>
+	<div id="Mensagem" style="font-family:verdana; font-size:12; font-weight:bold"><font color="#FF0000">ConexÃ£o com o SITE ainda NÃƒO foi estabelecida<br><Br> Aguarde...</font></div>
 	<br><br>
-	<div style="font-family:verdana; font-size:12; font-weight:bold"><font color="#000000">Quantidade de Modificações: <? echo($c);?></font></div>
+	<div style="font-family:verdana; font-size:12; font-weight:bold"><font color="#000000">Quantidade de ModificaÃ§Ãµes: <? echo($c);?></font></div>
 	<br><Br>
 	<input type="submit" value=">> Transmitir >>" id="Botao" style="display: none">
 </Form>
@@ -80,7 +80,7 @@ function EnderecarPagina()
 
 function TestarConexao()
 {
-	if (Mensagem.innerHTML != '<FONT color=blue>A Conexão com o SITE foi estabelecida...</FONT>')
+	if (Mensagem.innerHTML != '<FONT color=blue>A ConexÃ£o com o SITE foi estabelecida...</FONT>')
 	{
 		EnderecarPagina();
 		//setTimeout(TestarConexao,1000);

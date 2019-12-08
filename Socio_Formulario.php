@@ -76,7 +76,7 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos são obrigatórios para este Formulário:\n";
+	var Texto = "Os seguintes passos sÃ£o obrigatÃ³rios para este FormulÃ¡rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.FormularioSocio.NoSocio;
@@ -86,12 +86,12 @@ function ValidarCampo()
 	ArrayForm[4] = document.FormularioSocio.NoBairro;
 	ArrayForm[5] = document.FormularioSocio.NuCEP;
 	
-	ArrayMsg[0] = " - Preenchimento do Nome do Sócio\n";
-	ArrayMsg[1] = " - Preenchimento do Endereço do Sócio\n";
+	ArrayMsg[0] = " - Preenchimento do Nome do SÃ³cio\n";
+	ArrayMsg[1] = " - Preenchimento do EndereÃ§o do SÃ³cio\n";
 	ArrayMsg[2] = " - Preenchimento do Nome da Cidade\n";
 	ArrayMsg[3] = " - Preenchimento da UF\n";
 	ArrayMsg[4] = " - Preenchimento do Nome da Cidade\n";
-	ArrayMsg[5] = " - Preenchimento do Número do CEP\n";
+	ArrayMsg[5] = " - Preenchimento do NÃºmero do CEP\n";
 
 	for (var i=0; i<=5; i++)
 	{
@@ -112,7 +112,7 @@ function ValidarCampo()
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0" width=600>
     <tr> 
-      <td colspan="4"><h3>Sócio da SBCPA</h3></td>
+      <td colspan="4"><h3>SÃ³cio da SBCPA</h3></td>
     </tr>
           <tr> 
             <td>Filiada</td>
@@ -162,7 +162,7 @@ function ValidarCampo()
       <td colspan="3"><textarea name="NuTelefones" cols="59" rows="3" id="NuTelefones"><? echo($NuTelefones)?></textarea></td>
     </tr>
     <tr> 
-      <td>Observações</td>
+      <td>ObservaÃ§Ãµes</td>
       <td colspan="3"><textarea name="DsObservacao" cols="59" rows="3" id="DsObservacao"><? echo($DsObservacao)?></textarea></td>
     </tr>
     <tr> 

@@ -25,14 +25,14 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(6);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.Formulario.NoQualificacaoCao;
 	ArrayForm[1] = document.Formulario.DsQualificacaoCao;
 	
 	ArrayMsg[0] = " - Preenchimento do Nome da QualificacaoCao\n";
-	ArrayMsg[1] = " - Preenchimento da DescriÁ„o da QualificacaoCao\n";
+	ArrayMsg[1] = " - Preenchimento da Descri√ß√£o da QualificacaoCao\n";
 
 	for (var i=0; i<=0; i++)
 	{
@@ -53,14 +53,14 @@ function ValidarCampo()
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0">
     <tr> 
-      <td colspan="4"><h3>QualificaÁ„o de C&atilde;es Pastores Alem„es</h3></td>
+      <td colspan="4"><h3>Qualifica√ß√£o de C&atilde;es Pastores Alem√£es</h3></td>
     </tr>
     <tr> 
-      <td>Nome QualificaÁ„o</td>
+      <td>Nome Qualifica√ß√£o</td>
       <td colspan="3"><input name="NoQualificacaoCao" type="text" id="NoQualificacaoCao" size="60" maxlength="30" value="<? echo($NoQualificacaoCao)?>"></td>
     </tr>
     <tr> 
-      <td>Pontos da QualificaÁ„o</td>
+      <td>Pontos da Qualifica√ß√£o</td>
       <td colspan="3"><input name="NrPontos" type="text" id="NrPontos" size="5" maxlength="3" value="<? echo($NrPontos)?>"></td>
     </tr>
     <tr> 

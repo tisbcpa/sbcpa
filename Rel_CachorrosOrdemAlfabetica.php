@@ -2,7 +2,7 @@
  $menu = "false";
  require("Estilo/Estilo.php");?>
 
-<Title>Relação de Cachorros por Ordem Alfabética</Title>
+<Title>RelaÃ§Ã£o de Cachorros por Ordem AlfabÃ©tica</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC; text-align: center}
@@ -11,7 +11,7 @@
 </Style>
 
 
-<Span class=Titulo>Relação de Cachorros em Ordem Alfabética</Span><br><br>
+<Span class=Titulo>RelaÃ§Ã£o de Cachorros em Ordem AlfabÃ©tica</Span><br><br>
 
 <?
 	require("Funcoes/Conexao.php");
@@ -20,7 +20,7 @@
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table>");
-	echo("<tr class=Titulo><td width=140>N° de Registro</td><td width=400>Nome do Cachorro</td><td>Sexo</td><td>Cor</td></tr>");
+	echo("<tr class=Titulo><td width=140>NÂ° de Registro</td><td width=400>Nome do Cachorro</td><td>Sexo</td><td>Cor</td></tr>");
 	$c = 0;
 	while ($row = mysql_fetch_array($sql_result))
 	{

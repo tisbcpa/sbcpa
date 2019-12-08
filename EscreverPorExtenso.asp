@@ -1,7 +1,7 @@
 <%
 function unidades(num)
 dim vet_unidades, str, aux
-vet_unidades = Array("um", "dois", "trÍs", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove")
+vet_unidades = Array("um", "dois", "tr√™s", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove")
 aux = Right(num,2)
 if int(aux) < 20 then
 if int(aux) > 0 then
@@ -72,9 +72,9 @@ dim str, aux, strmilhao
 aux = int(num)
 if aux > 0 then
 if aux = 1 then
-strmilhao = "milh„o,"
+strmilhao = "milh√£o,"
 else
-strmilhao = "milhıes,"
+strmilhao = "milh√µes,"
 end if
 str = centenas(num, numero)&" "&strmilhao&" "
 else
@@ -87,9 +87,9 @@ dim str, aux, strbilhao
 aux = int(num)
 if aux > 0 then
 if aux = 1 then
-strbilhao = "bilh„o,"
+strbilhao = "bilh√£o,"
 else
-strbilhao = "bilhıes,"
+strbilhao = "bilh√µes,"
 end if
 str = centenas(num, numero)&" "&strbilhao&" "
 else

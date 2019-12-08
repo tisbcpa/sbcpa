@@ -84,7 +84,7 @@ function ValidarCampo()
 {
 	var ArrayForm = new Array(7);
 	var ArrayMsg = new Array(7);
-	var Texto = "Os seguintes passos s„o obrigatÛrios para este Formul·rio:\n";
+	var Texto = "Os seguintes passos s√£o obrigat√≥rios para este Formul√°rio:\n";
 	var Conferir = Texto;
 	
 	ArrayForm[0] = document.Formulario.NoProprietarioCanil;
@@ -95,9 +95,9 @@ function ValidarCampo()
 	ArrayForm[5] = document.Formulario.SgUF;
 	ArrayForm[6] = document.Formulario.TPCanil;
 	
-	ArrayMsg[0] = " - Preenchimento do Nome dos Propriet·rios\n";
+	ArrayMsg[0] = " - Preenchimento do Nome dos Propriet√°rios\n";
 	ArrayMsg[1] = " - Preenchimento do Nome do Canil\n";
-	ArrayMsg[2] = " - Preenchimento do EndereÁo do Canil\n";
+	ArrayMsg[2] = " - Preenchimento do Endere√ßo do Canil\n";
 	ArrayMsg[3] = " - Preenchimento do Bairro\n";
 	ArrayMsg[4] = " - Preenchimento da Cidade\n";
 	ArrayMsg[5] = " - Preenchimento da UF\n";
@@ -122,7 +122,7 @@ function ValidarCampo()
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0">
     <tr> 
-      <td colspan="4"><h3>Canil de C&atilde;es Pastores Alem„es</h3></td>
+      <td colspan="4"><h3>Canil de C&atilde;es Pastores Alem√£es</h3></td>
     </tr>
     <tr> 
       <td width="73">Nome Canil</td>
@@ -170,7 +170,7 @@ function ValidarCampo()
     </tr>
 
     <tr>
-      <td>Data de FiliaÁ„o</td>
+      <td>Data de Filia√ß√£o</td>
       <td colspan="3"><input name="DTFiliacao" type="text" id="DTFiliacao" size="12" maxlength="10" value="<? echo($DTFiliacao)?>"  onKeyUp="FormatarData(this)"></td>
     </tr>
 
@@ -193,7 +193,7 @@ function ValidarCampo()
 		<Script>document.Formulario.InDebito[<? echo($InDebito)?>].checked = true;</Script>
     </tr>
     <tr> 
-      <td>ObservaÁ„o</td>
+      <td>Observa√ß√£o</td>
       <td colspan="3"><textarea name="DSObservacao" type="text" cols="59" rows="3" id="DSObservacao"><? echo($DSObservacao)?></textarea></td>
     </tr>
 

@@ -64,7 +64,7 @@
 
 <script language="JavaScript" src="Funcoes/FuncoesXML.js"></script>
 <script>
-//Armazena o Número do elemento inicial do cadastro de filhote
+//Armazena o NÃºmero do elemento inicial do cadastro de filhote
 var ObjMatriz = new Array(30);
 var ArrayVisto = new Array(31);
 
@@ -173,7 +173,7 @@ var Qtde = 1;
 
 function ValidarQtdeFilhotes()
 {
-	var alerta = 'Informações Incorretas:\n';
+	var alerta = 'InformaÃ§Ãµes Incorretas:\n';
 	var alerta2 = alerta;
 	var Qtde = parseInt(document.Formulario.elements.length);
 	var QM = parseInt(document.Formulario.NrMachosVivos.value);
@@ -197,7 +197,7 @@ function ValidarQtdeFilhotes()
 	{alerta = alerta + '- A quantidade de Fikhotes Machos deve ser igual a Quantidade de Machos Vivos\n     Quantidade de Machos Vivos: '+ QM +'   Filhotes Machos: '+ QtdeM + '\n';}
 
 	if (QF != QtdeF)
-	{alerta = alerta + '- A quantidade de Filhotes Fêmeas deve ser igual a Quantidade de Fêmeas Vivas\n     Quantidade de Fêmeas Vivas: '+ QF +'   Filhotes Fêmeas: '+ QtdeF + '\n';}
+	{alerta = alerta + '- A quantidade de Filhotes FÃªmeas deve ser igual a Quantidade de FÃªmeas Vivas\n     Quantidade de FÃªmeas Vivas: '+ QF +'   Filhotes FÃªmeas: '+ QtdeF + '\n';}
 
 	/*
 	if (alerta != alerta2)
@@ -218,17 +218,17 @@ function ValidarCampos()
 	ArrayCampos[2] = document.Formulario.IDCanil;
 	ArrayMsg[2] = " - Informar o Canil;\n";
 	ArrayCampos[3] = document.Formulario.NrMachos;
-	ArrayMsg[3] = " - Informar o Número de Machos;\n";	
+	ArrayMsg[3] = " - Informar o NÃºmero de Machos;\n";	
 	ArrayCampos[4] = document.Formulario.NrFemeas
-	ArrayMsg[4] = " - Informar o Número de Fêmeas;\n";	
+	ArrayMsg[4] = " - Informar o NÃºmero de FÃªmeas;\n";	
 	ArrayCampos[5] = document.Formulario.NrMachosVivos;
-	ArrayMsg[5] = " - Informar o Número de Machos Vivos;\n";	
+	ArrayMsg[5] = " - Informar o NÃºmero de Machos Vivos;\n";	
 	ArrayCampos[6] = document.Formulario.NrFemeasVivas;
-	ArrayMsg[6] = " - Informar o Número de Fêmeas Vivos;\n";	
+	ArrayMsg[6] = " - Informar o NÃºmero de FÃªmeas Vivos;\n";	
 	ArrayCampos[7] = document.Formulario.IDPai;
 	ArrayMsg[7] = " - Informar o Pai da Ninhada;\n";	
 	ArrayCampos[8] = document.Formulario.IDMae;
-	ArrayMsg[8] = " - Informar a Mãe da Ninhada;\n";
+	ArrayMsg[8] = " - Informar a MÃ£e da Ninhada;\n";
 	
 	return ValidarCamposGlobal(ArrayCampos,ArrayMsg);
 }
@@ -291,7 +291,7 @@ function Novo(num)
 			var n = num.name.replace('NrSBCPA','');
 			if (document.Formulario.elements[VarrerVetor(n)].value == '')
 			{
-				alert('Altere o Nº SBCPA, pois já existe um cachorro cadastrado com este Registro:\n    Registro: SBCPA '+ num.value +'\n    Nome: ' + RetornoVerficiacao);
+				alert('Altere o NÂº SBCPA, pois jÃ¡ existe um cachorro cadastrado com este Registro:\n    Registro: SBCPA '+ num.value +'\n    Nome: ' + RetornoVerficiacao);
 				num.focus();
 			}
 		}
@@ -470,7 +470,7 @@ function RetirarFilhoteCadastrado(elemento)
 	//alert(Pagina +'\n\n\n\n'+ IlhaXml.xml)
 	TBRetorno = MontarTabela('IlhaXml','/ROOT/row');
 
-	if (LerAtributo(TBRetorno,"Resultado") == "Alterado com êxito!")
+	if (LerAtributo(TBRetorno,"Resultado") == "Alterado com Ãªxito!")
 	{	
 		RetirarFilhoteNaoCadastrado(elemento);
 		AtivacaoCampos(elemento,false);
@@ -615,7 +615,7 @@ function Combo($nome)
              </div></td>
             <td>&nbsp;</td>
             <!--td><div align="right">Ninhada</div></td-->
-            <td><input name="IdNinhada" type="hidden" value="<?echo($NuNinhada)?>" size="8" maxlength="7" disabled title="O Número da Ninhada é Gerado Automaticamente"></td>
+            <td><input name="IdNinhada" type="hidden" value="<?echo($NuNinhada)?>" size="8" maxlength="7" disabled title="O NÃºmero da Ninhada Ã© Gerado Automaticamente"></td>
             <!--td>/</td-->
             <td><input type="hidden" name="NrAnoNinhada" size="5" maxlength="4" value="<? echo($AnoNinhada)?>" disabled></td>
           </tr>
@@ -632,7 +632,7 @@ function Combo($nome)
           <tr> 
             <td>Canil</td>
             <input type="hidden" name="IDCanil" value="<?echo($IdCanil);?>">
-            <td><input name="NoCanil" type="text" value="<?echo($NoCanil);?>" size="70" maxlength="50" readonly title="Não digite, escolha o Canil clicando no Botão ao lado"> 
+            <td><input name="NoCanil" type="text" value="<?echo($NoCanil);?>" size="70" maxlength="50" readonly title="NÃ£o digite, escolha o Canil clicando no BotÃ£o ao lado"> 
               <a href="javascript: AbrirPopUp('Canil')"><img src="Imagens/Escolher.gif" border="0"></a></td>
           </tr>
         </table>
@@ -684,7 +684,7 @@ function Combo($nome)
           <tr> 
             <td>Pai&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <input type="hidden" name="IDPai" value="<? echo($IdCachorroPai);?>">
-            <td><input name="NoPai" type="text" size="79" maxlength="50" value="<?echo($NoPai);?>" readonly title="Não digite, escolha o Pai clicando no Botão ao lado"> 
+            <td><input name="NoPai" type="text" size="79" maxlength="50" value="<?echo($NoPai);?>" readonly title="NÃ£o digite, escolha o Pai clicando no BotÃ£o ao lado"> 
               <a href="javascript: AbrirPopUp('Pai')"><img src="Imagens/Escolher.gif" border="0"></a> 
             </td>
           </tr>
@@ -693,7 +693,7 @@ function Combo($nome)
           <tr> 
             <td>M&atilde;e&nbsp;&nbsp;</td>
             <input name="IDMae" type="hidden" value="<? echo($IdCachorroMae);?>">
-            <td><input name="NoMae" type="text" size="79" maxlength="50" value="<?echo($NoMae)?>" readonly title="Não digite, escolha o Canil clicando no Botão ao lado"> 
+            <td><input name="NoMae" type="text" size="79" maxlength="50" value="<?echo($NoMae)?>" readonly title="NÃ£o digite, escolha o Canil clicando no BotÃ£o ao lado"> 
               <a href="javascript: AbrirPopUp('Mae')"><img src="Imagens/Escolher.gif" border="0"></a> 
             </td>
           </tr>

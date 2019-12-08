@@ -86,9 +86,9 @@ function AtualizarPagina()
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 
-	echo("<center><br><span class=Titulo>Relação de Cachorros por Canil</span><br><br></center>");
+	echo("<center><br><span class=Titulo>RelaÃ§Ã£o de Cachorros por Canil</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=150>N° SBCPA</td><td align=Center Width=300>Nome</td><td align=Center Width=100>Seleção</td><td align=center width=100>Raio X</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=150>NÂ° SBCPA</td><td align=Center Width=300>Nome</td><td align=Center Width=100>SeleÃ§Ã£o</td><td align=center width=100>Raio X</td></tr>");
 
 	$SomaMachos = 0;
 	while ($row = mysql_fetch_array($sql_result))

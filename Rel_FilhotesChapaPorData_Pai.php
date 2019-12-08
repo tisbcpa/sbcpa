@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Consulta Pai e Chapas dos Filhotes por Período</Title>
+<Title>Consulta Pai e Chapas dos Filhotes por PerÃ­odo</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -61,12 +61,12 @@ function AtualizarPagina()
           <tr> 
             <td>Pai&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <input type="hidden" name="IDPai" value="<?echo($IdPai);?>" OnChange="AtualizarPagina()">
-            <td><input name="NoPai" type="text" size="50" maxlength="50" value="<?echo($Nome);?>" readonly title="Não digite, escolha o Pai clicando no Botão ao lado">
+            <td><input name="NoPai" type="text" size="50" maxlength="50" value="<?echo($Nome);?>" readonly title="NÃ£o digite, escolha o Pai clicando no BotÃ£o ao lado">
               <a href="javascript: AbrirPopUp('Pai')"><img src="Imagens/Escolher.gif" border="0"></a> 
             </td>
 	<Tr>
-	<td colspan=2>Data Início: <input type="text" size="12" Name="DTInicio" value="<?echo($DTInicio);?>">
-	Data Término: <input type="text" size="12" Name="DTTermino" value="<?echo($DTTermino);?>"></td>
+	<td colspan=2>Data InÃ­cio: <input type="text" size="12" Name="DTInicio" value="<?echo($DTInicio);?>">
+	Data TÃ©rmino: <input type="text" size="12" Name="DTTermino" value="<?echo($DTTermino);?>"></td>
           </tr>
           <tr> 
             <td colspan="2" align="center"><input type="submit" value="Pesquisar"></td>
@@ -91,7 +91,7 @@ function AtualizarPagina()
 		$Soma = $Soma + $Valor[$c];
 		$c = $c + 1;
 	}	
-	echo("<center><br><span class=Titulo>Consulta Pai e Chapas dos Filhotes por Período</span><br><br></center>");
+	echo("<center><br><span class=Titulo>Consulta Pai e Chapas dos Filhotes por PerÃ­odo</span><br><br></center>");
 	echo("<table border=0 align=center>");
 	echo("<tr class=Titulo><td align=Center Width=180> </td><td align=Center>Qtde</td><td align=Center>Percentual</td></tr>");
 	for($i=1; $i<$c; $i++)

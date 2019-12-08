@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Sócios Por Filiada</Title>
+<Title>SÃ³cios Por Filiada</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -61,12 +61,12 @@
 	//$sql = "Select SgUFRegistro, Count(SgUFRegistro) as Total from TBCachorro Where Year(DaRegistro) = $Ano and SgUFRegistro is Not Null and SgUFRegistro <> '' Group By SgUFRegistro";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
-	echo("<center><br><span class=Titulo>Sócios por UF</span><br><br></center>");
+	echo("<center><br><span class=Titulo>SÃ³cios por UF</span><br><br></center>");
 
 	echo("<table border=0 align=center>");
 	echo("<tr class=Titulo>");
-	echo("	<td>Sócio</td>");
-	echo("	<td>Endereço</td>");
+	echo("	<td>SÃ³cio</td>");
+	echo("	<td>EndereÃ§o</td>");
 	echo("	<td>Bairro</td>");
 	echo("	<td>Cidade</td>");
 	echo("	<td>UF</td>");

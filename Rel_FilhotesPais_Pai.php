@@ -48,7 +48,7 @@ function AtualizarPagina()
           <tr> 
             <td>Pai&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <input type="hidden" name="IDPai" value="<?echo($IdPai);?>" OnChange="AtualizarPagina()">
-            <td><input name="NoPai" type="text" size="50" maxlength="50" value="<?echo($Nome);?>" readonly title="Não digite, escolha o Pai clicando no Botão ao lado">
+            <td><input name="NoPai" type="text" size="50" maxlength="50" value="<?echo($Nome);?>" readonly title="NÃ£o digite, escolha o Pai clicando no BotÃ£o ao lado">
               <a href="javascript: AbrirPopUp('Pai')"><img src="Imagens/Escolher.gif" border="0"></a> 
             </td>
           </tr>
@@ -70,7 +70,7 @@ function AtualizarPagina()
 
 	echo("<center><br><span class=Titulo>Filhotes</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=150>N° SBCPA</td><td align=Center Width=300>Nome</td><td align=Center Width=100>Seleção</td><td align=center width=100>Raio X</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=150>NÂ° SBCPA</td><td align=Center Width=300>Nome</td><td align=Center Width=100>SeleÃ§Ã£o</td><td align=center width=100>Raio X</td></tr>");
 
 	$SomaMachos = 0;
 	while ($row = mysql_fetch_array($sql_result))

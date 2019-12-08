@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>Estatístico de Ninhadas</Title>
+<Title>EstatÃ­stico de Ninhadas</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -54,9 +54,9 @@
 	
 
 
-	echo("<center><br><span class=Titulo>Estatístico de Ninhadas em $Ano</span><br><br></center>");
+	echo("<center><br><span class=Titulo>EstatÃ­stico de Ninhadas em $Ano</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td Width=280 align=Center>Canil</td><td align=Center>Ninhadas</td><td align=Center>Machos</td><td align=Center>Fêmeas</td></tr>");
+	echo("<tr class=Titulo><td Width=280 align=Center>Canil</td><td align=Center>Ninhadas</td><td align=Center>Machos</td><td align=Center>FÃªmeas</td></tr>");
 
 	$SomaNinhada = 0;
 	$SomaMacho = 0;

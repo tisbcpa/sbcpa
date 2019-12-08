@@ -26,8 +26,8 @@
 		echo("<tr class=tit><td align=center>$rowTit[NoClube]</td></tr>");	
 		echo("<tr class=tit><td align=center>$rowTit[EdProva]</td></tr>");	
 		echo("<tr class=tit><td align=center>$rowTit[NoCidade] / $rowTit[SgUF]</td></tr>");	
-		echo("<tr class=tit><td align=center>" . FormatarDataTela($rowTit["DTInicio"]) . " à " . FormatarDataTela($rowTit["DTTermino"]) . "</td></tr>");	
-		echo("<tr class=tit><td align=center>Juíz(es):</td></tr>");			
+		echo("<tr class=tit><td align=center>" . FormatarDataTela($rowTit["DTInicio"]) . " Ã  " . FormatarDataTela($rowTit["DTTermino"]) . "</td></tr>");	
+		echo("<tr class=tit><td align=center>JuÃ­z(es):</td></tr>");			
 		echo("<tr class=Ntit><td align=center>" . str_replace(chr(13),"<br>",$rowTit["NoJuizes"]) . "</td></tr>");
 		
 		if ($rowTit["NoTiposProva"] != "")	
@@ -45,7 +45,7 @@
 		$sqlDet_result = mysql_query($sqlDet,$Conn);
 
 		echo("<table border=0>");
-		echo("<tr><th width=350>Cachorro</th><th width=100>Qualificação</th><th>Pontos A</th><th>Pontos B</th><th>Pontos C</th><th> Total Pontos</th></tr>");
+		echo("<tr><th width=350>Cachorro</th><th width=100>QualificaÃ§Ã£o</th><th>Pontos A</th><th>Pontos B</th><th>Pontos C</th><th> Total Pontos</th></tr>");
 		while ($rowDet = mysql_fetch_array($sqlDet_result))
 		{
 			echo("<tr class=txt><td>$rowDet[NoCachorro]</td><td align=center>$rowDet[NoQualificacaoCao]</td><td align=center>$rowDet[NuA]</td><td align=center>$rowDet[NuB]</td><td align=center>$rowDet[NuC]</td><td align=center>$rowDet[NuTotal]</td></tr>");

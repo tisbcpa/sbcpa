@@ -3,7 +3,7 @@
 	require("Exposicoes_GerarPontuacaoCINE.php");
 	require("Funcoes/Conexao.php");
 ?>
-<title>Pontuação do CINE em <?echo($Ano);?></title>
+<title>PontuaÃ§Ã£o do CINE em <?echo($Ano);?></title>
 <style>
 	th{font-family: verdana; font-size: 12; background-color: #CCCCCC;}
 	th.Tit{font-family: verdana; font-size: 12; background-color: #ffffff;}	
@@ -13,7 +13,7 @@
 	tr.txt{font-family: verdana; font-size: 12; background-color: #F4F4F4}	
 </style>
 <form name="Formulario">
-<table width="100%"><tr><th class="Tit">Pontuação do CINE em 
+<table width="100%"><tr><th class="Tit">PontuaÃ§Ã£o do CINE em 
 						<select name="NrAno" onChange="Processar.style.display=''; document.Formulario.submit()">
 						<?
 							for($i=$AnoFinal; $i>=1960; $i--)
@@ -23,7 +23,7 @@
 						?>
 						</select>
 						
-						<br><span id="Processar" class="Tit" style="display:none; color:red">Aguarde... O Sistema está Processando...</span>
+						<br><span id="Processar" class="Tit" style="display:none; color:red">Aguarde... O Sistema estÃ¡ Processando...</span>
 						
 						<script>document.Formulario.NrAno.value = '<?echo($Ano);?>';</script>
 </th></tr></table>
@@ -58,7 +58,7 @@
 			echo("</table>");
 			echo("<br><table width='100%' height='25' border='1' cellpadding='0' cellspacing='0'><tr><th class=Categoria><strong>&nbsp;&nbsp;Categoria: $row[NoCategoria]</strong></th></tr></table>");
 			echo("<table border=1 width='100%' cellpadding='0' cellspacing='0'>");
-			echo("<tr align=center><th align=center width=400>Animal</th><th width=40>1ª</th><th width=40>2ª</th><th width=40>3ª</th><th width=40>4ª</th><th width=40>5ª</th><th width=40>6ª</th><th width=50>Total</th></tr>");
+			echo("<tr align=center><th align=center width=400>Animal</th><th width=40>1Âª</th><th width=40>2Âª</th><th width=40>3Âª</th><th width=40>4Âª</th><th width=40>5Âª</th><th width=40>6Âª</th><th width=50>Total</th></tr>");
 		}
 		
 		echo("<tr class=txt><td><table><tr class=txt>");
@@ -66,7 +66,7 @@
 		echo("<strong>$row[NuRegistroNacional]</strong><br>" . FormatarData($row["DaNascimento"]));
 		echo("</td>");
 		echo("<td align=left>");
-		echo(RetornarNomeCachorro($row["idCachorro"]) ."<br>Pai: ". RetornarNomeCachorro($row["idCachorroPai"]) . "<br>Mãe: ". RetornarNomeCachorro($row["idCachorroMae"]));
+		echo(RetornarNomeCachorro($row["idCachorro"]) ."<br>Pai: ". RetornarNomeCachorro($row["idCachorroPai"]) . "<br>MÃ£e: ". RetornarNomeCachorro($row["idCachorroMae"]));
 		echo("</td>");
 		echo("</tr></table>");
 		echo("<td align=center valign=top>$row[NrPontoCine1]</td><td align=center valign=top>$row[NrPontoCine2]</td><td align=center valign=top>$row[NrPontoCine3]</td><td align=center valign=top>$row[NrPontoCine4]</td><td align=center valign=top>$row[NrPontoCine5]</td><td align=center valign=top>$row[NrPontoCine6]</td><td align=center valign=top>$row[Pontuacao]</td></tr>");

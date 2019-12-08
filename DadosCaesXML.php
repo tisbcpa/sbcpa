@@ -97,7 +97,7 @@ list($NoMae,$SBCPAMae,$IdAvoMMae,$IdAvoFMae) = split(",",RetornarDadosCao($IdMae
 	 list($NoTriAvoF4Mae,$SBCPATriAvoF4Mae) = split(",",RetornarDadosCao($IdTriAvoF4Mae));
 
 $t = "<ROOT>";
-//	$t = $t . '<row Id="1" Nome="'. str_replace("´","*",$NoCachorro) .'" Tipo="P" Grau=""/>';
+//	$t = $t . '<row Id="1" Nome="'. str_replace("Â´","*",$NoCachorro) .'" Tipo="P" Grau=""/>';
 	$t = $t . '<row Id="2" Nome="'. $NoPai .'" Tipo="P" Grau="I" />';
 	$t = $t . '<row Id="3" Nome="'. $NoMae .'" Tipo="M" Grau="I" />';
 	$t = $t . '<row Id="4" Nome="'. $NoAvoMPai .'" Tipo="P" Grau="II" />';
@@ -130,6 +130,6 @@ $t = "<ROOT>";
 	$t = $t . '<row Id="31" Nome="'. $NoTriAvoF4Mae .'" Tipo="M" Grau="IV" />';
 $t = $t . "</ROOT>";
 
-	echo(utf8_encode(str_replace("'","´",$t)));
+	echo(utf8_encode(str_replace("'","Â´",$t)));
 
 ?>

@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>SituaÁ„o Financeira de Canis</Title>
+<Title>Situa√ß√£o Financeira de Canis</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -32,12 +32,12 @@
 <Form name="Formulario">
 	<table align="center">
 		<tr class="Normal">
-			<td>Selecione a OpÁ„o:</td>
+			<td>Selecione a Op√ß√£o:</td>
 			<td>
 			<select name="NrAno" onChange="document.Formulario.submit()">
 			<?
-				echo("<option value=1>Canis com DÈbitos</option>");
-				echo("<option value=0>Canis sem DÈbitos</option>");
+				echo("<option value=1>Canis com D√©bitos</option>");
+				echo("<option value=0>Canis sem D√©bitos</option>");
 			?>
 			</select>
 			</td>
@@ -48,8 +48,8 @@
 
 
 <?
-	$Situacao = str_replace("1","Com DÈbitos",$Ano);
-	$Situacao = str_replace("0","Sem DÈbitos",$Situacao);
+	$Situacao = str_replace("1","Com D√©bitos",$Ano);
+	$Situacao = str_replace("0","Sem D√©bitos",$Situacao);
 
 	$sql = "select NoCanil, NoProprietarioCanil, SgUF, DtFiliacao from TBCanil Where InDebito = $Ano";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
@@ -57,7 +57,7 @@
 
 	echo("<center><br><span class=Titulo>Canis <?echo($Situacao);?></span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=250>Nome do Canil</td><td align=Center Width=300>Propriet·rio</td><td align=Center Width=40>UF</td><td align=center width=100>FiliaÁ„o</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=250>Nome do Canil</td><td align=Center Width=300>Propriet√°rio</td><td align=Center Width=40>UF</td><td align=center width=100>Filia√ß√£o</td></tr>");
 	$Soma = 0;
 	while ($row = mysql_fetch_array($sql_result))
 	{

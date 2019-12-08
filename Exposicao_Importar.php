@@ -1,7 +1,7 @@
 <? require("Estilo/Estilo.php");?>
 <title>SIPA</title>
 <link href="Estilo.css" rel="stylesheet" type="text/css">
-<h3>Importar ExposiÁ„o</h3>
+<h3>Importar Exposi√ß√£o</h3>
 <?
 	$link = "http://www.sbcpa.com.br/extranet/Exposicao_ResultadoImportacao.asp";
 	//$link = "http://sistemas/extranet/Exposicao_ResultadoImportacao.asp";
@@ -13,7 +13,7 @@
 
 	//die($Carga1);
 	
-	//APAGAR REGISTROS TEMPOR¡RIOS
+	//APAGAR REGISTROS TEMPOR√ÅRIOS
 		$sql = "DELETE FROM TBEXPOSICAOTEMP";
 	//	$sql_result = mysql_query($sql,$Conn);
 		
@@ -21,7 +21,7 @@
 	//	$sql_result = mysql_query($sql,$Conn);
 
 
-	// IMPORTAR OS DADOS COM A FORMATA«√O DA EXTRANET	
+	// IMPORTAR OS DADOS COM A FORMATA√á√ÉO DA EXTRANET	
 		$sql = "DELETE FROM tbsqlimport WHERE IDExposicao = $IDExposicao";
 	//	$sql_result = mysql_query($sql,$Conn);
 	
@@ -39,7 +39,7 @@
 		//	$sql_result = mysql_query($sql,$Conn);
 		}
 
-	//CADASTRAR PROPRIET¡RIOS
+	//CADASTRAR PROPRIET√ÅRIOS
 		$IDProprietarios = "0";
 		$sqll = "select * from tbproprietariotemp";
 		$sql_resultt = mysql_query($sqll,$Conn);
@@ -87,7 +87,7 @@
 
 
 	/*
-	//CADASTRAR OS CACHORROS TEMPOR¡RIOS
+	//CADASTRAR OS CACHORROS TEMPOR√ÅRIOS
 		$sqll = "SELECT * FROM TBCACHORROEXPOSICAOTEMP WHERE IDCACHORRO>0 AND IDEXPOSICAO=$IDExposicao";
 		$sql_resultt1 = mysql_query($sqll,$Conn);
 		while ($row = mysql_fetch_array($sql_resultt1))
@@ -97,7 +97,7 @@
 		}
 	*/
 
-	//CADASTRAR OS CACHORROS TEMPOR¡RIOS
+	//CADASTRAR OS CACHORROS TEMPOR√ÅRIOS
 		$sqll = "SELECT * FROM TBCACHORROEXPOSICAOTEMP WHERE IDCACHORRO=0 AND IDEXPOSICAO=$IDExposicao";
 		$sql_resultt1 = mysql_query($sqll,$Conn);
 		while ($row = mysql_fetch_array($sql_resultt1))
@@ -119,7 +119,7 @@
 			$sql_result = mysql_query($sql3,$Conn);
 		}
 	
-	//CADASTRAR A EXPOSI«√O
+	//CADASTRAR A EXPOSI√á√ÉO
 		$sqll = "SELECT * FROM TBEXPOSICAOTEMP WHERE IDEXPOSICAO=$IDExposicao";
 		$sql_resultt2 = mysql_query($sqll,$Conn);
 		while ($row = mysql_fetch_array($sql_resultt2))
@@ -140,7 +140,7 @@
 			$sql_result = mysql_query($sql3,$Conn);
 		}
 		
-	//CADASTRAR O RESULTADO EXPOSI«√O 
+	//CADASTRAR O RESULTADO EXPOSI√á√ÉO 
 		$sqll = "SELECT * FROM tbcachorroexposicaotemp WHERE IDEXPOSICAO=$NovoIDExposicao";
 		//echo($sqll);
 		$sql_resultt3 = mysql_query($sqll,$Conn);

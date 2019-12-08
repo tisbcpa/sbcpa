@@ -1,7 +1,7 @@
 <?
  $menu = "false";
  require("Estilo/Estilo.php");?>
-<Title>RelaÁ„o de Propriet·rios por Ordem AlfabÈtica</Title>
+<Title>Rela√ß√£o de Propriet√°rios por Ordem Alfab√©tica</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC; text-align: center}
@@ -10,7 +10,7 @@
 </Style>
 
 
-<Span class=Titulo>RelaÁ„o de Propriet·rios em Ordem AlfabÈtica</Span><br><br>
+<Span class=Titulo>Rela√ß√£o de Propriet√°rios em Ordem Alfab√©tica</Span><br><br>
 
 <?
 	require("Funcoes/Conexao.php");
@@ -27,7 +27,7 @@
 			echo("<table width=100%><tr>");
 			echo("<td width=20%><B>Nome:</B></td><td>$row[NoProprietario]</td>");
 			echo("<tr>");
-			echo("<td><B>EndereÁo:</B></td><td>$row[EdProprietario]</td>");
+			echo("<td><B>Endere√ßo:</B></td><td>$row[EdProprietario]</td>");
 			echo("<tr>");
 			echo("<td><B>Cidade:</B></td><td>$row[NoCidade]</td>");
 			echo("<tr>");
@@ -39,7 +39,7 @@
 			echo("<tr>");
 			echo("<td><B>e-mail:</B></td><td>$row[NoEmail]</td>");
 			echo("<tr>");
-			echo("<td><B>Associado?</B></td><td>". str_replace("0","N„o",str_replace("1","Sim",$row["TPAssociado"])) ."</td>");
+			echo("<td><B>Associado?</B></td><td>". str_replace("0","N√£o",str_replace("1","Sim",$row["TPAssociado"])) ."</td>");
 			echo("<tr>");
 			echo("<td><B>Telefones:</B></td><td>$row[NuTelefones]</td>");
 			echo("</table><br><br>");
