@@ -2,18 +2,18 @@
 function Limpar($nome)
 {
 	$nome = strtolower($nome);
-	$result = str_replace("á","a",$nome);
-	$result = str_replace("é","e",$result);
-	$result = str_replace("í","i",$result);
-	$result = str_replace("ó","o",$result);
-	$result = str_replace("ú","u",$result);
-	$result = str_replace("ã","a",$result);
-	$result = str_replace("à","a",$result);
+	$result = str_replace("Ã¡","a",$nome);
+	$result = str_replace("Ã©","e",$result);
+	$result = str_replace("Ã­","i",$result);
+	$result = str_replace("Ã³","o",$result);
+	$result = str_replace("Ãº","u",$result);
+	$result = str_replace("Ã£","a",$result);
+	$result = str_replace("Ã ","a",$result);
 	$result = str_replace("'","",$result);
-	$result = str_replace("ë","e",$result);
-	$result = str_replace("ü","u",$result);
-	$result = str_replace("õ","o",$result);
-	$result = str_replace("ç","c",$result);
+	$result = str_replace("Ã«","e",$result);
+	$result = str_replace("Ã¼","u",$result);
+	$result = str_replace("Ãµ","o",$result);
+	$result = str_replace("Ã§","c",$result);
 	return strtoupper($nome);
 }
 
@@ -77,7 +77,7 @@ function AlterarDadosCachorroNinhada($Id,$NoCachorro,$TPSexo,$IdCor,$DtNasciment
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	return "Alterado com êxito!";
+	return "Alterado com Ãªxito!";
 	mysql_close($Conn);
 }
 
@@ -254,7 +254,7 @@ function excluircachorroidcachorro($Id)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 	echo("<script>window.location.href = 'Cachorro_Listar.php';</script>");
 }
@@ -333,7 +333,7 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -408,7 +408,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 	if (mysql_error() != "")
 	{
 		if (mysql_error() == "Duplicate entry '". $NuRegistroNacional ."' for key 2")
-		{die("<p class='MsgErro'>Esse Nº de registro já existe em outro Cachorro!</p>");}
+		{die("<p class='MsgErro'>Esse NÂº de registro jÃ¡ existe em outro Cachorro!</p>");}
 		else
 		{die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>" . $sql);}	
 	}
@@ -423,7 +423,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -446,7 +446,7 @@ function ListarTbCachorroRelacaoCompleta($Ordem,$Parametro,$Campo,$Perfil)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table align=center border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td width=200><strong><a href=?Tipo=NoCachorro>Nome do Cachorro</a></strong></td><td width=200><strong><a href=?Tipo=NoProprietario>Proprietario</a></strong></td><td width=70><strong><a href=?Tipo=NuRegistroNacional>Nº SBCPA</a></strong></td><td><a href=?Tipo=NoTatuagem><strong>Tatuagem</strong></a></td><td colspan=2></td></tr>");
+	echo("<tr><td width=200><strong><a href=?Tipo=NoCachorro>Nome do Cachorro</a></strong></td><td width=200><strong><a href=?Tipo=NoProprietario>Proprietario</a></strong></td><td width=70><strong><a href=?Tipo=NuRegistroNacional>NÂº SBCPA</a></strong></td><td><a href=?Tipo=NoTatuagem><strong>Tatuagem</strong></a></td><td colspan=2></td></tr>");
 
 	while ($row = mysql_fetch_array($sql_result))
 	{
@@ -459,7 +459,7 @@ function ListarTbCachorroRelacaoCompleta($Ordem,$Parametro,$Campo,$Perfil)
 		}
 		else
 		{
-			echo("<td><a href=". chr(34) ."javascript:Selecionar($row[IdCachorro],'" . str_replace("'","´",$row["NoCachorro"]) . "')". chr(34) ."><img src='Imagens/Escolher.gif' border=0></a></td>");
+			echo("<td><a href=". chr(34) ."javascript:Selecionar($row[IdCachorro],'" . str_replace("'","Â´",$row["NoCachorro"]) . "')". chr(34) ."><img src='Imagens/Escolher.gif' border=0></a></td>");
 		}
 	}
 	
