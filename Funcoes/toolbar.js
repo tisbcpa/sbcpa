@@ -5,17 +5,17 @@ var DoInstrumentation = false;
 var JLarguraMenus = 160;
 
 //alert(navigator.userAgent);
-if (navigator.userAgent.indexOf("MSIE")    != -1 && 
-	navigator.userAgent.indexOf("Windows") != -1 && 
-	navigator.appVersion.substring(0,1) > 3)
-{
+// if (navigator.userAgent.indexOf("MSIE")    != -1 && 
+// 	navigator.userAgent.indexOf("Windows") != -1 && 
+// 	navigator.appVersion.substring(0,1) > 3)
+//{
 	ToolBar_Supported = true;
 	StyleStr =	"<STYLE type='text/css'>" +
 				".MSMenu			{ font-size:11;font-family:Tahoma,Tahoma;text-decoration:none;cursor:hand;}" +
 				".ICPMenu			{ font-weight:bold;font-size:11;font-family:Tahoma,Tahoma;text-decoration:none;cursor:hand;}" +
 				".ICPMenu:hover			{ font-weight:bold;font-size:11;font-family:Tahoma,Tahoma;text-decoration:none;cursor:hand;}" +
 				"</STYLE>";
-}
+//}
 
 if (ToolBar_Supported)
 {
@@ -515,7 +515,7 @@ function hideElement(elmID)
 function showElement(elmID)
 {
 	// Display any element that was hiddend
-	for (i = 0; i < document.all.tags(elmID).length; i++)
+	for (i = 0; i < document.getElementById(elmID).length; i++)
 	{
 		obj = document.all.tags(elmID)[i];
 		if (! obj || ! obj.offsetParent)
