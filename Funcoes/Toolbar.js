@@ -515,7 +515,7 @@ function hideElement(elmID)
 function showElement(elmID)
 {
 	// Display any element that was hiddend
-	for (i = 0; i < document.getElementById(elmID).length; i++)
+	for (i = 0; i < document.body.getElementsByTagName(elmID).length; i++)
 	{
 		obj = document.all.tags(elmID)[i];
 		if (! obj || ! obj.offsetParent)
