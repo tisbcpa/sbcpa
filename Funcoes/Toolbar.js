@@ -311,7 +311,7 @@ function addSubMenu(MenuIDStr, SubMenuStr, SubMenuURLStr, TargetStr, bICPMenu)
 				"<SPAN ID='" + MenuIDStr + "'" +
 				" STYLE='border:0px solid blue;display:none;position:absolute;width:190;background-color:" + cColor0 + ";padding-top:0;padding-left:0;padding-bottom:15;z-index:9;'" +
 				" onmouseover='keepMenu();'>";
-				//AQUI NA LINHA ACIMA NA TAG WIDTH FICA O TAMANHO DA CÉLULA ONDE FICAM OS SUB MENUS.
+				//AQUI NA LINHA ACIMA NA TAG WIDTH FICA O TAMANHO DA CÃ‰LULA ONDE FICAM OS SUB MENUS.
 		if (Frame_Supported == false || bICPMenu == false)
 		{
 			HTMLStr +=

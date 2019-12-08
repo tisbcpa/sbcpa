@@ -115,7 +115,7 @@
 <head>
 <script language="JavaScript">
 function Pergunta(){
-	return confirm('A impressão será realizada com a data de hoje');
+	return confirm('A impressÃ£o serÃ¡ realizada com a data de hoje');
 }
 
 function AbrirPopUp(obj)
@@ -146,7 +146,7 @@ function Imprimir1(id)
 {
 	if (!Pergunta())
 	{
-		data = prompt('Informe a Data para a Impressão do Pedigree (DD/MM/AAAA) ');
+		data = prompt('Informe a Data para a ImpressÃ£o do Pedigree (DD/MM/AAAA) ');
 		data = data.replace("/",".");
 		data = data.replace("/",".");
 		window.open('Relatorios/Pedigree.php?Data='+data+'&Id='+id,'Pedigree','width=780, height=520, left=5, top=20');
@@ -159,7 +159,7 @@ function Imprimir2(id)
 {
 	if (!Pergunta())
 	{
-		data = prompt('Informe a Data para a Impressão do Pedigree (DD/MM/AAAA) ');
+		data = prompt('Informe a Data para a ImpressÃ£o do Pedigree (DD/MM/AAAA) ');
 		data = data.replace("/",".");
 		data = data.replace("/",".");
 		window.open('Relatorios/Pedigree.php?Via=1&Data='+data+'&Id='+id,'Pedigree','width=780, height=520, left=5, top=20');
@@ -172,7 +172,7 @@ function Imprimir3(id)
 {
 	if (!Pergunta())
 	{
-		data = prompt('Informe a Data para a Impressão do Pedigree (DD/MM/AAAA) ');
+		data = prompt('Informe a Data para a ImpressÃ£o do Pedigree (DD/MM/AAAA) ');
 		data = data.replace("/",".");
 		data = data.replace("/",".");
 		window.open('Relatorios/Pedigree3.php?Data='+data+'&Id='+id,'Pedigree','width=780, height=520, left=5, top=20');
@@ -197,15 +197,15 @@ function Imprimir3(id)
         <tr> 
           <td><a href="javascript: Organizador(1)">Dados do Cachorro</a></td>
           <td> | </td>
-          <td><a href="javascript: Organizador(2)">Qualificações do Cachorro</a></td>
+          <td><a href="javascript: Organizador(2)">QualificaÃ§Ãµes do Cachorro</a></td>
 	
 	<? if ($Id != ""){?>
           <td> | </td>
-          <td><a href="javascript: window.location.href='Sumula_Formulario.php?Id=<? echo($Sumula);?>&IdCachorroSumula=<? echo($Id);?>&NoCachorroSumula=<? echo($NoCachorro);?>'">Súmula</a></td>
+          <td><a href="javascript: window.location.href='Sumula_Formulario.php?Id=<? echo($Sumula);?>&IdCachorroSumula=<? echo($Id);?>&NoCachorroSumula=<? echo($NoCachorro);?>'">SÃºmula</a></td>
           <td> | </td>
           <td><a href="JavaScript:Imprimir1(<? echo($Id);?>)">Pedigree</a></td>
           <td> | </td>
-          <td><a href="JavaScript:Imprimir2(<? echo($Id);?>)">2ª via</a></td>
+          <td><a href="JavaScript:Imprimir2(<? echo($Id);?>)">2Âª via</a></td>
           <td> | </td>
           <td><a href="JavaScript:Imprimir3(<? echo($Id);?>)">Pedrigree Novo</a></td>
 	<? }?>
@@ -218,7 +218,7 @@ function Imprimir3(id)
     <td align=center> <fieldset id="Dados" style="width: 495"><legend>
       <table>
         <tr>
-          <td>Dados do Cão</td>
+          <td>Dados do CÃ£o</td>
         </tr>
       </table></legend>
       <table class="SemBorda">
@@ -294,7 +294,7 @@ function Imprimir3(id)
       </span> <fieldset id="Registros" style="width: 495"><legend>
       <table>
         <tr>
-          <td>Registros do Cão</td>
+          <td>Registros do CÃ£o</td>
         </tr>
       </table></legend>
       <table class="SemBorda">
@@ -324,7 +324,7 @@ function Imprimir3(id)
                 </select>
                 
                 <script>
-					// Número de registro regional é pelagem
+					// NÃºmero de registro regional Ã© pelagem
                 	document.getElementById('NuRegistroRegional').value = '<?echo($NuRegistroRegional);?>';
                 </script>
           </td>
@@ -337,7 +337,7 @@ function Imprimir3(id)
       <fieldset id="Qualificacoes" style="display:none; width: 495"><legend>
       <table>
         <tr>
-          <td>Qualificações do Cachorro</td>
+          <td>QualificaÃ§Ãµes do Cachorro</td>
         </tr>
       </table></legend>
       <table width="480" class="semborda">            
