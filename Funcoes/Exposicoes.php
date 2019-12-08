@@ -23,7 +23,7 @@ function excluirexposicaoidexposicao($Id)
 	$DsAcaoLog = str_replace("'","|",$sql);
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 }
 
 
@@ -58,7 +58,7 @@ function ExcluirExposicaoResultado($IdExposicao,$IdCachorro,$InCategoria)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	//echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	//echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -110,10 +110,10 @@ function AlterarExposicao($Id,$IdClube,$NoExposicao,$EdExposicao,$DTInicio,$DTTe
 	}
 	else
 	{
-		echo("<script>alert('N„o esqueÁa de clicar no bot„o [Atualizar/Ver PontuaÁ„o] para pontuar os cachorros da exposiÁ„o');</script>");
+		echo("<script>alert('N√£o esque√ßa de clicar no bot√£o [Atualizar/Ver Pontua√ß√£o] para pontuar os cachorros da exposi√ß√£o');</script>");
 	}
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -187,7 +187,7 @@ function CadastrarExposicao($IdClube,$NoExposicao,$EdExposicao,$DTInicio,$DTTerm
 	mysql_query($SqlAcaoLog,$Conn);
 	
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -207,7 +207,7 @@ function CadastrarResultadoExposicao($IdExposicao,$IDCachorro,$InCategoria,$InCl
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -230,7 +230,7 @@ function AlterarResultadoExposicao($IdExposicao,$IDCachorro,$InCategoria,$InClas
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 

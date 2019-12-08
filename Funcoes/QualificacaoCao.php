@@ -29,7 +29,7 @@ function ExcluirQualificacaoCaoIdQualificacaoCao($Id)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -49,7 +49,7 @@ function AlterarQualificacaoCao($Id,$NoQualificacaoCao,$DsQualificacaoCao,$NrPon
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -72,7 +72,7 @@ function CadastrarQualificacaoCao($NoQualificacaoCao,$DsQualificacaoCao,$NrPonto
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -91,7 +91,7 @@ function ListarTbQualificacaoCaoRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=TbQualificacaoCao_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova Qualificação para Cão'></a></td><td width=20><strong><a href=?Tipo=IdQualificacaoCao>Código</a></strong></td><td width=200><strong><a href=?Tipo=NoQualificacaoCao>Nome da QualificacaoCao</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=TbQualificacaoCao_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova QualificaÃ§Ã£o para CÃ£o'></a></td><td width=20><strong><a href=?Tipo=IdQualificacaoCao>CÃ³digo</a></strong></td><td width=200><strong><a href=?Tipo=NoQualificacaoCao>Nome da QualificacaoCao</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdQualificacaoCao]</td><td>$row[NoQualificacaoCao]</td><td><a href=javascript:Editar($row[IdQualificacaoCao])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdQualificacaoCao])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	

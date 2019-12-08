@@ -110,7 +110,7 @@ function ExcluirJuizIdJuiz($Id)
 
 	mysql_query($SqlAcaoLog,$Conn);
 	mysql_close($Conn);
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 }
 
 function CadastrarJuiz($NoJuiz,$DaNascimento,$EdJuiz,$NoCidade,$SgUF,$NoBairro,$NuCEP,$NoEmail,$NuTelefones,$TPNivel,$TPStatus,$IdQualificacaoJuiz,$DSObservacao)
@@ -142,13 +142,13 @@ function CadastrarJuiz($NoJuiz,$DaNascimento,$EdJuiz,$NoCidade,$SgUF,$NoBairro,$
 	mysql_query($SqlAcaoLog,$Conn);
 	$IdJuizNovo = $IdRegistroLog;
 	
-	// Resgata o ID do Juiz, est· simples assim por n„o ser uma aplicaÁ„o com demanda transacional muito grande.
+	// Resgata o ID do Juiz, est√° simples assim por n√£o ser uma aplica√ß√£o com demanda transacional muito grande.
 	//$sql2 = "Select Max(IdJuiz) as IdJuiz From TBJuiz";
 	//$sql_result2 = mysql_query($sql2,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 
 	//while ($row = mysql_fetch_array($sql_result2))
 	//{
-		// Insere o CÛdigo do juiz junto com a QualificaÁ„o na tabela TBJuizQualificacaoJuiz.
+		// Insere o C√≥digo do juiz junto com a Qualifica√ß√£o na tabela TBJuizQualificacaoJuiz.
 		for ($i=1; $i<=$rep; $i++)
 		{
 			$sql3 = "insert into TBJuizQualificacaoJuiz (IdJuiz, IdQualificacaoJuiz) values ($IdJuizNovo, '$vIdQualificacaoJuiz[$i]')";
@@ -166,7 +166,7 @@ function CadastrarJuiz($NoJuiz,$DaNascimento,$EdJuiz,$NoCidade,$SgUF,$NoBairro,$
 
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -202,7 +202,7 @@ function AlterarJuiz($Id,$NoJuiz,$DaNascimento,$EdJuiz,$NoCidade,$SgUF,$NoBairro
 	ExcluirJuizQualificacaoJuiz($Id);
 	
 	//echo($IdQualificacaoJuiz);
-	// Insere o CÛdigo do juiz junto com a QualificaÁ„o na tabela TBJuizQualificacooJuiz.
+	// Insere o C√≥digo do juiz junto com a Qualifica√ß√£o na tabela TBJuizQualificacooJuiz.
 	for ($i=0; $i<$rep; $i++)
 	{
 		$sql3 = "insert into TBJuizQualificacaoJuiz (IdJuiz, IdQualificacaoJuiz) values ($Id, '$vIdQualificacaoJuiz[$i]')";
@@ -219,7 +219,7 @@ function AlterarJuiz($Id,$NoJuiz,$DaNascimento,$EdJuiz,$NoCidade,$SgUF,$NoBairro
 		mysql_query($SqlAcaoLog,$Conn);	
 	}
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 ?>

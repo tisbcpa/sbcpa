@@ -30,7 +30,7 @@ function ExcluirAdestramentoIdAdestramento($Id)
 	mysql_query($SqlAcaoLog,$Conn);
 
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -49,7 +49,7 @@ function AlterarAdestramento($Id,$NoAdestramento,$DsAdestramento,$InAdestramento
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -70,7 +70,7 @@ function CadastrarAdestramento($NoAdestramento,$DsAdestramento,$InAdestramento)
 	mysql_query($SqlAcaoLog,$Conn);
 
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -89,7 +89,7 @@ function ListarTbAdestramentoRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=TbAdestramento_Formulario.php><img src='Imagens/Novo.gif' border=0 Title='Novo Tipo de Adestramento'></a></td><td width=20><strong><a href=?Tipo=IdAdestramento>Código</a></strong></td><td width=200><strong><a href=?Tipo=NoAdestramento>Nome do Adestramento</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=TbAdestramento_Formulario.php><img src='Imagens/Novo.gif' border=0 Title='Novo Tipo de Adestramento'></a></td><td width=20><strong><a href=?Tipo=IdAdestramento>CÃ³digo</a></strong></td><td width=200><strong><a href=?Tipo=NoAdestramento>Nome do Adestramento</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdAdestramento]</td><td>$row[NoAdestramento]</td><td><a href=javascript:Editar($row[IdAdestramento])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdAdestramento])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	

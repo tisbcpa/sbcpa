@@ -87,7 +87,7 @@ function ListarTbRaioXRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=TbRaioX_Formulario.php title='Novo Tipo de Raio X'><img src='Imagens/Novo.gif' border=0></a></td><td width=20><strong><a href=?Tipo=IdRaioX>Código</a></strong></td><td width=200><strong><a href=?Tipo=NoRaioX>Nome da RaioX</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=TbRaioX_Formulario.php title='Novo Tipo de Raio X'><img src='Imagens/Novo.gif' border=0></a></td><td width=20><strong><a href=?Tipo=IdRaioX>CÃ³digo</a></strong></td><td width=200><strong><a href=?Tipo=NoRaioX>Nome da RaioX</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdRaioX]</td><td>$row[NoRaioX]</td><td><a href=javascript:Editar($row[IdRaioX])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdRaioX])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	

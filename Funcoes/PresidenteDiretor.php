@@ -24,7 +24,7 @@ function AlterarDirigente($NoPresidente,$NoDiretor)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 ?>

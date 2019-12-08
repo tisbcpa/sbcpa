@@ -22,7 +22,7 @@
 	$DOC_ROOT = "sbcpa_sipa_02";
 	$DB_HOST = "localhost";
 
-	$Conn = mysql_connect ($DB_HOST,$DB_USER,$DB_PASS) or die("Não pode conectar: " . mysql_error());
+	$Conn = mysql_connect ($DB_HOST,$DB_USER,$DB_PASS) or die("NÃ£o pode conectar: " . mysql_error());
 	mysql_select_db ($DOC_ROOT,$Conn);
 
 	$Data = date("Y-m-d");

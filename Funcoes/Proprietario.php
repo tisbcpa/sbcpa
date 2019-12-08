@@ -30,7 +30,7 @@ function ExcluirProprietarioIdProprietario($Id)
 	mysql_query($SqlAcaoLog,$Conn);
 	
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -49,7 +49,7 @@ function AlterarProprietario($Id,$NoProprietario,$EdProprietario,$NoCidade,$SgUF
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -70,7 +70,7 @@ function CadastrarProprietario($NoProprietario,$EdProprietario,$NoCidade,$SgUF,$
 	mysql_query($SqlAcaoLog,$Conn);
 
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 

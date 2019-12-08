@@ -11,7 +11,7 @@ function ListarSocioRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table align=center border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td width=200><strong><a href=?Tipo=NoSocio>Nome do Sócio</a></strong></td><td width=100><strong><a href=?Tipo=NoCidade>Cidade</a></strong></td><td width=20><strong><a href=?Tipo=SgUF>UF</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td width=200><strong><a href=?Tipo=NoSocio>Nome do SÃ³cio</a></strong></td><td width=100><strong><a href=?Tipo=NoCidade>Cidade</a></strong></td><td width=20><strong><a href=?Tipo=SgUF>UF</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td>$row[NoSocio]</td><td>$row[NoCidade]</td><td>$row[SgUF]</td><td><a href=javascript:Editar($row[IdSocio])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdSocio])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	
@@ -53,7 +53,7 @@ function ExcluirSocioIdSocio($Id)
 
 	
 	mysql_close($Conn);
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 }
 
 function CadastrarSocio($NoSocio,$EdSocio,$NoCidade,$SgUF,$NoBairro,$NuCEP,$NoEmail,$NuTelefones,$DsHomePage,$DsObservacao,$IdClube,$StSocio)
@@ -73,7 +73,7 @@ function CadastrarSocio($NoSocio,$EdSocio,$NoCidade,$SgUF,$NoBairro,$NuCEP,$NoEm
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 
 }
@@ -97,7 +97,7 @@ function AlterarSocio($Id,$NoSocio,$EdSocio,$NoCidade,$SgUF,$NoBairro,$NuCEP,$No
 	mysql_query($SqlAcaoLog,$Conn);
 	
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 ?>

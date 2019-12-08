@@ -38,7 +38,7 @@ function ExcluirCanilIdCanil($Id)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -67,7 +67,7 @@ function AlterarCanil($IdCanil,$NoProprietarioCanil,$NoCanil,$EdCanil,$NoBairro,
 	mysql_query($SqlAcaoLog,$Conn);
 
 
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -96,7 +96,7 @@ function CadastrarCanil($NoProprietarioCanil,$NoCanil,$EdCanil,$NoBairro,$NuCEP,
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>AÁ„o Realizada com  xito!</p>");
+	echo("<p class='MsgExito'>A√ß√£o Realizada com √äxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -115,7 +115,7 @@ function ListarTbCanilRelacaoCompleta($Ordem,$Parametro,$Campo,$Perfil)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table align=center border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td width=200><strong><a href=?Tipo=NoCanil>Nome do Canil</a></strong></td><td><a href=?Tipo=NoProprietarioCanil><b>Propriet·rio</b></a></td><td width=200><strong><a href=?Tipo=NoCidade>Nome da Cidade</a></strong></td><td width=20><strong><a href=?Tipo=SgUF>UF</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td width=200><strong><a href=?Tipo=NoCanil>Nome do Canil</a></strong></td><td><a href=?Tipo=NoProprietarioCanil><b>Propriet√°rio</b></a></td><td width=200><strong><a href=?Tipo=NoCidade>Nome da Cidade</a></strong></td><td width=20><strong><a href=?Tipo=SgUF>UF</a></strong></td><td colspan=2></td></tr>");
 
 	while ($row = mysql_fetch_array($sql_result))
 	{

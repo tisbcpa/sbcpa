@@ -56,7 +56,7 @@ function ExcluirDiretoriaIdDiretoria($Id)
 
 	
 	mysql_close($Conn);
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 }
 
 function CadastrarDiretoria($NoDiretoria,$EdDiretoria,$NoCidade,$SgUF,$NoBairro,$NuCEP,$NoEmail,$NuTelefones,$DsHomePage,$IdClube,$DsObservacao,$StFigurante)
@@ -76,7 +76,7 @@ function CadastrarDiretoria($NoDiretoria,$EdDiretoria,$NoCidade,$SgUF,$NoBairro,
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 
 }
@@ -100,7 +100,7 @@ function AlterarDiretoria($Id,$NoDiretoria,$EdDiretoria,$NoCidade,$SgUF,$NoBairr
 	mysql_query($SqlAcaoLog,$Conn);
 	
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 ?>

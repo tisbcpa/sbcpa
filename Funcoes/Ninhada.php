@@ -54,7 +54,7 @@ function ListarNinhada($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 cellpadding=2 align=center cellspacing=0>");
-	echo("<tr><td><a href='javascript:Novo()' title='Nova Ninhada'><img src='Imagens/Novo.gif' border=0></a></td><td><a><strong>Número da Ninhada</strong></a></td><td><a><strong>Data da Ninhada</strong></a></td><td></td></tr>");
+	echo("<tr><td><a href='javascript:Novo()' title='Nova Ninhada'><img src='Imagens/Novo.gif' border=0></a></td><td><a><strong>NÃºmero da Ninhada</strong></a></td><td><a><strong>Data da Ninhada</strong></a></td><td></td></tr>");
 	
 	while ($row = mysql_fetch_array($sql_result))
 	{	
@@ -175,7 +175,7 @@ function ExcluirNinhadaIdNinhada($Id)
 
 	ExcluirCachorrosNinhadaIdNinhada($Id);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	echo("<script>window.location.href = 'Ninhada_Listar.php';</script>");
 }
 
@@ -261,7 +261,7 @@ function AlterarNinhada($Id, $DaNascimento, $IDCanil, $NrMachos, $NrMachosVivos,
 		}
 	}
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	//mysql_close($Conn);
 	echo("<script>window.location.href = 'Ninhada_Formulario.php?Id=$IdRegistroLog';</script>");
 }
@@ -417,7 +417,7 @@ function CadastrarNinhada($DaNascimento, $IdCanil, $NrMachos, $NrMachosVivos, $N
 		}
 				
 	}
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	//mysql_close($Conn);
 	echo("<script>window.location.href = 'Ninhada_Formulario.php?Id=$IdRegistroLog';</script>");
 }
@@ -506,7 +506,7 @@ function CadastrarNinhadaEstrangeira($DaNascimento, $IdCanil, $NrMachos, $NrMach
 		}
 				
 	}
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	//mysql_close($Conn);
 	die("<script>window.location.href = 'NinhadaEstrangeira_Formulario.php?Id=$IdRegistroLog';</script>");
 }
@@ -586,7 +586,7 @@ function AlterarNinhadaEstrangeira($Id, $DaNascimento, $IDCanil, $NrMachos, $NrM
 		}
 	}
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	//mysql_close($Conn);
 	die("<script>window.location.href = 'NinhadaEstrangeira_Formulario.php?Id=$IdRegistroLog';</script>");
 }

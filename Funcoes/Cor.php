@@ -20,7 +20,7 @@ function ExcluirCorIdCor($Id)
 	require("Conexao.php");
 	$sql = "Delete From TBCor Where IdCor = $Id";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	
 	$TpAcaoLog = "E";
 	$IdRegistroLog = $Id;
@@ -39,7 +39,7 @@ function AlterarCor($Id,$NoCor,$DsCor)
 	require("Conexao.php");
 	$sql = "Update TBCor Set NoCor = '$NoCor', DsCor = '$DsCor' Where IdCor = $Id";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 
 	$TpAcaoLog = "A";
 	$IdRegistroLog = $Id;
@@ -59,7 +59,7 @@ function CadastrarCor($NoCor,$DsCor)
 	require("Conexao.php");
 	$sql = "Insert Into TBCor (NoCor,DsCor) values ('$NoCor','$DsCor')";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 
 	$TpAcaoLog = "I";
 	$IdRegistroLog = mysql_insert_id();
@@ -89,11 +89,11 @@ function ListarTbCorRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=TbCor_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova Cor'></a></td><td width=20><strong><a href=?Tipo=IdCor>Código</a></strong></td><td width=200><strong><a href=?Tipo=NoCor>Nome da Cor</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=TbCor_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova Cor'></a></td><td width=20><strong><a href=?Tipo=IdCor>CÃ³digo</a></strong></td><td width=200><strong><a href=?Tipo=NoCor>Nome da Cor</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdCor]</td><td>$row[NoCor]</td><td><a href=javascript:Editar($row[IdCor])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdCor])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	
-	//echo("<tr><td colspan=5><a href=TbCor_Formulario.php><img src='Imagens/Novo.gif' border=0> Novo</a> &nbsp;&nbsp;<a href=Default.php target=_top><img src='Imagens/Menu.gif' border=0> Menu</a>&nbsp;&nbsp;<a href=Relatorios.php target=_top><img src='Imagens/Relatorio.gif' border=0> Relatório</a></td></tr>");
+	//echo("<tr><td colspan=5><a href=TbCor_Formulario.php><img src='Imagens/Novo.gif' border=0> Novo</a> &nbsp;&nbsp;<a href=Default.php target=_top><img src='Imagens/Menu.gif' border=0> Menu</a>&nbsp;&nbsp;<a href=Relatorios.php target=_top><img src='Imagens/Relatorio.gif' border=0> RelatÃ³rio</a></td></tr>");
 	echo("</table>");
 		
 	mysql_close($Conn);

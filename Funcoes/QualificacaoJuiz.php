@@ -24,7 +24,7 @@ function ExcluirQualificacaoJuizIdQualificacaoJuiz($Id)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	$sql_result2 = mysql_query($sql2,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -43,7 +43,7 @@ function AlterarQualificacaoJuiz($Id,$NoQualificacaoJuiz,$DsQualificacaoJuiz)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -64,7 +64,7 @@ function CadastrarQualificacaoJuiz($NoQualificacaoJuiz,$DsQualificacaoJuiz)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -83,7 +83,7 @@ function ListarTbQualificacaoJuizRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 align=center cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=TbQualificacaoJuiz_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova Qualificação para Juiz'></a></td><td width=20><strong><a href=?Tipo=IdQualificacaoJuiz>Código</a></strong></td><td width=200><strong><a href=?Tipo=NoQualificacaoJuiz>Nome da Qualificacao do Juiz</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=TbQualificacaoJuiz_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova QualificaÃ§Ã£o para Juiz'></a></td><td width=20><strong><a href=?Tipo=IdQualificacaoJuiz>CÃ³digo</a></strong></td><td width=200><strong><a href=?Tipo=NoQualificacaoJuiz>Nome da Qualificacao do Juiz</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdQualificacaoJuiz]</td><td>$row[NoQualificacaoJuiz]</td><td><a href=javascript:Editar($row[IdQualificacaoJuiz])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdQualificacaoJuiz])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	

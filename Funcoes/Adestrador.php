@@ -56,7 +56,7 @@ function ExcluirAdestradorIdAdestrador($Id)
 
 	
 	mysql_close($Conn);
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 }
 
 function CadastrarAdestrador($NoAdestrador,$EdAdestrador,$NoCidade,$SgUF,$NoBairro,$NuCEP,$NoEmail,$NuTelefones,$DsHomePage,$IdClube,$DsObservacao,$StFigurante,$chCriacao,$chTrabalho,$chRegional,$chEstadual,$chNacional,$chLocal,$chInternacional)
@@ -76,7 +76,7 @@ function CadastrarAdestrador($NoAdestrador,$EdAdestrador,$NoCidade,$SgUF,$NoBair
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 
 }
@@ -103,7 +103,7 @@ function AlterarAdestrador($Id,$NoAdestrador,$EdAdestrador,$NoCidade,$SgUF,$NoBa
 	mysql_query($SqlAcaoLog,$Conn);
 	
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 ?>

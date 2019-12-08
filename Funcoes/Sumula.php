@@ -11,7 +11,7 @@ function ListarSumulaRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table align=center border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=Sumula_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova Súmula'></a></td><td width=20><strong><a>Súmula</a></strong></td><td width=100><strong><a>Nº SBCPA</a></strong></td><td width=200><strong><a>Juiz</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=Sumula_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Nova SÃºmula'></a></td><td width=20><strong><a>SÃºmula</a></strong></td><td width=100><strong><a>NÂº SBCPA</a></strong></td><td width=200><strong><a>Juiz</a></strong></td><td colspan=2></td></tr>");
 	
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdSumula]</td><td>&nbsp;$row[NuRegistroNacional]</td><td>&nbsp;$row[NoJuiz]</td><td><a href=javascript:Editar($row[IdSumula])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdSumula])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
@@ -52,7 +52,7 @@ function ExcluirSumulaIdSumula($Id)
 	mysql_query($SqlAcaoLog,$Conn);
 	
 	mysql_close($Conn);
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 }
 
 
@@ -100,7 +100,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 	mysql_query($SqlAcaoLog,$Conn);
 
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -109,7 +109,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,$NOPelagem,$DSSumula,$InVencida,$IDJuizReselecao,$DTSumulaReselecao,$DSSumulaReselecao)
 {
 	require("Conexao.php");
-	// Insere Dados da Súmula
+	// Insere Dados da SÃºmula
 
 	if ($DTSumula != "")
 	{
@@ -140,7 +140,7 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 	$DSSumula = str_replace(";",",",$DSSumula);
 		
 	$sql = "Insert Into TBSumula (IDCachorro,IDJuiz,DTSumula,NRAltura,NOPigmentacao,NOPelagem,DSSumula,InVencida,IDJuizReselecao, DTSumulaReselecao, DSSumulaReselecao) values ($IdCachorro,$IdJuiz,'$DTSumulaF','$NRAltura','$NOPigmentacao','$NOPelagem','$DSSumula',$InVencida, $IDJuizReselecao, '$DTSumulaReselecaoF', '$DSSumulaReselecao')";
-	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Falha ao Salvar os dados da Súmula!<br> Erros: " . mysql_error() . "<br><br>Sql: ". $sql ."</p>");
+	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Falha ao Salvar os dados da SÃºmula!<br> Erros: " . mysql_error() . "<br><br>Sql: ". $sql ."</p>");
 
 	$TpAcaoLog = "I";
 	$IdRegistroLog = mysql_insert_id();
@@ -154,7 +154,7 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 	
 	
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 ?>

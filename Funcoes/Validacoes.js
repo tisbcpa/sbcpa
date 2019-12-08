@@ -2,12 +2,12 @@ var tentativas = 0;
 
 function ValidarCamposGlobal(ArrayCampos,ArrayMsg)
 {
-	var msg = "Para realizar essa operação você deve:\n";
+	var msg = "Para realizar essa operaÃ§Ã£o vocÃª deve:\n";
 	var primeiro = 0;
 
 	if (tentativas > 0)
 	{
-		msg = "Para realizar essa operação AINDA falta:\n";
+		msg = "Para realizar essa operaÃ§Ã£o AINDA falta:\n";
 	}
 	var nmsg = msg;
 

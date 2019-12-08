@@ -29,7 +29,7 @@ function ExcluirSelecaoIdSelecao($Id)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -48,7 +48,7 @@ function AlterarSelecao($Id,$NoSelecao,$DsSelecao)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 	
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -68,7 +68,7 @@ function CadastrarSelecao($NoSelecao,$DsSelecao)
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -87,7 +87,7 @@ function ListarTbSelecaoRelacaoCompleta($Ordem,$Parametro,$Campo)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table align=center border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=TbSelecao_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Novo tipo de Seleção'></a></td><td width=20><strong><a href=?Tipo=IdSelecao>Código</a></strong></td><td width=200><strong><a href=?Tipo=NoSelecao>Nome da Selecao</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=TbSelecao_Formulario.php><img src='Imagens/Novo.gif' border=0 alt='Novo tipo de SeleÃ§Ã£o'></a></td><td width=20><strong><a href=?Tipo=IdSelecao>CÃ³digo</a></strong></td><td width=200><strong><a href=?Tipo=NoSelecao>Nome da Selecao</a></strong></td><td colspan=2></td></tr>");
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>$row[IdSelecao]</td><td>$row[NoSelecao]</td><td><a href=javascript:Editar($row[IdSelecao])><img src='Imagens/Editar.gif' border=0></a></td><td><a href=javascript:Excluir($row[IdSelecao])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
 	

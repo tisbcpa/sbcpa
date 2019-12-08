@@ -32,7 +32,7 @@ function ExcluirProvaResultado($IdProva,$IdCachorro)
 	mysql_query($SqlAcaoLog,$Conn);
 
 
-	//echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	//echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -67,7 +67,7 @@ function AlterarProva($Id,$IdClube,$NoProva,$EdProva,$DTInicio,$DTTermino,$NoTip
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -129,7 +129,7 @@ function CadastrarProva($IdClube,$NoProva,$EdProva,$DTInicio,$DTTermino,$NoTipos
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -149,7 +149,7 @@ function CadastrarResultadoProva($IdProva,$IDCachorro,$InQualificacao,$NuA,$NuB,
 	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
 	mysql_query($SqlAcaoLog,$Conn);
 
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	echo("<p class='MsgExito'>AÃ§Ã£o Realizada com ÃŠxito!</p>");
 	mysql_close($Conn);
 }
 
@@ -166,7 +166,7 @@ function ListarCachorrosProva($Id)
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table border=1 cellpadding=2 cellspacing=0>");
-	echo("<tr><td><a href=javascript:Novo()><img src='Imagens/Novo.gif' border=0></a></td><td width=200><strong><a>Cachorro</a></strong></td><td width=200><strong><a>Qualificação.</a></strong></td><td colspan=2></td></tr>");
+	echo("<tr><td><a href=javascript:Novo()><img src='Imagens/Novo.gif' border=0></a></td><td width=200><strong><a>Cachorro</a></strong></td><td width=200><strong><a>QualificaÃ§Ã£o.</a></strong></td><td colspan=2></td></tr>");
 
 	while ($row = mysql_fetch_array($sql_result))
 	{echo("<tr><td></td><td>&nbsp;$row[NoCachorro]</td><td>&nbsp;$row[NoQualificacaoCao]</td><td></td><td><a href=javascript:Excluir($row[IdProva],$row[IDCachorro])><img src='Imagens/Excluir.gif' border=0></a></td></tr>");}
