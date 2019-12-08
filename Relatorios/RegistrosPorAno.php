@@ -63,7 +63,7 @@
 
 	echo("<center><br><span class=Titulo>Registros por UF em $Ano</span><br><br></center>");
 	echo("<table border=0 align=center>");
-	echo("<tr class=Titulo><td align=Center Width=80>UF</td><td align=Center>Nº de Registros</td><td align=Center>Percentual</td></tr>");
+	echo("<tr class=Titulo><td align=Center Width=80>UF</td><td align=Center>NÂº de Registros</td><td align=Center>Percentual</td></tr>");
 	for($i=1; $i<$c; $i++)
 	{
 		$Percentual = ($Valor[$i] / $Soma) * 100;

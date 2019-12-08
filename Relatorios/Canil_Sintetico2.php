@@ -3,8 +3,8 @@ include ('../Funcoes/Relatorios/class.ezpdf.php');
 
 
 /*
-$link = mysql_connect("localhost","root","")	or die("N„o foi possÌvel conectar: " . mysql_error());
-mysql_select_db("sbcpa") or die("N„o foi possÌvel selecionar o banco.");
+$link = mysql_connect("localhost","root","")	or die("N√£o foi poss√≠vel conectar: " . mysql_error());
+mysql_select_db("sbcpa") or die("N√£o foi poss√≠vel selecionar o banco.");
 
 $query = "Select * From TBCachorro Group By SgUF;";
 $result = mysql_query($query) or die("Erro: " . mysql_error());
@@ -19,16 +19,16 @@ while ($row = mysql_fetch_array($result))
 }
 */
 
-	$DataImpressao = 'BrasÌlia-DF, 10 de Setembro de 2004';
+	$DataImpressao = 'Bras√≠lia-DF, 10 de Setembro de 2004';
 	$RegistroNacional = 'Registro Nacional: ' . "SBCPA 1234";
-	$Nome = 'Nome: ' . "GIZE DO BAR√O DE ARARIBE";
-	$Sexo = 'Sexo: ' . "F MEA";
+	$Nome = 'Nome: ' . "GIZE DO BAR√ÉO DE ARARIBE";
+	$Sexo = 'Sexo: ' . "F√äMEA";
 	$DataNascimento = 'DataNascimento: ' . "25/04/1996";
 	$Cor = 'Cor: ' . "CAPA PRETA";
 	$Tatuagem = 'Tatuagem: ' . "UPE 0496";
 
 	$Criador = 'Criador: ' . "PILATOS FERREIRA DA SILVA";
-	$Endereco = 'EndereÁo: ' . "AV. BELMIRO CORREIA N∫ 412";
+	$Endereco = 'Endere√ßo: ' . "AV. BELMIRO CORREIA N¬∫ 412";
 	$Cidade = 'Cidade: ' . "CAMARAGIBE";
 	$Estado = 'Estado: ' . "PERNAMBUCO";
 	$Ninhada = 'Ninhada: ' . "094";
@@ -41,7 +41,7 @@ while ($row = mysql_fetch_array($result))
 	$LarguraPais = 65;
 	$ColunaPais = 18;
 	$NomePai = strtoupper("Odin de Isla Bonita");
-	$SumulaPai = "Macho, medianamente forte. Boa cabeza. Muito boa pigmentaÁ„o. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posiÁ„o de garupa, algo curta. Boas angulaÁıes dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e espÌrito de luta pronunciados. N„o larga sob comando.";
+	$SumulaPai = "Macho, medianamente forte. Boa cabeza. Muito boa pigmenta√ß√£o. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posi√ß√£o de garupa, algo curta. Boas angula√ß√µes dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e esp√≠rito de luta pronunciados. N√£o larga sob comando.";
 	$JuizPai = "Celso Roberto Machado Pinto";
 	$IrmaosPai = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 	//$SumulaPai = strtoupper($SumulaPai);
@@ -49,7 +49,7 @@ while ($row = mysql_fetch_array($result))
 	$LarguraAvo1 = 78;
 	$ColunaAvo1 = 275;
 	$NomeAvo1 = strtoupper("Odin de Isla Bonita");
-	$SumulaAvo1 = "Macho, medianamente forte. Boa cabeza. Muito boa pigmentaÁ„o. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posiÁ„o de garupa, algo curta. Boas angulaÁıes dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e espÌrito de luta pronunciados. N„o larga sob comando.";
+	$SumulaAvo1 = "Macho, medianamente forte. Boa cabeza. Muito boa pigmenta√ß√£o. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posi√ß√£o de garupa, algo curta. Boas angula√ß√µes dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e esp√≠rito de luta pronunciados. N√£o larga sob comando.";
 	$JuizAvo1 = "Celso Roberto Machado Pinto";
 	$IrmaosAvo1 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
@@ -61,43 +61,43 @@ $pdf =& new Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
 
 /*
-//-------------- LADO ESQUERDO DA PRIMEIRA P¡GINA -------------------------------------
+//-------------- LADO ESQUERDO DA PRIMEIRA P√ÅGINA -------------------------------------
 $pdf -> rectangle(25,645,560,180);
-$pdf -> addText(230,810,12,'TRANSFER NCIAS','full');
+$pdf -> addText(230,810,12,'TRANSFER√äNCIAS','full');
 $pdf -> addText(270,780,12,'PARA','full');
 $pdf -> addText(440,780,12,'ASSINATURAS','full');
-$pdf -> addText(30,763,12,'1™ - Em __/__/____','full');
+$pdf -> addText(30,763,12,'1¬™ - Em __/__/____','full');
 $pdf -> line(180,760,380,760);
 $pdf -> line(390,760,550,760);
-$pdf -> addText(30,743,12,'2™ - Em  __/__/____','full');
+$pdf -> addText(30,743,12,'2¬™ - Em  __/__/____','full');
 $pdf -> line(180,740,380,740);
 $pdf -> line(390,740,550,740);
-$pdf -> addText(30,723,12,'3™ - Em  __/__/____','full');
+$pdf -> addText(30,723,12,'3¬™ - Em  __/__/____','full');
 $pdf -> line(180,720,380,720);
 $pdf -> line(390,720,550,720);
-$pdf -> addText(30,703,12,'4™ - Em  __/__/____','full');
+$pdf -> addText(30,703,12,'4¬™ - Em  __/__/____','full');
 $pdf -> line(180,700,380,700);
 $pdf -> line(390,700,550,700);
-$pdf -> addText(30,683,12,'5™ - Em  __/__/____','full');
+$pdf -> addText(30,683,12,'5¬™ - Em  __/__/____','full');
 $pdf -> line(180,680,380,680);
 $pdf -> line(390,680,550,680);
-$pdf -> addText(30,663,12,'6™ - Em  __/__/____','full');
+$pdf -> addText(30,663,12,'6¬™ - Em  __/__/____','full');
 $pdf -> line(180,660,380,660);
 $pdf -> line(390,660,550,660);
 
 
 $pdf -> rectangle(25,15,560,620);
-$pdf -> addText(199,620,12,'TÕTULOS - PROVAS - ANOTA«’ES','full');
+$pdf -> addText(199,620,12,'T√çTULOS - PROVAS - ANOTA√á√ïES','full');
 $pdf -> addText(234,605,10,'(Uso Exclusivo da SBCPA)','full');
 $pdf -> addText(234,295,10,'(Uso Exclusivo das Filiadas)','full');
 $pdf -> line(25,310,585,310);
 
 
-//-------------- LADO DIREITO DA PRIMEIRA P¡GINA -------------------------------------
+//-------------- LADO DIREITO DA PRIMEIRA P√ÅGINA -------------------------------------
 $pdf -> rectangle(620,15,560,810);
 
-$pdf -> addText(760,800,20,'SOCIEDADE BRASILEIRA C√ES','full');
-$pdf -> addText(805,777,20,'PASTORES ALEM√ES','full');
+$pdf -> addText(760,800,20,'SOCIEDADE BRASILEIRA C√ÉES','full');
+$pdf -> addText(805,777,20,'PASTORES ALEM√ÉES','full');
 $pdf -> addText(870,756,20,'SBCPA','full');
 $pdf -> addText(790,740,12,'CERTIFICADO DE REGISTRO DE ORIGEM','full');
 $pdf -> addText(878,725,12,'(PEDIGREE)','full');
@@ -137,21 +137,21 @@ $pdf -> addText(920,325,10,$Ninhada,'full');
 $pdf -> line(954,323,1160,323);
 
 
-$pdf -> addText(750,300,10,'Consang¸inidade','full');
+$pdf -> addText(750,300,10,'Consang√ºinidade','full');
 $pdf -> line(650,280,910,280);
 $pdf -> line(650,265,910,265);
 $pdf -> line(650,250,910,250);
 $pdf -> line(650,235,910,235);
 $pdf -> line(650,220,910,220);
-$pdf -> addText(1020,300,10,'Irm„os','full');
+$pdf -> addText(1020,300,10,'Irm√£os','full');
 $pdf -> line(920,280,1160,280);
 $pdf -> line(920,265,1160,265);
 $pdf -> line(920,250,1160,250);
 $pdf -> line(920,235,1160,235);
 $pdf -> line(920,220,1160,220);
 
-$pdf -> addText(740,180,12,'Certificamos que os dados aqui constantes est„o conforme os registros','full');
-$pdf -> addText(740,160,12,'do livro de origem da Sociedade Brasileira C„es Pastores Alem„es','full');
+$pdf -> addText(740,180,12,'Certificamos que os dados aqui constantes est√£o conforme os registros','full');
+$pdf -> addText(740,160,12,'do livro de origem da Sociedade Brasileira C√£es Pastores Alem√£es','full');
 
 $pdf -> addText(830,120,12,$DataImpressao,'full');
 
@@ -160,7 +160,7 @@ $pdf -> addText(710,50,12,$Presidente,'full');
 $pdf -> addText(750,38,10,'PRESIDENTE','full');
 $pdf -> line(920,60,1160,60);
 $pdf -> addText(975,50,12,$Diretor,'full');
-$pdf -> addText(950,38,10,'DIRETOR DE REGISTRO GENEAL”GICO','full');
+$pdf -> addText(950,38,10,'DIRETOR DE REGISTRO GENEAL√ìGICO','full');
 
 $pdf -> ezNewPage();*/
 
@@ -202,13 +202,13 @@ $pdf -> rectangle(1048,250,137,150);
 $pdf -> rectangle(1048,40,137,200);
 
 $pdf -> addText(100,820,14,'I Grau - PAIS','full');
-$pdf -> addText(400,820,14,'II Grau - AV”S','full');
-$pdf -> addText(650,820,14,'III Grau - BISAV”S','full');
-$pdf -> addText(860,820,14,'IV Grau - TRISAV”S','full');
-$pdf -> addText(435,13,18,'PASTOR ALEM√O - AMIZADE E PROTE«√O','full');
+$pdf -> addText(400,820,14,'II Grau - AV√ìS','full');
+$pdf -> addText(650,820,14,'III Grau - BISAV√ìS','full');
+$pdf -> addText(860,820,14,'IV Grau - TRISAV√ìS','full');
+$pdf -> addText(435,13,18,'PASTOR ALEM√ÉO - AMIZADE E PROTE√á√ÉO','full');
 
-$pdf -> addText(1075,798,12,'CONVEN«’ES','full');
-$pdf -> addText(1090,547,12,'SELE«√O','full');
+$pdf -> addText(1075,798,12,'CONVEN√á√ïES','full');
+$pdf -> addText(1090,547,12,'SELE√á√ÉO','full');
 $pdf -> addText(1100,387,12,'DNA','full');
 $pdf -> addText(1049,228,11,'CONTROLE DE DISPLASIA','full');
 
@@ -220,11 +220,11 @@ $pdf -> addText(1050,745,8,'PLL - Pelagem Longa','full');
 $pdf -> addText(1050,735,8,'"A" - Isento de Displasia','full');
 $pdf -> addText(1050,725,8,'+ - Selecionado','full');
 $pdf -> addText(1050,715,8,'CL - Classe','full');
-$pdf -> addText(1050,705,8,'CTA - C„o de Trabalho NÌvel A','full');
-$pdf -> addText(1050,695,8,'CT1 - C„o de Trabalho NÌvel 1 (SCH I)','full');
-$pdf -> addText(1050,685,8,'CT2 - C„o de Trabalho NÌvel 2 (SCH II)','full');
-$pdf -> addText(1050,675,8,'CT3 - C„o de Trabalho NÌvel 3 (SCH III)','full');
-$pdf -> addText(1050,665,8,'CF - C„o de Faro (FH)','full');
+$pdf -> addText(1050,705,8,'CTA - C√£o de Trabalho N√≠vel A','full');
+$pdf -> addText(1050,695,8,'CT1 - C√£o de Trabalho N√≠vel 1 (SCH I)','full');
+$pdf -> addText(1050,685,8,'CT2 - C√£o de Trabalho N√≠vel 2 (SCH II)','full');
+$pdf -> addText(1050,675,8,'CT3 - C√£o de Trabalho N√≠vel 3 (SCH III)','full');
+$pdf -> addText(1050,665,8,'CF - C√£o de Faro (FH)','full');
 $pdf -> addText(1050,655,8,'VA - Super Excelente','full');
 $pdf -> addText(1050,645,8,'V - Excelente','full');
 $pdf -> addText(1050,635,8,'SG - Muito Bom','full');
@@ -242,7 +242,7 @@ $Valores = split("]",$TexoRet);
 $PosLinha = 800;
 $pdf -> addText($ColunaPais,$PosLinha,8,"$NomePai",'full');
 $PosLinha = $PosLinha - 20;
-$pdf -> addText($ColunaPais,$PosLinha,8,"S⁄MULA:",'full');
+$pdf -> addText($ColunaPais,$PosLinha,8,"S√öMULA:",'full');
 $Frase = "";
 for ($i=1; $i<=$Tam; $i++)
 {
@@ -253,7 +253,7 @@ for ($i=1; $i<=$Tam; $i++)
 $PosLinha = $PosLinha - 20;
 $pdf -> addText($ColunaPais,$PosLinha,8,"JUIZ: $JuizPai",'full');
 $PosLinha = $PosLinha - 20;
-$pdf -> addText($ColunaPais,$PosLinha,8,"IRM√OS:",'full');
+$pdf -> addText($ColunaPais,$PosLinha,8,"IRM√ÉOS:",'full');
 $Tam = strlen($IrmaosPai)/$LarguraPais;
 $Tam++;
 $LarguraPais = $LarguraPais + 5;
@@ -275,7 +275,7 @@ $Valores = split("]",$TexoRet);
 $PosLinha = 800;
 $pdf -> addText($ColunaAvo1,$PosLinha,8,"$NomeAvo1",'full');
 $PosLinha = $PosLinha - 20;
-$pdf -> addText($ColunaAvo1,$PosLinha,8,"S⁄MULA:",'full');
+$pdf -> addText($ColunaAvo1,$PosLinha,8,"S√öMULA:",'full');
 $Frase = "";
 for ($i=1; $i<=$Tam; $i++)
 {
@@ -286,7 +286,7 @@ for ($i=1; $i<=$Tam; $i++)
 $PosLinha = $PosLinha - 20;
 $pdf -> addText($ColunaAvo1,$PosLinha,8,"JUIZ: $JuizAvo1",'full');
 $PosLinha = $PosLinha - 20;
-$pdf -> addText($ColunaAvo1,$PosLinha,8,"IRM√OS:",'full');
+$pdf -> addText($ColunaAvo1,$PosLinha,8,"IRM√ÉOS:",'full');
 $Tam = strlen($IrmaosAvo1)/$LarguraAvo1;
 $Tam++;
 $LarguraAvo1 = $LarguraAvo1 + 5;

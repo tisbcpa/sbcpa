@@ -2,9 +2,9 @@
 include ('../Funcoes/Relatorios/class.ezpdf.php');
 $pdf =& new Cezpdf();
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Helvetica.afm');
-$link = mysql_connect("localhost","root","")	or die("Não foi possível conectar: " . mysql_error());
+$link = mysql_connect("localhost","root","")	or die("NÃ£o foi possÃ­vel conectar: " . mysql_error());
 
-mysql_select_db("sbcpa") or die("Não foi possível selecionar o banco.");
+mysql_select_db("sbcpa") or die("NÃ£o foi possÃ­vel selecionar o banco.");
 $query = "select IdCanil, NoCanil, NoCidade, SgUF from TBCanil Order By SgUF limit 800";
 $result = mysql_query($query) or die("Erro: " . mysql_error());
 
@@ -40,10 +40,10 @@ $pdf -> addJpegFromFile('../Imagens/Logo.jpg',25,720,100,100);
 //$pdf->setEncryption('','2039087',array('print'));
 
 $pdf -> ezSetY(790);
-$pdf -> ezText('                                       SBCPA - Sociedade Brasileira de Cães Pastores Alemães');
+$pdf -> ezText('                                       SBCPA - Sociedade Brasileira de CÃ£es Pastores AlemÃ£es');
 //$pdf -> ezText($textopdf);
 
 $pdf -> ezSetY(700);
-$pdf -> ezTable($data,4,'Relação de Canis');
+$pdf -> ezTable($data,4,'RelaÃ§Ã£o de Canis');
 $pdf -> ezStream();
 ?>

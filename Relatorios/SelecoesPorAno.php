@@ -1,4 +1,4 @@
-<Title>Seleções Por Ano</Title>
+<Title>SeleÃ§Ãµes Por Ano</Title>
 <Style>
 	Span.Titulo{font-family: verdana; font-size: 13; font-weight: bold}
 	Tr.Titulo{font-family: verdana; color: black; font-size: 13; font-weight: bold; background-color: #CCCCCC}
@@ -47,7 +47,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Selecione a Seleção:</td>
+			<td>Selecione a SeleÃ§Ã£o:</td>
 			<td>
 			<?
 			echo("<select name=IdSelecao onChange=document.Formulario.submit()>");
@@ -71,7 +71,7 @@
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 
-	echo("<center><br><span class=Titulo>Seleções em $Ano</span><br><br></center>");
+	echo("<center><br><span class=Titulo>SeleÃ§Ãµes em $Ano</span><br><br></center>");
 	echo("<table border=0 align=center>");
 	echo("<tr class=Titulo><td align=Center Width=80>Registro Nacional</td><td align=Center Width=380>Nome do Cachorro</td></tr>");
 	$Soma = 0;

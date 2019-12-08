@@ -43,7 +43,7 @@ function RetornarMesExtenso($num)
 	{
 		case 1: return "Janeiro"; break;
 		case 2:	return "Fevereiro";	break;
-		case 3:	return "Março";	break;
+		case 3:	return "MarÃ§o";	break;
 		case 4:	return "Abril";	break;
 		case 5:	return "Maio";	break;
 		case 6:	return "Junho";	break;
@@ -345,7 +345,7 @@ function FormatarTextoMaiusculo($Texto)
 $Valores = split(";",RetornarTodasInformacoesCao($IdCachorro));
 $Sexo = $Valores[2];
 $Sexo = str_replace("M","MACHO",$Sexo);
-$Sexo = str_replace("F","FÊMEA",$Sexo);
+$Sexo = str_replace("F","FÃŠMEA",$Sexo);
 $DtNascimento = $Valores[4];
 if ($DtNascimento != "")
 {
@@ -353,7 +353,7 @@ if ($DtNascimento != "")
 	$DtNascimento = "$dia/$mes/$ano";
 }
 
-//$RegistroNacional = 'Nº SBCPA: ' . str_replace("SBCPA","",strtoupper($Valores[1]));
+//$RegistroNacional = 'NÂº SBCPA: ' . str_replace("SBCPA","",strtoupper($Valores[1]));
 $RegistroNacional = '                  ' . str_replace("SBCPA","",strtoupper($Valores[1]));
 //$Nome = 'Nome:  ' . strtoupper($Valores[0]);
 
@@ -374,10 +374,10 @@ $Microchip = '                  ' . $Valores[13];
 
 //$Criador = 'Criador:  ' . strtoupper($Valores[6]);
 $Criador = '             ' . strtoupper($Valores[6]);
-//$Endereco = 'Endereço:  '. $Valores[7];
+//$Endereco = 'EndereÃ§o:  '. $Valores[7];
 $Endereco = '                '. strtoupper($Valores[7]);
-//$Cidade = 'Cidade: ' . str_replace("'","´",strtoupper($Valores[8]));
-$Cidade = '             ' . str_replace("NÃO INFORMADO","",strtoupper($Valores[8]));
+//$Cidade = 'Cidade: ' . str_replace("'","Â´",strtoupper($Valores[8]));
+$Cidade = '             ' . str_replace("NÃƒO INFORMADO","",strtoupper($Valores[8]));
 //$Estado = 'Estado:  ' . strtoupper($Valores[9]);
 $Estado = '             ' . str_replace("ESTRANGEIRO","",strtoupper($Valores[9]));
 //$Ninhada = 'Ninhada: ' . $Valores[10];
@@ -389,10 +389,10 @@ else
 
 //$Data = 'Data de Registro: '; // . '12/08/2004';
 $Data = '';
-$NuCBKC = 'N° CBKC: ' . $Valores[11];
+$NuCBKC = 'NÂ° CBKC: ' . $Valores[11];
 
 $Presidente = RetornarTitularCargo(3);//RetornarTitularCargo("PRESIDENTE");
-$Diretor = RetornarTitularCargo(2);//RetornarTitularCargo("DIRETOR DE REGISTRO GENEALÓGICO");
+$Diretor = RetornarTitularCargo(2);//RetornarTitularCargo("DIRETOR DE REGISTRO GENEALÃ“GICO");
 $TaxaConsaguinidade = RetornarTaxaConsaguinidade($IdCachorro);
 $TaxaConsaguinidade = str_replace("$",",",$TaxaConsaguinidade);
 $TaxaConsaguinidade = str_replace(", ",",",$TaxaConsaguinidade);
@@ -435,37 +435,37 @@ list($NoMae,$SBCPAMae,$IdAvoMMae,$IdAvoFMae) = split(",",RetornarDadosCao($IdMae
 echo("<strong>Cachorro:</strong> $NoCachorro,$SBCPACachorro,$IdPai,$IdMae <br><br>");
 
 echo("&nbsp;&nbsp;<strong>Pai:</strong> $NoPai,$SBCPAPai,$IdAvoMPai,$IdAvoFPai<br>");
-	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>Avô Paterno:</strong> $NoAvoMPai,$SBCPAAvoMPai,$IdBisAvoM1Pai,$IdBisAvoF1Pai<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvô Paterno:</strong> $NoBisAvoM1Pai,$SBCPABisAvoM1Pai,$IdTriAvoM1Pai,$IdTriAvoF1Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Paterno:</strong> $NoTriAvoM1Pai,$SBCPATriAvoM1Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Paterno:</strong> $NoTriAvoF1Pai,$SBCPATriAvoF1Pai<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvó Paterna:</strong> $NoBisAvoF1Pai,$SBCPABisAvoF1Pai,$IdTriAvoM2Pai,$IdTriAvoF2Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Paterno:</strong> $NoTriAvoM2Pai,$SBCPATriAvoM2Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Paterno:</strong> $NoTriAvoF2Pai,$SBCPATriAvoF2Pai<br>");
-	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>Avó Paterna:</strong> $NoAvoFPai,$SBCPAAvoFPai,$IdBisAvoM2Pai,$IdBisAvoF2Pai<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvô Paterno:</strong> $NoBisAvoM2Pai,$SBCPABisAvoM2Pai,$IdTriAvoM3Pai,$IdTriAvoF3Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Paterno:</strong> $NoTriAvoM3Pai,$SBCPATriAvoM3Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Paterno:</strong> $NoTriAvoF3Pai,$SBCPATriAvoF3Pai<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvó Paterna:</strong> $NoBisAvoF2Pai,$SBCPABisAvoF2Pai,$IdTriAvoM4Pai,$IdTriAvoF4Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Paterno:</strong> $NoTriAvoM4Pai,$SBCPATriAvoM4Pai<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Paterno:</strong> $NoTriAvoF4Pai,$SBCPATriAvoF4Pai<br>");
+	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>AvÃ´ Paterno:</strong> $NoAvoMPai,$SBCPAAvoMPai,$IdBisAvoM1Pai,$IdBisAvoF1Pai<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ´ Paterno:</strong> $NoBisAvoM1Pai,$SBCPABisAvoM1Pai,$IdTriAvoM1Pai,$IdTriAvoF1Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Paterno:</strong> $NoTriAvoM1Pai,$SBCPATriAvoM1Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Paterno:</strong> $NoTriAvoF1Pai,$SBCPATriAvoF1Pai<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ³ Paterna:</strong> $NoBisAvoF1Pai,$SBCPABisAvoF1Pai,$IdTriAvoM2Pai,$IdTriAvoF2Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Paterno:</strong> $NoTriAvoM2Pai,$SBCPATriAvoM2Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Paterno:</strong> $NoTriAvoF2Pai,$SBCPATriAvoF2Pai<br>");
+	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>AvÃ³ Paterna:</strong> $NoAvoFPai,$SBCPAAvoFPai,$IdBisAvoM2Pai,$IdBisAvoF2Pai<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ´ Paterno:</strong> $NoBisAvoM2Pai,$SBCPABisAvoM2Pai,$IdTriAvoM3Pai,$IdTriAvoF3Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Paterno:</strong> $NoTriAvoM3Pai,$SBCPATriAvoM3Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Paterno:</strong> $NoTriAvoF3Pai,$SBCPATriAvoF3Pai<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ³ Paterna:</strong> $NoBisAvoF2Pai,$SBCPABisAvoF2Pai,$IdTriAvoM4Pai,$IdTriAvoF4Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Paterno:</strong> $NoTriAvoM4Pai,$SBCPATriAvoM4Pai<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Paterno:</strong> $NoTriAvoF4Pai,$SBCPATriAvoF4Pai<br>");
 
 echo("<br>");
 
 echo("&nbsp;&nbsp;<strong>Mae:</strong> $NoMae,$SBCPAMae,$IdAvoMMae,$IdAvoFMae <br>");
-	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>Avô Materno:</strong> $NoAvoMMae,$SBCPAAvoMMae,$IdBisAvoM1Mae,$IdBisAvoF1Mae<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvô Materno:</strong> $NoBisAvoM1Mae,$SBCPABisAvoM1Mae,$IdTriAvoM1Mae,$IdTriAvoF1Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Materno:</strong> $NoTriAvoM1Mae,$SBCPATriAvoM1Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Materna:</strong> $NoTriAvoF1Mae,$SBCPATriAvoF1Mae<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvó Materna:</strong> $NoBisAvoF1Mae,$SBCPABisAvoF1Mae,$IdTriAvoM2Mae,$IdTriAvoF2Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Materno:</strong> $NoTriAvoM2Mae,$SBCPATriAvoM2Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Materna:</strong> $NoTriAvoF2Mae,$SBCPATriAvoF2Mae<br>");
-	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>Avó Materna:</strong> $NoAvoFMae,$SBCPAAvoFMae,$IdBisAvoM2Mae,$IdBisAvoF2Mae<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvô Materno:</strong> $NoBisAvoM2Mae,$SBCPABisAvoM2Mae,$IdTriAvoM3Mae,$IdTriAvoF3Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Materno:</strong> $NoTriAvoM3Mae,$SBCPATriAvoM3Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Materna:</strong> $NoTriAvoF3Mae,$SBCPATriAvoF3Mae<br>");
-		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvó Materna:</strong> $NoBisAvoF2Mae,$SBCPABisAvoF2Mae,$IdTriAvoM4Mae,$IdTriAvoF4Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Materno:</strong> $NoTriAvoM4Mae,$SBCPATriAvoM4Mae<br>");
-			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Materna:</strong> $NoTriAvoF4Mae,$SBCPATriAvoF4Mae<br>");
+	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>AvÃ´ Materno:</strong> $NoAvoMMae,$SBCPAAvoMMae,$IdBisAvoM1Mae,$IdBisAvoF1Mae<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ´ Materno:</strong> $NoBisAvoM1Mae,$SBCPABisAvoM1Mae,$IdTriAvoM1Mae,$IdTriAvoF1Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Materno:</strong> $NoTriAvoM1Mae,$SBCPATriAvoM1Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Materna:</strong> $NoTriAvoF1Mae,$SBCPATriAvoF1Mae<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ³ Materna:</strong> $NoBisAvoF1Mae,$SBCPABisAvoF1Mae,$IdTriAvoM2Mae,$IdTriAvoF2Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Materno:</strong> $NoTriAvoM2Mae,$SBCPATriAvoM2Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Materna:</strong> $NoTriAvoF2Mae,$SBCPATriAvoF2Mae<br>");
+	echo("&nbsp;&nbsp;&nbsp;&nbsp;<strong>AvÃ³ Materna:</strong> $NoAvoFMae,$SBCPAAvoFMae,$IdBisAvoM2Mae,$IdBisAvoF2Mae<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ´ Materno:</strong> $NoBisAvoM2Mae,$SBCPABisAvoM2Mae,$IdTriAvoM3Mae,$IdTriAvoF3Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Materno:</strong> $NoTriAvoM3Mae,$SBCPATriAvoM3Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Materna:</strong> $NoTriAvoF3Mae,$SBCPATriAvoF3Mae<br>");
+		echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>BisAvÃ³ Materna:</strong> $NoBisAvoF2Mae,$SBCPABisAvoF2Mae,$IdTriAvoM4Mae,$IdTriAvoF4Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ´ Materno:</strong> $NoTriAvoM4Mae,$SBCPATriAvoM4Mae<br>");
+			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvÃ³ Materna:</strong> $NoTriAvoF4Mae,$SBCPATriAvoF4Mae<br>");
 */
 ?>
