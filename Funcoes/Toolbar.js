@@ -154,7 +154,7 @@ function setICPMenuColor(MenuIDStr, bgColor, fontColor, mouseoverColor)
 	}
 
 	var	id = "AM_" + "ICP_" + MenuIDStr;
-	var thisMenu = document.all(id);
+	var thisMenu = document.getElementById(id);
 	if (thisMenu != null)
 	{
 		CurICPMenu = "ICP_" + MenuIDStr;
@@ -170,7 +170,7 @@ function setICPMenuColor(MenuIDStr, bgColor, fontColor, mouseoverColor)
 
 		// Change subMenu color
 		id = "ICP_" + MenuIDStr;
-		thisMenu = document.all(id);
+		thisMenu = document.getElementById(id);
 		if (thisMenu != null)
 		{
 			if (bgColor != "")
@@ -389,7 +389,7 @@ function mouseMenu(id, MenuIDStr)
 
 function doMenu(MenuIDStr) 
 {
-	var thisMenu = document.all(MenuIDStr);
+	var thisMenu = document.getElementById(MenuIDStr);
 	if (ToolbarMenu == null || thisMenu == null || thisMenu == ToolbarMenu) 
 	{
 		window.event.cancelBubble = true;
@@ -480,9 +480,9 @@ function keepMenu()
 function hideElement(elmID)
 {
 	// Hide any element that overlaps with the dropdown menu
-	for (i = 0; i < document.all.tags(elmID).length; i++)
+	for (i = 0; i < document.body.getElementsByTagName(elmID).length; i++)
 	{
-		obj = document.all.tags(elmID)[i];
+		obj = document.body.getElementsByTagName(elmID)[i];
 		if (! obj || ! obj.offsetParent)
 			continue;
 
@@ -517,7 +517,7 @@ function showElement(elmID)
 	// Display any element that was hiddend
 	for (i = 0; i < document.body.getElementsByTagName(elmID).length; i++)
 	{
-		obj = document.all.tags(elmID)[i];
+		obj = document.body.getElementsByTagName(elmID)[i];
 		if (! obj || ! obj.offsetParent)
 			continue;
 		obj.style.visibility = "";
