@@ -60,7 +60,7 @@ if (ToolBar_Supported)
 		"<DIV ID='idMSCBanner'   STYLE='border:0px solid red;position:absolute;top:0;left:10;height:40;width:112;vertical-align:top;overflow:hidden;' ALIGN=RIGHT><!--BEG_MSC_BANNER--><!--END_MSC_BANNER--></DIV>" +
 		"</DIV>" +
 		"<DIV ID='idRow3'        STYLE='border:0x solid red;position:absolute;height:10;left:0;width:100%'>" +
-		"<DIV ID='idICPMenuPane' CLASS='ICPMenuPane' STYLE='border:0px solid red;position:absolute;top:-15;left:10;width:710;height:0;background-color:black;' NOWRAP><!--ICP_MENU_TITLES--></DIV>" + 
+		"<DIV ID='idICPMenuPane' CLASS='ICPMenuPane' STYLE='border:0px solid red;position:absolute;top:-10;left:10;width:910;height:0;background-color:black;' NOWRAP><!--ICP_MENU_TITLES--></DIV>" + 
 		"</DIV>" +
 		"</DIV>" +
 		"<SCRIPT TYPE='text/javascript'>" + 
