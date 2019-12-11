@@ -291,9 +291,9 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtRaioX);
 		$dateRaioX = "$ano-$mes-$dia";
 		if(validateDate($dateRaioX)){
-			$DtRaioX = $dateRaioX;
+			$DtRaioX = ", DaRaioX = '$dateRaioX'";
 		}else{
-			$DtRaioX = "null";
+			$DtRaioX = null;
 		}
 	}
 	else
@@ -334,7 +334,7 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 	if ($IdQualificacaoCao == "") {$IdQualificacaoCao = 0;}
 	if ($InResistencia == "") {$InResistencia = 0;}
 	
-	$sql = "UpDate TBCachorro Set NoCachorro = '$NoCachorro', TPSexo = '$TPSexo', IdCor = $IdCor, DaNascimento = '$DtNascimento', IdCachorroPai = $NoPai, IdCachorroMae = $NoMae, IdProprietario = $IDProprietario,  IdCanil = $IDCanil, IdNinhada = $NoNinhada, NuRegistroNacional = '$NuRegistroNacional', NoTatuagem = '$NoTatuagem', NuRegistroInternacional = '$NuRegistroInternacional', NuCBKC = '$NuCBKC', NuRegistroRegional = '$NuRegistroRegional', SgUFRegistro = '$SgUFRegistro', IdRaioX = $IdRaioX, DaRaioX = '$DtRaioX', IdAdestramento = $IdAdestramento, DaProvaAdestramento = '$DtProvaAdestramento', IdSelecao = $IdSelecao, DaSelecao = '$DtSelecao', IdQualificacaoCao = $IdQualificacaoCao, InResistencia = '$InResistencia', DaProvaResistencia = '$DtResistencia', DsObservacao = '$DsObservacao', NrMicrochip = '$NrMicrochip', DsAdestramento = '$DsAdestramento', IdRaioX1 = '$IdRaioX1', IdRaioX2 = '$IdRaioX2', IdRaioX3 = '$IdRaioX3', IdRaioX4 = '$IdRaioX4' Where IdCachorro = $Id";	
+	$sql = "UpDate TBCachorro Set NoCachorro = '$NoCachorro', TPSexo = '$TPSexo', IdCor = $IdCor, DaNascimento = '$DtNascimento', IdCachorroPai = $NoPai, IdCachorroMae = $NoMae, IdProprietario = $IDProprietario,  IdCanil = $IDCanil, IdNinhada = $NoNinhada, NuRegistroNacional = '$NuRegistroNacional', NoTatuagem = '$NoTatuagem', NuRegistroInternacional = '$NuRegistroInternacional', NuCBKC = '$NuCBKC', NuRegistroRegional = '$NuRegistroRegional', SgUFRegistro = '$SgUFRegistro', IdRaioX = $IdRaioX".$DtRaioX.", IdAdestramento = $IdAdestramento, DaProvaAdestramento = '$DtProvaAdestramento', IdSelecao = $IdSelecao, DaSelecao = '$DtSelecao', IdQualificacaoCao = $IdQualificacaoCao, InResistencia = '$InResistencia', DaProvaResistencia = '$DtResistencia', DsObservacao = '$DsObservacao', NrMicrochip = '$NrMicrochip', DsAdestramento = '$DsAdestramento', IdRaioX1 = '$IdRaioX1', IdRaioX2 = '$IdRaioX2', IdRaioX3 = '$IdRaioX3', IdRaioX4 = '$IdRaioX4' Where IdCachorro = $Id";	
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . $sql . "<br><br>" . mysql_error() . "</p>");
 
 	$TpAcaoLog = "A";
