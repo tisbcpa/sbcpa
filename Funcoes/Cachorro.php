@@ -391,7 +391,6 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 		$IdCor = 0;
 	}
 
-	$columnNascimento = null;
 	if ($DtNascimento != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtNascimento);
 		$dateNasc = "$ano-$mes-$dia";
@@ -403,14 +402,11 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			echo("<p class='MsgErro'>A Data ".$DtNascimento." é inválida! Campo Data de Nascimento.</p>");
 			exit;
 		}	
-	}
-	else
-	{
+	}else{
 		$columnNascimento = null;
 		$DtNascimento = null;
 	}
-	
-	$columnRaioX = null;
+
 	if ($DtRaioX != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtRaioX);
 		$dateRaioX = "$ano-$mes-$dia";
@@ -422,14 +418,11 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			echo("<p class='MsgErro'>A Data ".$DtRaioX." é inválida! Campo Data da RaioX.</p>");
 			exit;
 		}
-	}
-	else
-	{
+	}else{
 		$columnRaioX = null;
 		$DtRaioX = null;
 	}
-	
-	$columnProvaAdestramento = null;
+
 	if ($DtProvaAdestramento != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtProvaAdestramento);
 		$dateProvaAdestramento = "$ano-$mes-$dia";
@@ -441,14 +434,11 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			echo("<p class='MsgErro'>A Data ".$DtProvaAdestramento." é inválida! Campo Prova Adestramento!</p>");
 			exit;
 		}
-	}
-	else
-	{
+	}else{
 		$columnProvaAdestramento = null;
 		$DtProvaAdestramento = null;
 	}
-	
-	$columnSelecao = null;
+
 	if ($DtSelecao != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtSelecao);	
 		$dateSelecao = "$ano-$mes-$dia";
@@ -460,14 +450,11 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			echo("<p class='MsgErro'>A Data ".$DtSelecao." é inválida! Campo Data Seleção!</p>");
 			exit;
 		}
-	}
-	else
-	{
+	}else{
 		$columnSelecao = null;
 		$DtSelecao = null;
 	}
-	
-	$columnResistencia = null;
+
 	if ($DtResistencia != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtResistencia);
 		$dateResistencia = "$ano-$mes-$dia";
@@ -479,9 +466,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			echo("<p class='MsgErro'>A Data ".$DtResistencia." é inválida! Campo Data Prova Resistência!</p>");
 			exit;
 		}
-	}
-	else
-	{
+	}else{
 		$columnResistencia = null;
 		$DtResistencia = null;
 	}
