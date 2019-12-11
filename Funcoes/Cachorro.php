@@ -349,6 +349,10 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 	if ($NoMae == "") {$NoMae = 0;} 
 	if ($NoNinhada == "") {$NoNinhada = 0;}
 	if ($IdRaioX == "") {$IdRaioX = 0;}
+	if ($IdRaioX1 == "") {$IdRaioX1 = 0;}
+	if ($IdRaioX2 == "") {$IdRaioX2 = 0;}
+	if ($IdRaioX3 == "") {$IdRaioX3 = 0;}
+	if ($IdRaioX4 == "") {$IdRaioX4 = 0;}
 	if ($IdAdestramento == "") {$IdAdestramento = 0;}
 	if ($IDProprietario == "") {$IDProprietario = 0;}
 	
