@@ -404,7 +404,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 		}	
 	}else{
 		$columnNascimento = ", DaNascimento";
-		$DtNascimento = 'NULL';
+		$DtNascimento = ", 'NULL'";
 	}
 
 	if ($DtRaioX != ""){
