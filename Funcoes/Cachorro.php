@@ -477,6 +477,10 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 	if ($IDProprietario == "") {$IDProprietario = 0;}
 	if ($IDCanil == "") {$IDCanil = 0;}
 	if ($IdRaioX == "") {$IdRaioX = 0;}
+	if ($IdRaioX1 == "") {$IdRaioX1 = 0;}
+	if ($IdRaioX2 == "") {$IdRaioX2 = 0;}
+	if ($IdRaioX3 == "") {$IdRaioX3 = 0;}
+	if ($IdRaioX4 == "") {$IdRaioX4 = 0;}
 	if ($IdAdestramento == "") {$IdAdestramento = 0;}
 	//if ($IdAdestramentoAlemanha == "") {$IdAdestramentoAlemanha = 0;}
 	if ($IdSelecao == "") {$IdSelecao = 0;}
@@ -507,7 +511,6 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
 	mysql_close($Conn);
-	exit;
 }
 
 
