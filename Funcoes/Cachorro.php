@@ -398,10 +398,10 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 		if(validateDate($dateNasc)){
 			$columnNascimento = ", DaNascimento";
-			$DtNascimento = $dateNasc;
+			$DtNascimento = ", '$dateNasc'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtNascimento." é inválida! Campo Data de Nascimento.</p>");
-			//exit;
+			exit;
 		}	
 	}
 	else
@@ -417,10 +417,10 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 		if(validateDate($dateRaioX)){
 			$columnRaioX = ", DaRaioX";
-			$DtRaioX = $dateRaioX;
+			$DtRaioX = ", '$dateRaioX'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtRaioX." é inválida! Campo Data da RaioX.</p>");
-			//exit;
+			exit;
 		}
 	}
 	else
@@ -436,10 +436,10 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 		if(validateDate($dateProvaAdestramento)){
 			$columnProvaAdestramento = ", DaProvaAdestramento";
-			$DtProvaAdestramento = $dateProvaAdestramento;
+			$DtProvaAdestramento = ", '$dateProvaAdestramento'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtProvaAdestramento." é inválida! Campo Prova Adestramento!</p>");
-			//exit;
+			exit;
 		}
 	}
 	else
@@ -455,10 +455,10 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 		if(validateDate($dateSelecao)){
 			$columnSelecao = ", DaSelecao";
-			$DtSelecao = $dateSelecao;
+			$DtSelecao = ", '$dateSelecao'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtSelecao." é inválida! Campo Data Seleção!</p>");
-			//exit;
+			exit;
 		}
 	}
 	else
@@ -474,15 +474,15 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 		if(validateDate($dateResistencia)){
 			$columnResistencia = ", DaProvaResistencia";
-			$DtResistencia = $dateResistencia;
+			$DtResistencia = ", '$dateResistencia'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtResistencia." é inválida! Campo Data Prova Resistência!</p>");
-			//exit;
+			exit;
 		}
 	}
 	else
 	{
-		$columnSelecao = null;
+		$columnResistencia = null;
 		$DtResistencia = null;
 	}
 
@@ -499,7 +499,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 	if ($InResistencia == "") {$InResistencia = 0;}
 		
 
-	$sql = "Insert Into TBCachorro (NoCachorro, TPSexo, IdCor".$columnNascimento.", IdCachorroPai, IdCachorroMae, IdProprietario, IdCanil, IdNinhada, NuRegistroNacional, NoTatuagem, NuRegistroInternacional, NuCBKC, NuRegistroRegional, SgUFRegistro, IdRaioX".$columnRaioX.", IdAdestramento".$columnProvaAdestramento.", IdSelecao".$columnSelecao.", IdQualificacaoCao, InResistencia".$columnResistencia", DsObservacao,DaRegistro,NrMicrochip,DsAdestramento,IdRaioX1,IdRaioX2,IdRaioX3,IdRaioX4) values ('$NoCachorro', '$TPSexo', $IdCor, '$DtNascimento', $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, '$NuRegistroNacional', '$NoTatuagem', '$NuRegistroInternacional', '$NuCBKC', '$NuRegistroRegional', '$SgUFRegistro', $IdRaioX, '$DtRaioX', $IdAdestramento, '$DtProvaAdestramento', $IdSelecao, '$DtSelecao', $IdQualificacaoCao, '$InResistencia', '$DtResistencia', '$DsObservacao', '$Hoje','$NrMicrochip','$DsAdestramento','$IdRaioX1','$IdRaioX2','$IdRaioX3','$IdRaioX4')";
+	$sql = "Insert Into TBCachorro (NoCachorro, TPSexo, IdCor".$columnNascimento.", IdCachorroPai, IdCachorroMae, IdProprietario, IdCanil, IdNinhada, NuRegistroNacional, NoTatuagem, NuRegistroInternacional, NuCBKC, NuRegistroRegional, SgUFRegistro, IdRaioX".$columnRaioX.", IdAdestramento".$columnProvaAdestramento.", IdSelecao".$columnSelecao.", IdQualificacaoCao, InResistencia".$columnResistencia", DsObservacao,DaRegistro,NrMicrochip,DsAdestramento,IdRaioX1,IdRaioX2,IdRaioX3,IdRaioX4) values ('$NoCachorro', '$TPSexo', $IdCor".$DtNascimento.", $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, '$NuRegistroNacional', '$NoTatuagem', '$NuRegistroInternacional', '$NuCBKC', '$NuRegistroRegional', '$SgUFRegistro', $IdRaioX".$DtRaioX.", $IdAdestramento".$DtProvaAdestramento.", $IdSelecao".$DtSelecao.", $IdQualificacaoCao, '$InResistencia'".$DtResistencia.", '$DsObservacao', '$Hoje','$NrMicrochip','$DsAdestramento','$IdRaioX1','$IdRaioX2','$IdRaioX3','$IdRaioX4')";
 	$sql_result = mysql_query($sql,$Conn);
 
 	if (mysql_error() != "")
@@ -512,7 +512,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 	$TpAcaoLog = "I";
 	$IdRegistroLog = mysql_insert_id();
-	$sql = "Insert Into TBCachorro (IdCachorro, NoCachorro, TPSexo, IdCor, DaNascimento, IdCachorroPai, IdCachorroMae, IdProprietario, IdCanil, IdNinhada, NuRegistroNacional, NoTatuagem, NuRegistroInternacional, NuCBKC, NuRegistroRegional, SgUFRegistro, IdRaioX, DaRaioX, IdAdestramento, DaProvaAdestramento, IdSelecao, DaSelecao, IdQualificacaoCao, InResistencia, DaProvaResistencia, DsObservacao,DaRegistro,NrMicrochip) values ($IdRegistroLog, '$NoCachorro', '$TPSexo', $IdCor, '$DtNascimento', $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, '$NuRegistroNacional', '$NoTatuagem', '$NuRegistroInternacional', '$NuCBKC', '$NuRegistroRegional', '$SgUFRegistro', $IdRaioX, '$DtRaioX', $IdAdestramento, '$DtProvaAdestramento', $IdSelecao, '$DtSelecao', $IdQualificacaoCao, '$InResistencia', '$DtResistencia', '$DsObservacao', '$Hoje','$NrMicrochip')";	
+	$sql = "Insert Into TBCachorro (IdCachorro, NoCachorro, TPSexo, IdCor, DaNascimento, IdCachorroPai, IdCachorroMae, IdProprietario, IdCanil, IdNinhada, NuRegistroNacional, NoTatuagem, NuRegistroInternacional, NuCBKC, NuRegistroRegional, SgUFRegistro, IdRaioX".$columnRaioX.", IdAdestramento".$columnProvaAdestramento.", IdSelecao".$columnSelecao.", IdQualificacaoCao, InResistencia".$columnResistencia", DsObservacao,DaRegistro,NrMicrochip) values ($IdRegistroLog, '$NoCachorro', '$TPSexo', $IdCor".$DtNascimento.", $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, '$NuRegistroNacional', '$NoTatuagem', '$NuRegistroInternacional', '$NuCBKC', '$NuRegistroRegional', '$SgUFRegistro', $IdRaioX".$DtRaioX.", $IdAdestramento".$DtProvaAdestramento.", $IdSelecao".$DtSelecao.", $IdQualificacaoCao, '$InResistencia'".$DtResistencia.", '$DsObservacao', '$Hoje','$NrMicrochip')";	
 	$NoTabelaLog = "TBCachorro";
 	//$DsAcaoLog = "$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, $NuRegistroNacional, $NoTatuagem, $NuRegistroInternacional, $NuCBKC, $NuRegistroRegional, $SgUFRegistro, $IdRaioX, $DtRaioX, $IdAdestramento, $DtProvaAdestramento, $IdSelecao, $DtSelecao, $IdQualificacaoCao, $InResistencia, $DtResistencia, $DsObservacao";
 	$DsAcaoLog = str_replace("'","|",$sql);
