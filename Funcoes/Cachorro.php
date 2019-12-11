@@ -343,7 +343,7 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 		}
 	}
 	else
-	{$DtResistencia = "0000-00-00";}
+	{$DtResistencia = null;}
 
 	if ($NoPai == "") {$NoPai = 0;}
 	if ($NoMae == "") {$NoMae = 0;} 
