@@ -289,10 +289,15 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 	
 	if ($DtRaioX != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtRaioX);
-		$DtRaioX = "$ano-$mes-$dia";
+		$dateRaioX = "$ano-$mes-$dia";
+		if(validateDate($dateRaioX)){
+			$DtRaioX = $dateRaioX;
+		}else{
+			$DtRaioX = "";
+		}
 	}
 	else
-	{$DtRaioX = "0000-00-00";}
+	{$DtRaioX = "";}
 	
 	if ($DtProvaAdestramento != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtProvaAdestramento);
