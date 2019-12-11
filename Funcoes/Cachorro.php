@@ -401,9 +401,8 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			$DtNascimento = $dateNasc;
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtNascimento." é inválida! Campo Data de Nascimento.</p>");
-			exit;
-		}
-		
+			//exit;
+		}	
 	}
 	else
 	{
@@ -421,7 +420,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			$DtRaioX = $dateRaioX;
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtRaioX." é inválida! Campo Data da RaioX.</p>");
-			exit;
+			//exit;
 		}
 	}
 	else
@@ -440,7 +439,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			$DtProvaAdestramento = $dateProvaAdestramento;
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtProvaAdestramento." é inválida! Campo Prova Adestramento!</p>");
-			exit;
+			//exit;
 		}
 	}
 	else
@@ -459,7 +458,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			$DtSelecao = $dateSelecao;
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtSelecao." é inválida! Campo Data Seleção!</p>");
-			exit;
+			//exit;
 		}
 	}
 	else
@@ -478,7 +477,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 			$DtResistencia = $dateResistencia;
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtResistencia." é inválida! Campo Data Prova Resistência!</p>");
-			exit;
+			//exit;
 		}
 	}
 	else
