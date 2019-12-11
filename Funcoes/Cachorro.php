@@ -293,7 +293,7 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 		if(validateDate($dateRaioX)){
 			$DtRaioX = $dateRaioX;
 		}else{
-			$DtRaioX = "";
+			$DtRaioX = "null";
 		}
 	}
 	else
