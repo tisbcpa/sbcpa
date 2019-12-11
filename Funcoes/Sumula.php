@@ -63,18 +63,31 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 
 	if ($DTSumula != ""){
 		list($dia, $mes, $ano) = split('[/]',$DTSumula);
-		$DTSumulaF = "$ano-$mes-$dia";
+		$dateSumula = "$ano-$mes-$dia";
+		if(validateDate($dateSumula)){
+			$DTSumulaF = $dateSumula;
+		}else{
+			echo("<p class='MsgErro'>A Data ".$DTSumula." é inválida! Campo Data Súmula.</p>");
+			exit;
+		}
 	}
 	else{
-		$DTSumulaF = "0000-00-00";
+		$DTSumulaF = "NULL";
 	}
 
 	if ($DTSumulaReselecao != ""){
 		list($dia, $mes, $ano) = split('[/]',$DTSumulaReselecao);
-		$DTSumulaReselecaoF = "$ano-$mes-$dia";
+		 $dateSumulaReselecao = "$ano-$mes-$dia";
+
+		if(validateDate($dateSumula)){
+			$DTSumulaReselecaoF = $dateSumulaReselecao;
+		}else{
+			echo("<p class='MsgErro'>A Data ".$DTSumulaReselecao." é inválida! Campo Data Súmula Re-seleção.</p>");
+			exit;
+		}
 	}
 	else{
-		$DTSumulaReselecaoF = "0000-00-00";
+		$DTSumulaReselecaoF = "NULL";
 	}
 
 	if ($IdJuiz == "")
