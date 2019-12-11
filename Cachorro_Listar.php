@@ -15,7 +15,6 @@ function Excluir(Id)
 </script>
 
 <?
-error_reporting(E_ALL);
 
 	if (isset($_GET["Tipo"]))
 	{$Tipo = $_GET["Tipo"];}
