@@ -283,6 +283,129 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 		}else{
 			$DtNascimento = null;
 			echo("<p class='MsgErro'>A Data ".$DtNascimento." é inválida! Campo Data de Nascimento.</p>");
+			exit;
+		}
+		
+	}
+	else
+	{$DtNascimento = null;}
+	
+	if ($DtRaioX != ""){
+		list ($dia, $mes, $ano) = split ('[/.-]', $DtRaioX);
+		$dateRaioX = "$ano-$mes-$dia";
+
+		if(validateDate($dateRaioX)){
+			$DtRaioX = ", DaRaioX = '$dateRaioX'";
+		}else{
+			$DtRaioX = null;
+			echo("<p class='MsgErro'>A Data ".$DtRaioX." é inválida! Campo Data da RaioX.</p>");
+			exit;
+		}
+	}
+	else
+	{$DtRaioX = null;}
+	
+	if ($DtProvaAdestramento != ""){
+		list ($dia, $mes, $ano) = split ('[/.-]', $DtProvaAdestramento);
+		$dateProvaAdestramento = "$ano-$mes-$dia";
+
+		if(validateDate($dateProvaAdestramento)){
+			$DtProvaAdestramento = ", DaProvaAdestramento = '$dateProvaAdestramento'";
+		}else{
+			$DtProvaAdestramento = null;
+			echo("<p class='MsgErro'>A Data ".$DtProvaAdestramento." é inválida! Campo Prova Adestramento!</p>");
+			exit;
+		}
+	}
+	else
+	{$DtProvaAdestramento = null;}
+		
+	if ($DtSelecao != ""){
+		list ($dia, $mes, $ano) = split ('[/.-]', $DtSelecao);	
+		$dateSelecao = "$ano-$mes-$dia";
+
+		if(validateDate($dateSelecao)){
+			$DtSelecao = ", DaSelecao = '$dateSelecao'";
+		}else{
+			$DtSelecao = null;
+			echo("<p class='MsgErro'>A Data ".$DtSelecao." é inválida! Campo Data Seleção!</p>");
+			exit;
+		}
+	}
+	else
+	{$DtSelecao = null;}
+	
+	if ($DtResistencia != ""){
+		list ($dia, $mes, $ano) = split ('[/.-]', $DtResistencia);
+		$dateResistencia = "$ano-$mes-$dia";
+
+		if(validateDate($dateResistencia)){
+			$DtResistencia = ", DaProvaResistencia = '$dateResistencia'";
+		}else{
+			$DtResistencia = null;
+			echo("<p class='MsgErro'>A Data ".$DtResistencia." é inválida! Campo Data Prova Resistência!</p>");
+			exit;
+		}
+	}
+	else
+	{$DtResistencia = null;}
+
+	if ($NoPai == "") {$NoPai = 0;}
+	if ($NoMae == "") {$NoMae = 0;} 
+	if ($NoNinhada == "") {$NoNinhada = 0;}
+	if ($IdRaioX == "") {$IdRaioX = 0;}
+	if ($IdAdestramento == "") {$IdAdestramento = 0;}
+	if ($IDProprietario == "") {$IDProprietario = 0;}
+	
+	//if ($IdAdestramentoAlemanha == "") {$IdAdestramentoAlemanha = 0;}
+	if ($IdCor== "") {$IdCor = 0;}
+	if ($IDCanil== "") {$IDCanil = 0;}
+	if ($IdSelecao == "") {$IdSelecao = 0;}
+	if ($IdQualificacaoCao == "") {$IdQualificacaoCao = 0;}
+	if ($InResistencia == "") {$InResistencia = 0;}
+	
+	$sql = "UpDate TBCachorro Set NoCachorro = '$NoCachorro', TPSexo = '$TPSexo', IdCor = $IdCor".$DtNascimento.", IdCachorroPai = $NoPai, IdCachorroMae = $NoMae, IdProprietario = $IDProprietario,  IdCanil = $IDCanil, IdNinhada = $NoNinhada, NuRegistroNacional = '$NuRegistroNacional', NoTatuagem = '$NoTatuagem', NuRegistroInternacional = '$NuRegistroInternacional', NuCBKC = '$NuCBKC', NuRegistroRegional = '$NuRegistroRegional', SgUFRegistro = '$SgUFRegistro', IdRaioX = $IdRaioX".$DtRaioX.", IdAdestramento = $IdAdestramento".$DtProvaAdestramento.", IdSelecao = $IdSelecao".$DtSelecao.", IdQualificacaoCao = $IdQualificacaoCao, InResistencia = '$InResistencia'".$DtResistencia.", DsObservacao = '$DsObservacao', NrMicrochip = '$NrMicrochip', DsAdestramento = '$DsAdestramento', IdRaioX1 = '$IdRaioX1', IdRaioX2 = '$IdRaioX2', IdRaioX3 = '$IdRaioX3', IdRaioX4 = '$IdRaioX4' Where IdCachorro = $Id";	
+	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . $sql . "<br><br>" . mysql_error() . "</p>");
+
+	$TpAcaoLog = "A";
+	$IdRegistroLog = $Id;
+	$NoTabelaLog = "TBCachorro";
+	//$DsAcaoLog = "$Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, $NuRegistroNacional, $NoTatuagem, $NuRegistroInternacional, $NuCBKC, $NuRegistroRegional, $SgUFRegistro, $IdRaioX, $DtRaioX, $IdAdestramento, $DtProvaAdestramento, $IdSelecao, $DtSelecao, $IdQualificacaoCao, $InResistencia, $DtResistencia, $DsObservacao";
+	$DsAcaoLog = str_replace("'","|",$sql);
+	$DsAcaoLog = str_replace('"','',$DsAcaoLog);
+	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
+	mysql_query($SqlAcaoLog,$Conn);
+
+	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
+	mysql_close($Conn);
+}
+
+
+
+
+function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, $NuRegistroNacional, $NoTatuagem, $NuRegistroInternacional, $NuCBKC, $NuRegistroRegional, $SgUFRegistro, $IdRaioX, $DtRaioX, $IdAdestramento, $DtProvaAdestramento, $IdSelecao, $DtSelecao, $IdQualificacaoCao, $InResistencia, $DtResistencia, $DsObservacao,$NrMicrochip,$DsAdestramento,$IdRaioX1,$IdRaioX2,$IdRaioX3,$IdRaioX4)
+{
+	require("Conexao.php");
+	$Hoje = date("y/m/d");
+
+	if ($TPSexo == ""){
+		$TPSexo = 0;
+	}
+
+	if ($IdCor == ""){
+		$IdCor = 0;
+	}
+
+
+	if ($DtNascimento != ""){
+		list ($dia, $mes, $ano) = split ('[/.-]', $DtNascimento);
+		$dateNasc = "$ano-$mes-$dia";
+
+		if(validateDate($dateNasc)){
+			$DtNascimento = ", DaNascimento = '$dateNasc'";
+		}else{
+			$DtNascimento = null;
+			echo("<p class='MsgErro'>A Data ".$DtNascimento." é inválida! Campo Data de Nascimento.</p>");
 		}
 		
 	}
@@ -344,88 +467,6 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 	}
 	else
 	{$DtResistencia = null;}
-
-	if ($NoPai == "") {$NoPai = 0;}
-	if ($NoMae == "") {$NoMae = 0;} 
-	if ($NoNinhada == "") {$NoNinhada = 0;}
-	if ($IdRaioX == "") {$IdRaioX = 0;}
-	if ($IdAdestramento == "") {$IdAdestramento = 0;}
-	if ($IDProprietario == "") {$IDProprietario = 0;}
-	
-	//if ($IdAdestramentoAlemanha == "") {$IdAdestramentoAlemanha = 0;}
-	if ($IdCor== "") {$IdCor = 0;}
-	if ($IDCanil== "") {$IDCanil = 0;}
-	if ($IdSelecao == "") {$IdSelecao = 0;}
-	if ($IdQualificacaoCao == "") {$IdQualificacaoCao = 0;}
-	if ($InResistencia == "") {$InResistencia = 0;}
-	
-	$sql = "UpDate TBCachorro Set NoCachorro = '$NoCachorro', TPSexo = '$TPSexo', IdCor = $IdCor".$DtNascimento.", IdCachorroPai = $NoPai, IdCachorroMae = $NoMae, IdProprietario = $IDProprietario,  IdCanil = $IDCanil, IdNinhada = $NoNinhada, NuRegistroNacional = '$NuRegistroNacional', NoTatuagem = '$NoTatuagem', NuRegistroInternacional = '$NuRegistroInternacional', NuCBKC = '$NuCBKC', NuRegistroRegional = '$NuRegistroRegional', SgUFRegistro = '$SgUFRegistro', IdRaioX = $IdRaioX".$DtRaioX.", IdAdestramento = $IdAdestramento".$DtProvaAdestramento.", IdSelecao = $IdSelecao".$DtSelecao.", IdQualificacaoCao = $IdQualificacaoCao, InResistencia = '$InResistencia'".$DtResistencia.", DsObservacao = '$DsObservacao', NrMicrochip = '$NrMicrochip', DsAdestramento = '$DsAdestramento', IdRaioX1 = '$IdRaioX1', IdRaioX2 = '$IdRaioX2', IdRaioX3 = '$IdRaioX3', IdRaioX4 = '$IdRaioX4' Where IdCachorro = $Id";	
-	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . $sql . "<br><br>" . mysql_error() . "</p>");
-
-	$TpAcaoLog = "A";
-	$IdRegistroLog = $Id;
-	$NoTabelaLog = "TBCachorro";
-	//$DsAcaoLog = "$Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, $NuRegistroNacional, $NoTatuagem, $NuRegistroInternacional, $NuCBKC, $NuRegistroRegional, $SgUFRegistro, $IdRaioX, $DtRaioX, $IdAdestramento, $DtProvaAdestramento, $IdSelecao, $DtSelecao, $IdQualificacaoCao, $InResistencia, $DtResistencia, $DsObservacao";
-	$DsAcaoLog = str_replace("'","|",$sql);
-	$DsAcaoLog = str_replace('"','',$DsAcaoLog);
-	$SqlAcaoLog = "Insert into TBAcao (TpAcao,IdUsuario,IdRegistro,NoTabela,DsAcao,HrAcao,DtAcao) values ('$TpAcaoLog',$Usuario,$IdRegistroLog,'$NoTabelaLog','$DsAcaoLog','$Hora','$Data')";
-	mysql_query($SqlAcaoLog,$Conn);
-
-	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
-	mysql_close($Conn);
-}
-
-
-
-
-function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, $NoMae, $IDProprietario, $IDCanil, $NoNinhada, $NuRegistroNacional, $NoTatuagem, $NuRegistroInternacional, $NuCBKC, $NuRegistroRegional, $SgUFRegistro, $IdRaioX, $DtRaioX, $IdAdestramento, $DtProvaAdestramento, $IdSelecao, $DtSelecao, $IdQualificacaoCao, $InResistencia, $DtResistencia, $DsObservacao,$NrMicrochip,$DsAdestramento,$IdRaioX1,$IdRaioX2,$IdRaioX3,$IdRaioX4)
-{
-	require("Conexao.php");
-	$Hoje = date("y/m/d");
-
-	if ($TPSexo == ""){
-		$TPSexo = 0;
-	}
-
-	if ($IdCor == ""){
-		$IdCor = 0;
-	}
-
-
-	if ($DtNascimento != ""){
-		list ($dia, $mes, $ano) = split ('[/.-]', $DtNascimento);
-		$DtNascimento = "$ano-$mes-$dia";
-	}
-	else
-	{$DtNascimento = "0000-00-00";}
-	
-	if ($DtRaioX != ""){
-		list ($dia, $mes, $ano) = split ('[/.-]', $DtRaioX);
-		$DtRaioX = "$ano-$mes-$dia";
-	}
-	else
-	{$DtRaioX = "0000-00-00";}
-		
-	if ($DtProvaAdestramento != ""){
-		list ($dia, $mes, $ano) = split ('[/.-]', $DtProvaAdestramento);
-		$DtProvaAdestramento = "$ano-$mes-$dia";
-	}
-	else
-	{$DtProvaAdestramento = "0000-00-00";}
-			
-	if ($DtSelecao != ""){
-		list ($dia, $mes, $ano) = split ('[/.-]', $DtSelecao);	
-		$DtSelecao = "$ano-$mes-$dia";
-	}
-	else
-	{$DtSelecao = "0000-00-00";}
-	
-	if ($DtResistencia != ""){
-		list ($dia, $mes, $ano) = split ('[/.-]', $DtResistencia);
-		$DtResistencia = "$ano-$mes-$dia";
-	}
-	else
-	{$DtResistencia = "0000-00-00";}
 
 	if ($NoPai == "") {$NoPai = 0;}
 	if ($NoMae == "") {$NoMae = 0;} 
