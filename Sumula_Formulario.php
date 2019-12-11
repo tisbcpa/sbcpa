@@ -22,7 +22,7 @@
 			}
 			else
 			{
-				$DTSumula = "";
+				$DTSumula = "NULL";
 			}
 
 			$NRAltura = $Valores[4];
@@ -41,7 +41,7 @@
 			}
 			else
 			{
-				$DTSumulaReselecao = "";
+				$DTSumulaReselecao = "NULL";
 			}
 						
 			$DSSumulaReselecao = $Valores[12];
@@ -71,14 +71,14 @@
 		$NoCachorro = "";
 		$IDSumula = "";
 		$IDJuiz = "";
-		$DTSumula = "";
+		$DTSumula = "NULL";
 		$NRAltura = "";
 		$NOPigmentacao = "";
 		$NOPelagem = "";
 		$InVencida = "0";
 		$DSSumula = "";
 		$IDJuizReselecao = "";
-		$DTSumulaReselecao = "";
+		$DTSumulaReselecao = "NULL";
 		$DSSumulaReselecao = "";
 	}
 ?>
