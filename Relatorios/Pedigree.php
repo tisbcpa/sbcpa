@@ -2,9 +2,9 @@
 include('../Funcoes/Relatorios/class.ezpdf.php');
 
 class UTF8_Cezpdf extends Cezpdf {
-    function ezText($text, $size=0, $options=array(), $test=0) {
+    function addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0){
         $text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
-        return parent::ezText($text, $size, $options, $test);
+        return parent::addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0);
     }
 }
 
