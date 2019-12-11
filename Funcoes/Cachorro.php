@@ -1,4 +1,6 @@
 <?
+require("Funcoes/Funcoes.php");
+
 function Limpar($nome)
 {
 	$nome = strtolower($nome);
@@ -274,10 +276,16 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 
 	if ($DtNascimento != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtNascimento);
-		$DtNascimento = "$ano-$mes-$dia";
+		$dateNasc = "$ano-$mes-$dia";
+		if(validateDate($dateNasc)){
+			$DtNascimento = $dateNasc;
+		}else{
+			$DtNascimento = "";
+		}
+		
 	}
 	else
-	{$DtNascimento = "0000-00-00";}
+	{$DtNascimento = "";}
 	
 	if ($DtRaioX != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtRaioX);
