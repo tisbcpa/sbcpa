@@ -475,7 +475,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 		if(validateDate($dateResistencia)){
 			$columnResistencia = ", DaProvaResistencia";
-			$DtResistencia =  = $dateResistencia;
+			$DtResistencia = $dateResistencia;
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DtResistencia." é inválida! Campo Data Prova Resistência!</p>");
 			exit;
