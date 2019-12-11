@@ -15,7 +15,7 @@
 			$IDCachorro = $Valores[1];
 			$IDJuiz = $Valores[2];
 		
-			if ($Valores[3] != "0000-00-00")
+			if ($Valores[3] != "0000-00-00" && $Valores[3] != "")
 			{
 				list($ano, $mes, $dia) = split('[-]',$Valores[3]);
 				$DTSumula = "$dia/$mes/$ano";
