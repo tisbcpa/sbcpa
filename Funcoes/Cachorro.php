@@ -507,6 +507,7 @@ function CadastrarCachorro($NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai, 
 
 	echo("<p class='MsgExito'>Ação Realizada com Êxito!</p>");
 	mysql_close($Conn);
+	exit;
 }
 
 
