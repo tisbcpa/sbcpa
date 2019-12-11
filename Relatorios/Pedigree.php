@@ -1,5 +1,13 @@
 <?php
 include('../Funcoes/Relatorios/class.ezpdf.php');
+
+class UTF8_Cezpdf extends Cezpdf {
+    function ezText($text, $size=0, $options=array(), $test=0) {
+        $text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
+        return parent::ezText($text, $size, $options, $test);
+    }
+}
+
 //$IdCachorro = 38658;
 
 $IdCachorro = $_GET["Id"];
@@ -153,7 +161,7 @@ else
 $ColunaConvencoes = 1045;
 $LinhaConvencoes = 1043;
 
-$pdf =& new Cezpdf('a3','landscape');
+$pdf =& new UTF8_Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
 
 
