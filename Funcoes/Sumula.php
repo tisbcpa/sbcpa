@@ -129,7 +129,7 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 		list($dia, $mes, $ano) = split('[/]',$DTSumula);
 		$dateSumula = "$ano-$mes-$dia";
 		if(validateDate($dateSumula)){
-			$DTSumulaF = $dateSumula;
+			$DTSumulaF = "'$dateSumula'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DTSumula." é inválida! Campo Data Súmula.</p>");
 			exit;
@@ -146,7 +146,7 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 		$dateSumulaReselecao = "$ano-$mes-$dia";
 
 		if(validateDate($dateSumula)){
-			$DTSumulaReselecaoF = $dateSumulaReselecao;
+			$DTSumulaReselecaoF = "'$dateSumulaReselecao'";
 		}else{
 			echo("<p class='MsgErro'>A Data ".$DTSumulaReselecao." é inválida! Campo Data Súmula Re-seleção.</p>");
 			exit;
@@ -165,12 +165,12 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 
 	$DSSumula = str_replace(";",",",$DSSumula);
 		
-	$sql = "Insert Into TBSumula (IDCachorro,IDJuiz,DTSumula,NRAltura,NOPigmentacao,NOPelagem,DSSumula,InVencida,IDJuizReselecao, DTSumulaReselecao, DSSumulaReselecao) values ($IdCachorro,$IdJuiz,'$DTSumulaF','$NRAltura','$NOPigmentacao','$NOPelagem','$DSSumula',$InVencida, $IDJuizReselecao, '$DTSumulaReselecaoF', '$DSSumulaReselecao')";
+	$sql = "Insert Into TBSumula (IDCachorro,IDJuiz,DTSumula,NRAltura,NOPigmentacao,NOPelagem,DSSumula,InVencida,IDJuizReselecao, DTSumulaReselecao, DSSumulaReselecao) values ($IdCachorro,$IdJuiz,$DTSumulaF,'$NRAltura','$NOPigmentacao','$NOPelagem','$DSSumula',$InVencida, $IDJuizReselecao, $DTSumulaReselecaoF, '$DSSumulaReselecao')";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Falha ao Salvar os dados da Súmula!<br> Erros: " . mysql_error() . "<br><br>Sql: ". $sql ."</p>");
 
 	$TpAcaoLog = "I";
 	$IdRegistroLog = mysql_insert_id();
-	$sql = "Insert Into TBSumula (IDSumula,IDCachorro,IDJuiz,DTSumula,NRAltura,NOPigmentacao,NOPelagem,DSSumula,InVencida) values ($IdRegistroLog,$IdCachorro,$IdJuiz,'$DTSumulaF','$NRAltura','$NOPigmentacao','$NOPelagem','$DSSumula',$InVencida)";
+	$sql = "Insert Into TBSumula (IDSumula,IDCachorro,IDJuiz,DTSumula,NRAltura,NOPigmentacao,NOPelagem,DSSumula,InVencida) values ($IdRegistroLog,$IdCachorro,$IdJuiz,$DTSumulaF,'$NRAltura','$NOPigmentacao','$NOPelagem','$DSSumula',$InVencida)";
 	$NoTabelaLog = "TBSumula";
 	//$DsAcaoLog = "$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,$NOPelagem,$DSSumula,$InVencida";
 	$DsAcaoLog = str_replace("'","|",$sql);
