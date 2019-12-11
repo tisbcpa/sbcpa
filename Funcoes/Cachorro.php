@@ -297,7 +297,7 @@ function AlterarCachorro($Id,$NoCachorro, $TPSexo, $IdCor, $DtNascimento, $NoPai
 		}
 	}
 	else
-	{$DtRaioX = "null";}
+	{$DtRaioX = null;}
 	
 	if ($DtProvaAdestramento != ""){
 		list ($dia, $mes, $ano) = split ('[/.-]', $DtProvaAdestramento);
