@@ -1,5 +1,5 @@
 <?
-require("Funcoes/Funcoes.php");
+require_once("Funcoes/Funcoes.php");
 
 function ListarSumulaRelacaoCompleta($Ordem,$Parametro,$Campo)
 {

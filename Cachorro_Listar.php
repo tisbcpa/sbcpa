@@ -1,5 +1,5 @@
 <? require("Estilo/Estilo.php");?>
-<? require("Funcoes/Cachorro.php");?>
+<? require_once("Funcoes/Cachorro.php");?>
 
 <script>
 function Editar(Id)
