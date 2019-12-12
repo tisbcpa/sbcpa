@@ -8,8 +8,8 @@ function CarregarXml(XmlId,pagina)
 function MontarTabela(XmlId,path)
 {
 	var IlhaJs = eval("document.getElementById('"+ XmlId +"')");
-	console.log(IlhaJs);
 	IlhaJs.setAttribute("SelectionLanguage", "XPath");
+	console.log(IlhaJs.documentElement.selectNodes(path));
 	var Tb = new Enumerator(IlhaJs.documentElement.selectNodes(path));
 	return Tb;
 }
