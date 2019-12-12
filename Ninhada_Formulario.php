@@ -119,12 +119,12 @@ function VerificarConsaguinidade(IdMae,IdPai)
 	TBRetorno = MontarTabela('IlhaXmlConsaguinidade',Path);
 	c = 0;
 
-	for (i=0;!TBRetorno.atEnd();TBRetorno.moveNext())
+	for (i=0;i < TBRetorno.length; i++)
 	{
-		jNome = LerAtributo(TBRetorno,"Nome");
-		jId = LerAtributo(TBRetorno,"Id");
-		jTipo = LerAtributo(TBRetorno,"Tipo");
-		jGrau = LerAtributo(TBRetorno,"Grau");				
+		jNome = LerAtributo(TBRetorno[i],"Nome");
+		jId = LerAtributo(TBRetorno[i],"Id");
+		jTipo = LerAtributo(TBRetorno[i],"Tipo");
+		jGrau = LerAtributo(TBRetorno[i],"Grau");				
 		//Msg.innerHTML = Msg.innerHTML +"**"+ jId +"-"+ jNome + '<br>';
 		
 		Path = "/ROOT/row[@Nome = '"+ jNome +"']";
