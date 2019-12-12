@@ -10,7 +10,7 @@ function MontarTabela(XmlId,path)
 	var IlhaJs = eval("document.getElementById('"+ XmlId +"')");
 	console.log(IlhaJs);
 	IlhaJs.setAttribute("SelectionLanguage", "XPath");
-	var Tb = new Enum(IlhaJs.documentElement.selectNodes(path))
+	var Tb = new Enumerator(IlhaJs.documentElement.selectNodes(path));
 	return Tb;
 }
 
@@ -22,7 +22,7 @@ function LerAtributo(TbXml,Campo)
 
 function CriarOption(ObjForm,id,valorId,valorNo)
 {
-	ObjForm.options[id] = new Option(valorNo,valorId)
+	ObjForm.options[id] = new Option(valorNo,valorId);
 }
 
 function ExcluirOption(ObjForm,OptionInicial)
