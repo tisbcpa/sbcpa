@@ -1,13 +1,13 @@
 function CarregarXml(XmlId,pagina)
 {
-	var IlhaJs = eval("document.all['"+ XmlId +"']")
+	var IlhaJs = eval("document.getElementById('"+ XmlId +"')")
 	IlhaJs.async = false;
 	IlhaJs.src = pagina;
 }
 
 function MontarTabela(XmlId,path)
 {
-	var IlhaJs = eval("document.all['"+ XmlId +"']");
+	var IlhaJs = eval("document.getElementById('"+ XmlId +"')");
 	IlhaJs.setProperty("SelectionLanguage", "XPath");
 	var Tb = new Enumerator(IlhaJs.documentElement.selectNodes(path))
 	return Tb;
