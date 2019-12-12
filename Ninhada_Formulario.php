@@ -321,7 +321,7 @@ function AcrescentarNovo()
 	var ver = parseInt(document.Formulario.elements.length) - 7;
 	vlr = parseInt(document.Formulario.elements.length) - 6;
 	console.log(document.Formulario.elements.length);
-	console.log(document.Formulario.elements[ver]);
+	console.log(document.Formulario.elements[ver].name);
 	//alert('SBCPA: ' + document.Formulario.elements[ver].name);	
 	//alert('Nome: ' + document.Formulario.elements[vlr].name);
 	
