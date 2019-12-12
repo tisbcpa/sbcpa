@@ -9,8 +9,8 @@ function MontarTabela(XmlId,path)
 {
 	var IlhaJs = eval("document.getElementById('"+ XmlId +"')");
 	IlhaJs.setAttribute("SelectionLanguage", "XPath");
-	console.log(IlhaJs);
-	console.log(path);
+	//console.log(IlhaJs);
+	//console.log(path);
 	//console.log(IlhaJs.documentElement.selectNodes(path));
 	//var Tb = new Enumerator(IlhaJs.documentElement.selectNodes(path));
 	var Tb = IlhaJs.getElementsByTagName('row');
