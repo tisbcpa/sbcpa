@@ -11,8 +11,9 @@ function MontarTabela(XmlId,path)
 	IlhaJs.setAttribute("SelectionLanguage", "XPath");
 	console.log(IlhaJs);
 	console.log(path);
-	console.log(IlhaJs.documentElement.selectNodes(path));
-	var Tb = new Enumerator(IlhaJs.documentElement.selectNodes(path));
+	//console.log(IlhaJs.documentElement.selectNodes(path));
+	//var Tb = new Enumerator(IlhaJs.documentElement.selectNodes(path));
+	var Tb = IlhaJs.getElementsByTagName('row');
 	return Tb;
 }
 
