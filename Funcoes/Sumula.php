@@ -1,4 +1,6 @@
 <?
+require("Funcoes/Funcoes.php");
+
 function ListarSumulaRelacaoCompleta($Ordem,$Parametro,$Campo)
 {
 	require("Conexao.php");
