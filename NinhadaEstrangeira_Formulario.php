@@ -271,7 +271,14 @@ function FilhotesCampo()
 	NovoNome = 'IdCor'+ Qtde.toString();
 	Form = Form.replace('IdCor',NovoNome);
 
-	FilhotesCampoSpan.innerHTML = FilhotesCampoSpan.innerHTML + Form;
+	var mydiv = document.getElementById("FilhotesCampoSpan");
+
+	var newcontent = document.createElement('div');
+    newcontent.innerHTML = Form;
+
+	mydiv.appendChild(newcontent.firstChild);
+
+	//FilhotesCampoSpan.innerHTML = FilhotesCampoSpan.innerHTML + Form;
 }
 
 
