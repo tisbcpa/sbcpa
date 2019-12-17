@@ -91,7 +91,7 @@ var ArrayVisto = new Array(31);
 
 function ImprimirPedigree(Id)
 {
-	window.open('Relatorios/Pedigree.php?Id='+Id,'Pedigree','width=780, height=520, left=5, top=20')
+	window.open('Relatorios/Pedigree3.php?Id='+Id,'Pedigree','width=780, height=520, left=5, top=20')
 }
 
 function VarrerArray(vl)
