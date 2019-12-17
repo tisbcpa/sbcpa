@@ -111,6 +111,7 @@ function VarrerArray(vl)
 	
 function VerificarConsaguinidade(IdMae,IdPai)
 {
+	console.log('VerificarConsaguinidade');
 	var Taxa = "";
 	var Pagina = 'DadosCaesXML.php?IdPai='+ IdPai +'&IdMae='+ IdMae;
 	//alert(Pagina);
@@ -159,6 +160,7 @@ function VerificarConsaguinidade(IdMae,IdPai)
 
 function PreencherConsaguinidade()
 {
+	console.log('PreencherConsaguinidade');
 	var IdMae = document.Formulario.IDMae.value;
 	var IdPai = document.Formulario.IDPai.value;
 
@@ -168,11 +170,13 @@ function PreencherConsaguinidade()
 
 function AbrirPopUp(obj)
 {
+	console.log('AbrirPopUp');
 	window.open('ConsultarPreenchimento_Corpo.php?Obj='+obj,'Pesquisar','width=500, height=260');
 }
 
 function Organizador(opc)
 {
+	console.log('Organizador');
 	if (opc == 1)
 	{
 		Formulario.Dados.style.display = '';
@@ -196,6 +200,7 @@ var Qtde = 1;
 
 function ValidarQtdeFilhotes()
 {
+	console.log('ValidarQtdeFilhotes');
 	var alerta = 'Informações Incorretas:\n';
 	var alerta2 = alerta;
 	var Qtde = parseInt(document.Formulario.elements.length);
@@ -226,6 +231,7 @@ function ValidarQtdeFilhotes()
 
 function ValidarCampos()
 {
+	console.log('ValidarCampos');
 	var ArrayCampos = new Array(8)
 	var ArrayMsg = new Array(8)
 	ArrayCampos[1] = document.Formulario.DaNascimento;
@@ -253,7 +259,7 @@ function ValidarCampos()
 function Validar()
 {
 	//PreencherConsaguinidade();
-
+	console.log('Validar');
 	if (ValidarCampos() && ValidarQtdeFilhotes())
 	{
 		AtivacaoTodosFilhotes(false);
@@ -267,6 +273,7 @@ function Validar()
 
 function FilhotesCampo()
 {
+	console.log('FilhotesCampo');
 	Form = "";
 	Form = Form + "<table border=0 class=SemBorda>";
 	Form = Form + "  <tr>";
@@ -293,10 +300,11 @@ function FilhotesCampo()
 
 function Novo(num)
 {
+	console.log('Novo');
 	if (num.value != '')
 	{
 		var RetornoVerficiacao = PesquisarRegistroSBCPA(num.value);
-		
+
 		if(RetornoVerficiacao == "")
 		{
 			AcrescentarNovo();
@@ -316,12 +324,11 @@ function Novo(num)
 
 
 function AcrescentarNovo()
-{	
+{
+	console.log('AcrescentarNovo');
 	var Novo = parseInt(document.Formulario.elements.length) - 1;
 	var ver = parseInt(document.Formulario.elements.length) - 7;
 	vlr = parseInt(document.Formulario.elements.length) - 6;
-	console.log(document.Formulario.elements.length);
-	console.log(document.Formulario.elements[ver].name);
 	//alert('SBCPA: ' + document.Formulario.elements[ver].name);	
 	//alert('Nome: ' + document.Formulario.elements[vlr].name);
 	
@@ -341,16 +348,19 @@ function AcrescentarNovo()
 
 function Foco()
 {
+	console.log('Foco');
 	document.Formulario.elements[vlr].focus();
 }
 
 function EscreverCombo(txt)
 {
+	console.log('EscreverCombo');
 	ListarCachorros.innerHTML = txt;
 }
 
 function PesquisarRegistroSBCPA(num)
 {
+	console.log('PesquisarRegistroSBCPA');
 	num = 'SBCPA ' + num;
 	CarregarXml('IlhaXml','Cachorro_PesquisarXML.php?Parametro='+num+'&Acao=1');
 	var TbNuSBCPA = MontarTabela('IlhaXml',"/ROOT/row");
@@ -373,6 +383,7 @@ var QtdeCaracteres = 0;
 
 function AtivacaoTodosFilhotes(valor)
 {
+	console.log('AtivacaoTodosFilhotes');
 	var t = 19;
 	var f = document.Formulario.elements.length;
 	for(var i=t; i<f; i++)
@@ -386,6 +397,7 @@ function AtivacaoTodosFilhotes(valor)
 
 function AtivacaoCampos(Id,valor)
 {
+	console.log('AtivacaoCampos');
 	var t = VarrerVetor(Id);
 	var f = parseInt(t) + 6;
 	for(var i=t; i<=f; i++)
@@ -399,6 +411,7 @@ function AtivacaoCampos(Id,valor)
 
 function RetirarFilhoteNaoCadastrado(Id)
 {
+	console.log('RetirarFilhoteNaoCadastrado');
 	var t = VarrerVetor(Id);
 	var f = parseInt(t) + 6;
 	for(var i=t; i<=f; i++)
@@ -410,6 +423,7 @@ function RetirarFilhoteNaoCadastrado(Id)
 
 function VarrerVetor(n)
 {
+	console.log('VarrerVetor');
 	for(i=1;i<=10;i++)
 	{
 		if (ObjMatriz[i])
@@ -423,6 +437,7 @@ function VarrerVetor(n)
 
 function EscolherCachorro(nome,valor)
 {
+	console.log('EscolherCachorro');
 	var n = nome.replace("NoCachorro","");
 	var elemento = VarrerVetor(n);	
 	elementoIni = parseInt(elemento);
@@ -431,6 +446,7 @@ function EscolherCachorro(nome,valor)
 
 function PesquisarCachorroId(Id,elementoInicial)
 {
+	console.log('PesquisarCachorroId');
 	var Pagina = 'Cachorro_PesquisarXML.php?Parametro='+Id+'&Acao=3';
 	CarregarXml('IlhaXmlCachorro',Pagina);
 	var TBRetorno = MontarTabela('IlhaXmlCachorro','/ROOT/row');
@@ -457,6 +473,7 @@ function PesquisarCachorroId(Id,elementoInicial)
 
 function RetirarFilhoteCadastrado(elemento)
 {
+	console.log('RetirarFilhoteCadastrado');
 	if (!confirm('Deseja realmente Retirar este Cachorro desta Ninhada?'))
 	{return false;}
 
@@ -498,6 +515,7 @@ function RetirarFilhoteCadastrado(elemento)
 
 function PesquisarCachorroNome(nome)
 {
+	console.log('PesquisarCachorroNome');
 	if (nome.value.length > 0)
 	{
 		if (Carregado != true)
@@ -565,6 +583,7 @@ function PesquisarCachorroNome(nome)
 
 function PosicionarSelect(nome)
 {
+	console.log('PosicionarSelect');
 	var Num = nome.name.replace("NoCachorro","");
 	var n = parseInt(Num);
 	n--;
@@ -581,10 +600,12 @@ function PosicionarSelect(nome)
 
 function AtribuirObj(NumFilhote,NumElemento)
 {
+	console.log('AtribuirObj');
 	ObjMatriz[NumFilhote] = NumFilhote +','+ NumElemento;
 }
 
 function PontoVirgulaConsaguinidade(){
+	console.log('PontoVirgulaConsaguinidade');
 	if (event.keyCode == 13){
 		document.Formulario.TxConsaguinidade.value = document.Formulario.TxConsaguinidade.value + ";";
 	}
