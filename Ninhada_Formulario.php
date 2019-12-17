@@ -301,7 +301,7 @@ function FilhotesCampo()
 
 	mydiv.appendChild(newcontent.firstChild);
 
-	//document.getElementById("FilhotesCampoSpan").appendChild(Form);
+	//FilhotesCampoSpan.innerHTML = FilhotesCampoSpan.innerHTML + Form;
 }
 
 
