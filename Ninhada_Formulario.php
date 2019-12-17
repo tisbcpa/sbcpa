@@ -295,7 +295,7 @@ function FilhotesCampo()
 	NovoNome = 'IdCor'+ Qtde.toString();
 	Form = Form.replace('IdCor',NovoNome);
 
-	FilhotesCampoSpan.innerHTML = FilhotesCampoSpan.innerHTML + Form;
+	FilhotesCampoSpan.append(Form);
 }
 
 
