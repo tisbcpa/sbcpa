@@ -274,7 +274,6 @@ function Validar()
 function FilhotesCampo()
 {
 	console.log('FilhotesCampo');
-	console.log(FilhotesCampoSpan.innerHTML);
 	Form = "";
 	Form = Form + "<table border=0 class=SemBorda>";
 	Form = Form + "  <tr>";
@@ -295,7 +294,14 @@ function FilhotesCampo()
 	NovoNome = 'IdCor'+ Qtde.toString();
 	Form = Form.replace('IdCor',NovoNome);
 
-	document.getElementById("FilhotesCampoSpan").appendChild(Form);
+	var mydiv = document.getElementById("FilhotesCampoSpan");
+
+	var newcontent = document.createElement('div');
+    newcontent.innerHTML = Form;
+
+	mydiv.appendChild(newcontent.firstChild);
+
+	//document.getElementById("FilhotesCampoSpan").appendChild(Form);
 }
 
 
