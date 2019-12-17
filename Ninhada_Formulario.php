@@ -274,6 +274,7 @@ function Validar()
 function FilhotesCampo()
 {
 	console.log('FilhotesCampo');
+	console.log(FilhotesCampoSpan.innerHTML);
 	Form = "";
 	Form = Form + "<table border=0 class=SemBorda>";
 	Form = Form + "  <tr>";
