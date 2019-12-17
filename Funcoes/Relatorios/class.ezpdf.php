@@ -26,7 +26,7 @@ var $ezPageCount=0;
 // ------------------------------------------------------------------------------
 
 function addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0){
-    $text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
+    $text = utf8_decode(mb_strtoupper($text)); // or use mb_convert_encoding(), according to your needs
     return parent::addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0);
 }
 

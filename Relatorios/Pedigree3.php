@@ -211,7 +211,7 @@ $pdf -> addText(938,$LinhaAgora,12,$NuCBKC,'full');
 //$pdf -> addText(961,421,10,'_______________','full');
 
 $LinhaAgora = 380 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,mb_strtoupper($Nome),'full');
+$pdf -> addText(700,$LinhaAgora,12,$Nome,'full');
 $LinhaAgora = 366 + $PosLinhaInicialPagina1;
 $pdf -> addText(700,$LinhaAgora,12,$Sexo,'full');
 $pdf -> addText(815,$LinhaAgora,12,$Cor,'full');
