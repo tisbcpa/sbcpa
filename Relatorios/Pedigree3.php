@@ -21,7 +21,7 @@ else
 }
 
 
-	$TamanhoLetraSumula = 8;
+	$TamanhoLetraSumula = 6;
 	$Irmaos = RetornarIrmaos($IdCachorro);
 	
 	//echo($Irmaos);
