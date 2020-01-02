@@ -74,7 +74,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 		}
 	}
 	else{
-		$DTSumulaF = "NULL";
+		$DTSumulaF = null;
 	}
 
 	if ($DTSumulaReselecao != ""){
@@ -89,7 +89,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 		}
 	}
 	else{
-		$DTSumulaReselecaoF = "NULL";
+		$DTSumulaReselecaoF = null;
 	}
 
 	if ($IdJuiz == "")
@@ -139,7 +139,7 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 	}
 	else
 	{
-		$DTSumulaF = "NULL";
+		$DTSumulaF = null;
 	}
 
 
@@ -155,7 +155,7 @@ function CadastrarSumula($IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentacao,
 		}
 	}
 	else{
-		$DTSumulaReselecaoF = "NULL";
+		$DTSumulaReselecaoF = null;
 	}
 	
 	
