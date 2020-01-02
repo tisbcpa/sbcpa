@@ -74,7 +74,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 		}
 	}
 	else{
-		$DTSumulaF = NULL;
+		$DTSumulaF = "NULL";
 	}
 
 	if ($DTSumulaReselecao != ""){
@@ -89,7 +89,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 		}
 	}
 	else{
-		$DTSumulaReselecaoF = NULL;
+		$DTSumulaReselecaoF = "NULL";
 	}
 
 	if ($IdJuiz == "")
@@ -102,7 +102,7 @@ function AlterarSumula($Id,$IdCachorro,$IdJuiz,$DTSumula,$NRAltura,$NOPigmentaca
 	$DSSumulaReselecao = str_replace(";",",",$DSSumulaReselecao);
 
 	// Alterar Dados do Adestrador
-	$sql = "UpDate TBSumula Set IDCachorro = $IdCachorro, IDJuiz = $IdJuiz, DTSumula = ".$DTSumulaF == NULL ? "NULL" : "'$DTSumulaF'".", NRAltura = '$NRAltura', NOPigmentacao = '$NOPigmentacao', NOPelagem = '$NOPelagem', DSSumula = '$DSSumula', InVencida = $InVencida, IDJuizReselecao=$IDJuizReselecao, DTSumulaReselecao=".$DTSumulaReselecaoF == NULL ? "NULL" : "'$DTSumulaReselecaoF'".", DSSumulaReselecao='$DSSumulaReselecao' Where IDSumula = $Id";
+	$sql = "UpDate TBSumula Set IDCachorro = $IdCachorro, IDJuiz = $IdJuiz, DTSumula = '$DTSumulaF', NRAltura = '$NRAltura', NOPigmentacao = '$NOPigmentacao', NOPelagem = '$NOPelagem', DSSumula = '$DSSumula', InVencida = $InVencida, IDJuizReselecao=$IDJuizReselecao, DTSumulaReselecao='$DTSumulaReselecaoF', DSSumulaReselecao='$DSSumulaReselecao' Where IDSumula = $Id";
 	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Falha ao Salvar os dados do Adestrador!<br> Erro: " . mysql_error() . "</p>");
 
 	$TpAcaoLog = "A";
