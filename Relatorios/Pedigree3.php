@@ -393,7 +393,7 @@ $pdf -> addText($ColunaConvencoes-5,575,8,'Branco - Pais Não selecionados','ful
 //--------------- Pai -------------------------------------
 //$Tam = strlen($SumulaPai)/$LarguraPais;
 //$Tam++;
-$TexoRet = QuebraLinhaTexto($SumulaPai,$LarguraPais);
+$TexoRet = QuebraLinhaTexto(utf8_encode($SumulaPai),$LarguraPais);
 $Tam = substr_count($TexoRet,"]");
 $Valores = split("]",$TexoRet);
 $PosLinha = 505 + $PosLinhaInicial;
@@ -429,7 +429,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 
 //--------------- Mae -------------------------------------
-$TexoRet = QuebraLinhaTexto($SumulaMae,$LarguraMaes);
+$TexoRet = QuebraLinhaTexto(utf8_encode($SumulaMae),$LarguraMaes);
 $Tam = substr_count($TexoRet,"]");
 $Valores = split("]",$TexoRet);
 $PosLinha = 115 + $PosLinhaInicial;
