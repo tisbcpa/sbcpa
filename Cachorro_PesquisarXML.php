@@ -3,9 +3,9 @@
 	$Acao =  $_GET["Acao"];
 	$Parametro = $_GET["Parametro"];
 
-	if ($Acao == "1"){echo(PesquisarNuSBCPAXML($Parametro));}
-	if ($Acao == "2"){echo(PesquisarNoCachorroXML($Parametro));}
-	if ($Acao == "3"){echo(PesquisarIdCachorroXML($Parametro));}
+	if ($Acao == "1"){echo(utf8_encode(PesquisarNuSBCPAXML($Parametro)));}
+	if ($Acao == "2"){echo(utf8_encode(PesquisarNoCachorroXML($Parametro)));}
+	if ($Acao == "3"){echo(utf8_encode(PesquisarIdCachorroXML($Parametro)));}
 	if ($Acao == "4")
 	{
 		$Id = $_GET["Id"];
