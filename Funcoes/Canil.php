@@ -112,7 +112,7 @@ function ListarTbCanilRelacaoCompleta($Ordem,$Parametro,$Campo,$Perfil)
 		{$sql = "select IdCanil, NoCanil, NoProprietarioCanil, NoCidade, SgUF from TBCanil Order By $Ordem LIMIT 50";}
 	}
 	
-	$sql_result = mysql_query($sql." collate utf8_general_ci",$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
+	$sql_result = mysql_query($sql,$Conn) or die("<p class='MsgErro'>Query invalida: " . mysql_error() . "</p>");
 	
 	echo("<table align=center border=1 cellpadding=2 cellspacing=0>");
 	echo("<tr><td width=200><strong><a href=?Tipo=NoCanil>Nome do Canil</a></strong></td><td><a href=?Tipo=NoProprietarioCanil><b>Proprietário</b></a></td><td width=200><strong><a href=?Tipo=NoCidade>Nome da Cidade</a></strong></td><td width=20><strong><a href=?Tipo=SgUF>UF</a></strong></td><td colspan=2></td></tr>");
