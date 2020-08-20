@@ -119,7 +119,7 @@ function ListarTbCanilRelacaoCompleta($Ordem,$Parametro,$Campo,$Perfil)
 
 	while ($row = mysql_fetch_array($sql_result))
 	{
-		echo("<tr><td>&nbsp;$row[NoCanil]</td><td>&nbsp;$row[NoProprietarioCanil]</td><td>&nbsp;$row[NoCidade]</td><td>&nbsp;$row[SgUF]</td>");
+		echo("<tr><td>&nbsp;".utf8_decode($row['NoCanil'])."</td><td>&nbsp;$row[NoProprietarioCanil]</td><td>&nbsp;$row[NoCidade]</td><td>&nbsp;$row[SgUF]</td>");
 
 		if ($Perfil == "Preenchimento")
 		{
