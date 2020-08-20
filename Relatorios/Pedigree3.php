@@ -525,7 +525,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo2,$PosLinha,8,"$JuizAvo2",'full');
-$PosLinha = $PosLinha - 20;
+$PosLinha = $PosLinha;
 //$pdf -> addText($ColunaAvo2,$PosLinha,8,"IRMÃOS:",'full');
 $LarguraAvo2 = $LarguraAvo2;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo2,$LarguraAvo2);
@@ -561,7 +561,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo3,$PosLinha,8,"$JuizAvo3",'full');
-$PosLinha = $PosLinha - 20;
+$PosLinha = $PosLinha;
 //$pdf -> addText($ColunaAvo3,$PosLinha,8,"IRMÃOS:",'full');
 $LarguraAvo3 = $LarguraAvo3;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo3,$LarguraAvo3);
@@ -598,7 +598,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo4,$PosLinha,8,"$JuizAvo4",'full');
-$PosLinha = $PosLinha - 20;
+$PosLinha = $PosLinha;
 //$pdf -> addText($ColunaAvo4,$PosLinha,8,"IRMÃOS:",'full');
 $LarguraAvo4 = $LarguraAvo4;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo4,$LarguraAvo4);
