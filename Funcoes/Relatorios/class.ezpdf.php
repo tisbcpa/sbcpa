@@ -25,10 +25,10 @@ var $ezPageCount=0;
 
 // ------------------------------------------------------------------------------
 
-//function addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0){
-//    $text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
-//    return parent::addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0);
-//}
+function addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0){
+    $text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
+    return parent::addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0);
+}
 
 function Cezpdf($paper='a4',$orientation='portrait'){
 	// Assuming that people don't want to specify the paper size using the absolute coordinates
