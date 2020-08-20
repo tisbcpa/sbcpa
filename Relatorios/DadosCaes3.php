@@ -302,7 +302,7 @@ if ($DtNascimento != "")
 
 $RegistroNacional = 'Nº SBCPA: ' . str_replace("SBCPA","",strtoupper($Valores[1]));
 //$RegistroNacional = '                  ' . str_replace("SBCPA","",strtoupper($Valores[1]));
-$Nome = 'Nome:  ' . strtoupper($Valores[0]);
+$Nome = 'Nome:  ' . mb_strtoupper($Valores[0]);
 //$RNome = str_replace("_"," ",$Valores[0]);
 //$Nome = '           ' . strtoupper($RNome);
 $Sexo = 'Sexo: ' . $Sexo;
