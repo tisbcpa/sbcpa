@@ -206,33 +206,33 @@ $PosLinhaInicialPagina1 = -9;
 $PosLinhaInicialPagina2 = 280;
 
 $LinhaAgora = 420 + $PosLinhaInicialPagina1;
-$pdf -> addText(680,$LinhaAgora,12,$RegistroNacional,'full');
-$pdf -> addText(938,$LinhaAgora,12,$NuCBKC,'full');
+$pdf -> addText(660,$LinhaAgora,12,$RegistroNacional,'full');
+$pdf -> addText(898,$LinhaAgora,12,$NuCBKC,'full');
 //$pdf -> addText(961,421,10,'_______________','full');
 
 $LinhaAgora = 380 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,$Nome,'full');
+$pdf -> addText(660,$LinhaAgora,12,$Nome,'full');
 $LinhaAgora = 366 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,$Sexo,'full');
-$pdf -> addText(815,$LinhaAgora,12,$Cor,'full');
+$pdf -> addText(660,$LinhaAgora,12,$Sexo,'full');
+$pdf -> addText(775,$LinhaAgora,12,$Cor,'full');
 
 $LinhaAgora = 353 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,$DataNascimento,'full');
+$pdf -> addText(660,$LinhaAgora,12,$DataNascimento,'full');
 $LinhaAgora = 341 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,$Tatuagem,'full');
+$pdf -> addText(660,$LinhaAgora,12,$Tatuagem,'full');
 $LinhaAgora = 328 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,$Microchip,'full');
+$pdf -> addText(660,$LinhaAgora,12,$Microchip,'full');
 
 $LinhaAgora = 380 + $PosLinhaInicialPagina1;
-$pdf -> addText(950,$LinhaAgora,12,$Criador,'full');
+$pdf -> addText(910,$LinhaAgora,12,$Criador,'full');
 $LinhaAgora = 366 + $PosLinhaInicialPagina1;
-$pdf -> addText(950,$LinhaAgora,12,$Endereco,'full');
+$pdf -> addText(910,$LinhaAgora,12,$Endereco,'full');
 $LinhaAgora = 353 + $PosLinhaInicialPagina1;
-$pdf -> addText(950,$LinhaAgora,12,$Cidade,'full');
+$pdf -> addText(910,$LinhaAgora,12,$Cidade,'full');
 $LinhaAgora = 341 + $PosLinhaInicialPagina1;
-$pdf -> addText(950,$LinhaAgora,12,$Estado,'full');
+$pdf -> addText(910,$LinhaAgora,12,$Estado,'full');
 $LinhaAgora = 328 + $PosLinhaInicialPagina1;
-$pdf -> addText(950,$LinhaAgora,12,$Ninhada,'full');
+$pdf -> addText(910,$LinhaAgora,12,$Ninhada,'full');
 
 /*
 $pdf -> addText(700,420,10,'_______________','full');
