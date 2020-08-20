@@ -130,6 +130,6 @@ $t = "<ROOT>";
 	$t = $t . '<row Id="31" Nome="'. $NoTriAvoF4Mae .'" Tipo="M" Grau="IV" />';
 $t = $t . "</ROOT>";
 
-	echo(utf8_encode(str_replace("'","´",$t)));
+	echo(str_replace("'","´",$t));
 
 ?>
