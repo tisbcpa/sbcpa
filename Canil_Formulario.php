@@ -134,7 +134,7 @@ function ValidarCampo()
     </tr>
     <tr> 
       <td>Endere&ccedil;o</td>
-      <td colspan="3"><input name="EdCanil" type="text" id="EdCanil" size="60" maxlength="50" value="<? echo($EdCanil)?>"></td>
+      <td colspan="3"><input name="EdCanil" type="text" id="EdCanil" size="60" maxlength="50" value="<? echo(utf8_encode($EdCanil))?>"></td>
     </tr>
     <tr> 
       <td>Cidade</td>
