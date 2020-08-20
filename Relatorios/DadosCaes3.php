@@ -317,13 +317,13 @@ $Microchip = 'Microchip: ' . $Valores[13];
 //$Microchip = '                  ' . $Valores[13];
 //$Microchip = '  ' . $Valores[13];
 
-$Criador = 'Criador:  ' . mb_strtoupper(utf8_encode($Valores[6]));
+$Criador = 'Criador:  ' . mb_strtoupper($Valores[6]);
 //$Criador = '             ' . strtoupper($Valores[6]);
-$Endereco = 'Endereço:  '. mb_strtoupper(utf8_encode($Valores[7]));
+$Endereco = 'Endereço:  '. mb_strtoupper($Valores[7]);
 //$Endereco = '                '. strtoupper($Valores[7]);
-$Cidade = 'Cidade: ' . str_replace("'","´",mb_strtoupper(utf8_encode($Valores[8])));
+$Cidade = 'Cidade: ' . str_replace("'","´",mb_strtoupper($Valores[8]));
 //$Cidade = '             ' . str_replace("NÃO INFORMADO","",strtoupper($Valores[8]));
-$Estado = 'Estado:  ' . mb_strtoupper(utf8_encode($Valores[9]));
+$Estado = 'Estado:  ' . mb_strtoupper($Valores[9]);
 //$Estado = '             ' . str_replace("ESTRANGEIRO","",strtoupper($Valores[9]));
 //$Ninhada = 'Ninhada: ' . $Valores[10];
 
