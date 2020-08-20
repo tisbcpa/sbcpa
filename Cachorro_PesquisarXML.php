@@ -3,9 +3,9 @@
 	$Acao =  $_GET["Acao"];
 	$Parametro = $_GET["Parametro"];
 
-	if ($Acao == "1"){echoPesquisarNuSBCPAXML($Parametro));}
-	if ($Acao == "2"){echoPesquisarNoCachorroXML($Parametro));}
-	if ($Acao == "3"){echoPesquisarIdCachorroXML($Parametro));}
+	if ($Acao == "1"){echo(PesquisarNuSBCPAXML($Parametro));}
+	if ($Acao == "2"){echo(PesquisarNoCachorroXML($Parametro));}
+	if ($Acao == "3"){echo(PesquisarIdCachorroXML($Parametro));}
 	if ($Acao == "4")
 	{
 		$Id = $_GET["Id"];
@@ -23,6 +23,6 @@
 		$Retorno = "Erro";
 		
 		$Retorno = AlterarDadosCachorroNinhada($Id,$NoCachorro,$TPSexo,$IdCor,$DtNascimento,$NoPai,$NoMae,$IDCanil,$NoNinhada,$NuRegistroNacional,$NoTatuagem,$NuCBKC);
-		echo('<ROOT><row Resultado="'. $Retorno . '" /></ROOT>');
+		echo(utf8_encode('<ROOT><row Resultado="'. $Retorno . '" /></ROOT>'));
 	}
 ?>
