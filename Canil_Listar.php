@@ -11,7 +11,7 @@ function Excluir(Id)
 	{
 		window.location.href = 'Canil_Processar.php?Action=D&Id=' + Id;
 	}
-}		
+}
 </script>
 
 <?
@@ -36,7 +36,7 @@ function Excluir(Id)
 	ListarTbCanilRelacaoCompleta($Tipo,$Parametro,$Campo,"")
 ?>
 <form name="FormPesquisa" action="Formulario_Pesquisa.php" method="get" target="ManorPagina">
-	<input type="hidden" name="Tipo" value="Canil">
+	<input type="hidden" name="Tipo" value="Canil" >
 </form>
 <? if ($Parametro == "")
 {

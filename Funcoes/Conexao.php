@@ -21,6 +21,7 @@
 	$DB_PASS = "@*SbCpA102030##";
 	$DOC_ROOT = "sbcpa_sipa_02";
 	$DB_HOST = "localhost";
+	header ('Content-type: text/html; charset=utf-8');
 
 	$Conn = mysql_connect ($DB_HOST,$DB_USER,$DB_PASS) or die("Não pode conectar: " . mysql_error());
 	mysql_select_db ($DOC_ROOT,$Conn);
