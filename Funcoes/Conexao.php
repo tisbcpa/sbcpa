@@ -23,7 +23,6 @@
 	$DB_HOST = "localhost";
 
 	$Conn = mysql_connect ($DB_HOST,$DB_USER,$DB_PASS) or die("Não pode conectar: " . mysql_error());
-	mysqli_set_charset($Conn,"utf8");
 	mysql_select_db ($DOC_ROOT,$Conn);
 
 	$Data = date("Y-m-d");

@@ -224,7 +224,7 @@ function Imprimir3(id)
       <table class="SemBorda">
         <tr> 
           <td>Nome</td>
-          <td><input name="NoCachorro" type="text" value="<?echo($NoCachorro)?>" size="70" maxlength="50"></td>
+          <td><input name="NoCachorro" type="text" value="<?echo(utf8_encode($NoCachorro))?>" size="70" maxlength="50"></td>
         </tr>
       </table>
       <table width="484" class="SemBorda">
