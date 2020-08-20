@@ -205,7 +205,7 @@ if (isset($_GET["Via"])) {
 $PosLinhaInicialPagina1 = -9;
 $PosLinhaInicialPagina2 = 280;
 
-$LinhaAgora = 420 + $PosLinhaInicialPagina1;
+$LinhaAgora = 400 + $PosLinhaInicialPagina1;
 $pdf -> addText(700,$LinhaAgora,12,$RegistroNacional,'full');
 $pdf -> addText(938,$LinhaAgora,12,$NuCBKC,'full');
 //$pdf -> addText(961,421,10,'_______________','full');
