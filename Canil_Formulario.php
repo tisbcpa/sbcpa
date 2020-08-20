@@ -117,7 +117,7 @@ function ValidarCampo()
 </Script>
 
 <body>
-<Form name="Formulario" Action="Canil_Processar.php" method="post" onSubmit="return ValidarCampo()">
+<Form name="Formulario" Action="Canil_Processar.php" method="post" onSubmit="return ValidarCampo()" >
 <input type="hidden" name="IdCanil" value="<? echo($Id)?>">
 <input type="hidden" name="Action" value="<? echo($Action)?>">
   <table border="0">

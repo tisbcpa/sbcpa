@@ -45,7 +45,7 @@ function MontarComboUFFormulario($pagina,$formulario)
 	{
 		$Texto = $Texto .  "<option value='$row[SGUF]'>$row[SGUF]</option>";
 	}
-	$Texto = $Texto . "</select>";
+	$Texto = $Texto . "</select >";
 	
 	mysql_close($Conn);
 	return $Texto;
