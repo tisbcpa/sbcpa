@@ -268,7 +268,7 @@ $pdf -> addText(918,222,10,'_________________________________________________','
 //$pdf -> addText(740,180,12,'Certificamos que os dados aqui constantes estão conforme os registros','full');
 //$pdf -> addText(740,160,12,'do livro de origem da Sociedade Brasileira Cães Pastores Alemães','full');
 
-$pdf -> addText(820,100,12,$DataImpressao,'full');
+$pdf -> addText(820,140,12,$DataImpressao,'full');
 
 //$pdf -> addText(650,62,10,'____________________________________________________','full');
 $LinhaAgora = 70 + $PosLinhaInicialPagina1;
