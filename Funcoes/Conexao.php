@@ -24,6 +24,7 @@
 
 	$Conn = mysql_connect ($DB_HOST,$DB_USER,$DB_PASS) or die("Não pode conectar: " . mysql_error());
 	mysql_select_db ($DOC_ROOT,$Conn);
+	mysql_set_charset('utf8');
 
 	$Data = date("Y-m-d");
 	$Hora = date("H:i:s");
