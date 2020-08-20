@@ -540,7 +540,7 @@ function ListarTbCachorroRelacaoCompleta($Ordem,$Parametro,$Campo,$Perfil)
 
 	while ($row = mysql_fetch_array($sql_result))
 	{
-		echo("<tr><td>".utf8_decode($row['NoCachorro'])."</td><td>&nbsp;$row[NoProprietario]</td><td>$row[NuRegistroNacional]</td><td>&nbsp;$row[NoTatuagem]</td>");
+		echo("<tr><td>".$row['NoCachorro']."</td><td>&nbsp;$row[NoProprietario]</td><td>$row[NuRegistroNacional]</td><td>&nbsp;$row[NoTatuagem]</td>");
 		
 		if ($Perfil != "Preenchimento")
 		{
