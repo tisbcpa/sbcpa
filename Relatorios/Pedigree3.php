@@ -158,7 +158,7 @@ $LinhaConvencoes = 1043;
 
 $pdf =& new Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
-$pdf->ezImage('../Imagens/frente_pedigree.png', 0, 100, '', 'center');
+$pdf->ezImage('/var/www/SIPA/Imagens/frente_pedigree.png', 0, 100, '', 'center');
 
 //-------------- LADO ESQUERDO DA PRIMEIRA PÁGINA -------------------------------------
 /*
@@ -1035,4 +1035,3 @@ function RelFormatarTextoMaiusculo($Texto)
 //$pdf->setEncryption('','$Senha',array('print'));
 
 $pdf -> ezStream();
-?>
