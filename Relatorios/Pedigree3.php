@@ -282,7 +282,7 @@ $pdf -> addText(918,222,10,'_________________________________________________','
 //$pdf -> addText(740,180,12,'Certificamos que os dados aqui constantes estão conforme os registros','full');
 //$pdf -> addText(740,160,12,'do livro de origem da Sociedade Brasileira Cães Pastores Alemães','full');
 
-$pdf -> addText(820,120,12,$DataImpressao,'full');
+$pdf -> addText(820,140,12,$DataImpressao,'full');
 
 //$pdf -> addText(650,62,10,'____________________________________________________','full');
 $LinhaAgora = 60 + $PosLinhaInicialPagina1;
@@ -540,7 +540,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo2,$PosLinha,8,"$JuizAvo2",'full');
-$PosLinha = $PosLinha;
+$PosLinha = $PosLinha - 12;
 //$pdf -> addText($ColunaAvo2,$PosLinha,8,"IRMÃOS:",'full');
 $LarguraAvo2 = $LarguraAvo2;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo2,$LarguraAvo2);
@@ -576,7 +576,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo3,$PosLinha,8,"$JuizAvo3",'full');
-$PosLinha = $PosLinha;
+$PosLinha = $PosLinha - 12;
 //$pdf -> addText($ColunaAvo3,$PosLinha,8,"IRMÃOS:",'full');
 $LarguraAvo3 = $LarguraAvo3;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo3,$LarguraAvo3);
@@ -613,7 +613,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo4,$PosLinha,8,"$JuizAvo4",'full');
-$PosLinha = $PosLinha;
+$PosLinha = $PosLinha - 12;
 //$pdf -> addText($ColunaAvo4,$PosLinha,8,"IRMÃOS:",'full');
 $LarguraAvo4 = $LarguraAvo4;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo4,$LarguraAvo4);
