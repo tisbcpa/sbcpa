@@ -246,7 +246,7 @@ $pdf -> addText(910,$LinhaAgora,12,$Cidade,'full');
 $LinhaAgora = 341 + $PosLinhaInicialPagina1;
 $pdf -> addText(910,$LinhaAgora,12,$Estado,'full');
 $LinhaAgora = 328 + $PosLinhaInicialPagina1;
-$pdf -> addText(910,$LinhaAgora,12,$Ninhada,'full');
+$pdf -> addText(920,$LinhaAgora,12,$Ninhada,'full');
 
 /*
 $pdf -> addText(700,420,10,'_______________','full');
