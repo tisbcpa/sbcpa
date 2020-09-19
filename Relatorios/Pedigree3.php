@@ -317,7 +317,7 @@ for ($i=1; $i<=$Tam; $i++)
 }
 
 $pdf -> ezNewPage();
-$pdf->ezSetMargins(0,0,10,0);
+$pdf->ezSetMargins(10,0,10,0);
 $pdf->ezImage('/var/www/SIPA/Imagens/Verso_branca.jpg',0,1100,'none','left');
 /*
 //Linhas Verticais
