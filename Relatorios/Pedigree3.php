@@ -503,9 +503,9 @@ for ($i=1; $i<=$Tam; $i++)
 }
 $PosLinha = $PosLinha - 12;
 $pdf -> addText($ColunaAvo1,$PosLinha,8,"$JuizAvo1",'full');
-$PosLinha = $PosLinha;
+$PosLinha = $PosLinha - 12;
 //$pdf -> addText($ColunaAvo1,$PosLinha,8,"IRMÃOS:",'full');
-$LarguraAvo1 = $LarguraAvo1 + 5;
+$LarguraAvo1 = $LarguraAvo1;
 $TexoRet = QuebraLinhaTexto($IrmaosAvo1,$LarguraAvo1);
 $Tam = substr_count($TexoRet,"]");
 $Valores = split("]",$TexoRet);
