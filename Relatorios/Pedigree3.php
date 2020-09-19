@@ -45,7 +45,13 @@ else
 	if ($JuizMae != ""){ $JuizMae = "JUIZ: " . $JuizMae;}
 	$IrmaosMae = RetornarIrmaos($IdMae);
 	if ($IrmaosMae != ''){$IrmaosMae = "IRMÃOS: ". $IrmaosMae;}
-	
+
+	$convencao = "branca";
+	if(strpos('+',$NomePai) ==! false && strpos('+',$NoMae) ==! false){
+	    $convencao = "rosa";
+    }elseif(strpos('+',$NomePai) ==! false || strpos('+',$NoMae) ==! false){
+        $convencao = "azul";
+    }
 	
 	$LarguraAvo1 = 78;
 	$ColunaAvo1 = 268;
@@ -160,7 +166,7 @@ $pdf =& new Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
 //$pdf->ezSetMargins(24,0,10,-15);
 $pdf->ezSetMargins(-15,-15,10,-15);
-$pdf->ezImage('/var/www/SIPA/Imagens/Frente_azul.jpg',0,1170,'none','left');
+$pdf->ezImage('/var/www/SIPA/Imagens/Frente_'.$convencao.'.jpg',0,1170,'none','left');
 
 //-------------- LADO ESQUERDO DA PRIMEIRA PÁGINA -------------------------------------
 /*

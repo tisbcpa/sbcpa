@@ -439,4 +439,3 @@ echo("&nbsp;&nbsp;<strong>Mae:</strong> $NoMae,$SBCPAMae,$IdAvoMMae,$IdAvoFMae <
 			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvô Materno:</strong> $NoTriAvoM4Mae,$SBCPATriAvoM4Mae<br>");
 			echo("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>TrisAvó Materna:</strong> $NoTriAvoF4Mae,$SBCPATriAvoF4Mae<br>");
 */
-?>
