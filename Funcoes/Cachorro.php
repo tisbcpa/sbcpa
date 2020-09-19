@@ -16,7 +16,7 @@ function Limpar($nome)
 	$result = str_replace("ü","u",$result);
 	$result = str_replace("õ","o",$result);
 	$result = str_replace("ç","c",$result);
-	return strtoupper($nome);
+	return mb_strtoupper($nome);
 }
 
 function FormatarDataTelaCachorro($Data)

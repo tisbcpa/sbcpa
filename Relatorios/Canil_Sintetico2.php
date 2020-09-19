@@ -40,15 +40,15 @@ while ($row = mysql_fetch_array($result))
 	//----------------------------------------------------------------------------------------
 	$LarguraPais = 65;
 	$ColunaPais = 18;
-	$NomePai = strtoupper("Odin de Isla Bonita");
+	$NomePai = mb_strtoupper("Odin de Isla Bonita");
 	$SumulaPai = "Macho, medianamente forte. Boa cabeza. Muito boa pigmentação. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posição de garupa, algo curta. Boas angulações dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e espírito de luta pronunciados. Não larga sob comando.";
 	$JuizPai = "Celso Roberto Machado Pinto";
 	$IrmaosPai = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
-	//$SumulaPai = strtoupper($SumulaPai);
+	//$SumulaPai = mb_strtoupper($SumulaPai);
 
 	$LarguraAvo1 = 78;
 	$ColunaAvo1 = 275;
-	$NomeAvo1 = strtoupper("Odin de Isla Bonita");
+	$NomeAvo1 = mb_strtoupper("Odin de Isla Bonita");
 	$SumulaAvo1 = "Macho, medianamente forte. Boa cabeza. Muito boa pigmentação. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posição de garupa, algo curta. Boas angulações dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e espírito de luta pronunciados. Não larga sob comando.";
 	$JuizAvo1 = "Celso Roberto Machado Pinto";
 	$IrmaosAvo1 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";

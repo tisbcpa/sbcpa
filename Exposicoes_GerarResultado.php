@@ -141,7 +141,7 @@ function FormatarTextoMaiusculo($Texto)
 	
 		if (strlen($palavra) > 2)
 		{
-			$parte1 = strtoupper(substr($palavra,0,1));
+			$parte1 = mb_strtoupper(substr($palavra,0,1));
 			$parte2 = strtolower(substr($palavra,1));
 			
 			$palavra = $parte1 . $parte2;

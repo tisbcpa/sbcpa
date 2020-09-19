@@ -27,7 +27,7 @@ else
 	//----------------------------------------------------------------------------------------
 	$LarguraPais = 50;
 	$ColunaPais = 30;
-	$NomePai = strtoupper("$NoPai");
+	$NomePai = mb_strtoupper("$NoPai");
 	list($SumulaPai,$JuizPai,$SumulaPaiReselecao,$JuizPaiReselecao) = split(";",DadosSumula($IdPai));
 	if ($SumulaPai == ""){ $SumulaPai = "";}
 	if ($JuizPai != ""){ $JuizPai = "JUIZ: " . $JuizPai;}
@@ -38,7 +38,7 @@ else
 
 	$LarguraMaes = $LarguraPais;
 	$ColunaMaes = $ColunaPais;
-	$NomeMae = strtoupper("$NoMae");
+	$NomeMae = mb_strtoupper("$NoMae");
 	list($SumulaMae,$JuizMae,$SumulaMaeReselecao,$JuizMaeReselecao) = split(";",DadosSumula($IdMae));
 	if ($SumulaMae == ""){ $SumulaMae = "";}
 	if ($JuizMae != ""){ $JuizMae = "JUIZ: " . $JuizMae;}
@@ -50,7 +50,7 @@ else
 	
 	$LarguraAvo1 = 78;
 	$ColunaAvo1 = 268;
-	$NomeAvo1 = strtoupper("$NoAvoMPai");
+	$NomeAvo1 = mb_strtoupper("$NoAvoMPai");
 	list($SumulaAvo1,$JuizAvo1,$SumulaAvo1Reselecao,$JuizAvo1Reselecao) = split(";",DadosSumula($IdAvoMPai));
 	if ($SumulaAvo1 == ""){ $SumulaAvo1 = "";}
 	if ($JuizAvo1 != ""){ $JuizAvo1 = "JUIZ: " . $JuizAvo1;}
@@ -61,7 +61,7 @@ else
 		
 	$LarguraAvo2 = $LarguraAvo1;
 	$ColunaAvo2 = $ColunaAvo1;
-	$NomeAvo2 = strtoupper("$NoAvoFPai");
+	$NomeAvo2 = mb_strtoupper("$NoAvoFPai");
 	list($SumulaAvo2,$JuizAvo2,$SumulaAvo2Reselecao,$JuizAvo2Reselecao) = split(";",DadosSumula($IdAvoFPai));
 	if ($SumulaAvo2 == ""){ $SumulaAvo2 = "";}
 	if ($JuizAvo2 != ""){ $JuizAvo2 = "JUIZ: " . $JuizAvo2;}
@@ -72,7 +72,7 @@ else
 	
 	$LarguraAvo3 = $LarguraAvo1;
 	$ColunaAvo3 = $ColunaAvo1;
-	$NomeAvo3 = strtoupper("$NoAvoMMae");
+	$NomeAvo3 = mb_strtoupper("$NoAvoMMae");
 	list($SumulaAvo3,$JuizAvo3,$SumulaAvo3Reselecao,$JuizAvo3Reselecao) = split(";",DadosSumula($IdAvoMMae));
 	if ($SumulaAvo3 == ""){ $SumulaAvo3 = "";}
 	if ($JuizAvo3 != ""){ $JuizAvo3 = "JUIZ: " . $JuizAvo3;}
@@ -83,7 +83,7 @@ else
 
 	$LarguraAvo4 = $LarguraAvo1;
 	$ColunaAvo4 = $ColunaAvo1;
-	$NomeAvo4 = strtoupper("$NoAvoFMae");
+	$NomeAvo4 = mb_strtoupper("$NoAvoFMae");
 	list($SumulaAvo4,$JuizAvo4,$SumulaAvo4Reselecao,$JuizAvo4Reselecao) = split(";",DadosSumula($IdAvoFMae));
 	if ($SumulaAvo4 == ""){ $SumulaAvo4 = "";}
 	if ($JuizAvo4 != ""){ $JuizAvo4 = "JUIZ: " . $JuizAvo4;}
@@ -94,70 +94,70 @@ else
 
 	$LarguraBisAvo1 = 55;
 	$ColunaBisAvo1 = 595;
-	$NomeBisAvo1 = strtoupper("$NoBisAvoM1Pai");
+	$NomeBisAvo1 = mb_strtoupper("$NoBisAvoM1Pai");
 	$IrmaosBisAvo1 = RetornarIrmaos($IdBisAvoM1Pai);
 	if ($IrmaosBisAvo1 != ''){$IrmaosBisAvo1 = "IRMÃOS: ". $IrmaosBisAvo1;}
 
 	$LarguraBisAvo2 = $LarguraBisAvo1;
 	$ColunaBisAvo2 = $ColunaBisAvo1;
-	$NomeBisAvo2 = strtoupper("$NoBisAvoF1Pai");
+	$NomeBisAvo2 = mb_strtoupper("$NoBisAvoF1Pai");
 	$IrmaosBisAvo2 = RetornarIrmaos($IdBisAvoF1Pai);
 	if ($IrmaosBisAvo2 != ''){$IrmaosBisAvo2 = "IRMÃOS: ". $IrmaosBisAvo2;}
 
 	$LarguraBisAvo3 = $LarguraBisAvo1;
 	$ColunaBisAvo3 = $ColunaBisAvo1;
-	$NomeBisAvo3 = strtoupper("$NoBisAvoM2Pai");
+	$NomeBisAvo3 = mb_strtoupper("$NoBisAvoM2Pai");
 	$IrmaosBisAvo3 = RetornarIrmaos($IdBisAvoM2Pai);
 	if ($IrmaosBisAvo3 != ''){$IrmaosBisAvo3 = "IRMÃOS: ". $IrmaosBisAvo3;}
 
 	$LarguraBisAvo4 = $LarguraBisAvo1;
 	$ColunaBisAvo4 = $ColunaBisAvo1;
-	$NomeBisAvo4 = strtoupper("$NoBisAvoF2Pai");
+	$NomeBisAvo4 = mb_strtoupper("$NoBisAvoF2Pai");
 	$IrmaosBisAvo4 = RetornarIrmaos($IdBisAvoF2Pai);
 	if ($IrmaosBisAvo4 != ''){$IrmaosBisAvo4 = "IRMÃOS: ". $IrmaosBisAvo4;}
 
 	$LarguraBisAvo5 = $LarguraBisAvo1;
 	$ColunaBisAvo5 = $ColunaBisAvo1;
-	$NomeBisAvo5 = strtoupper("$NoBisAvoM1Mae");
+	$NomeBisAvo5 = mb_strtoupper("$NoBisAvoM1Mae");
 	$IrmaosBisAvo5 = RetornarIrmaos($IdBisAvoM1Mae);
 	if ($IrmaosBisAvo5 != ''){$IrmaosBisAvo5 = "IRMÃOS: ". $IrmaosBisAvo5;}
 
 	$LarguraBisAvo6 = $LarguraBisAvo1;
 	$ColunaBisAvo6 = $ColunaBisAvo1;
-	$NomeBisAvo6 = strtoupper("$NoBisAvoF1Mae");
+	$NomeBisAvo6 = mb_strtoupper("$NoBisAvoF1Mae");
 	$IrmaosBisAvo6 = RetornarIrmaos($IdBisAvoF1Mae);
 	if ($IrmaosBisAvo6 != ''){$IrmaosBisAvo6 = "IRMÃOS: ". $IrmaosBisAvo6;}
 	
 	$LarguraBisAvo7 = $LarguraBisAvo1;
 	$ColunaBisAvo7 = $ColunaBisAvo1;
-	$NomeBisAvo7 = strtoupper("$NoBisAvoM2Mae");
+	$NomeBisAvo7 = mb_strtoupper("$NoBisAvoM2Mae");
 	$IrmaosBisAvo7 = RetornarIrmaos($IdBisAvoM2Mae);
 	if ($IrmaosBisAvo7 != ''){$IrmaosBisAvo7 = "IRMÃOS: ". $IrmaosBisAvo7;}
 
 	$LarguraBisAvo8 = $LarguraBisAvo1;
 	$ColunaBisAvo8 = $ColunaBisAvo1;
-	$NomeBisAvo8 = strtoupper("$NoBisAvoF2Mae");
+	$NomeBisAvo8 = mb_strtoupper("$NoBisAvoF2Mae");
 	$IrmaosBisAvo8 = RetornarIrmaos($IdBisAvoF2Mae);
 	if ($IrmaosBisAvo8 != ''){$IrmaosBisAvo8 = "IRMÃOS: ". $IrmaosBisAvo8;}
 
 	$ColunaTriAvoM1 = 833;
-	$NomeTriAvoM1 = strtoupper("$NoTriAvoM1Pai");
-	$NomeTriAvoF1 = strtoupper("$NoTriAvoF1Pai");
-	$NomeTriAvoM2 = strtoupper("$NoTriAvoM2Pai");
-	$NomeTriAvoF2 = strtoupper("$NoTriAvoF2Pai");
-	$NomeTriAvoM3 = strtoupper("$NoTriAvoM3Pai");
-	$NomeTriAvoF3 = strtoupper("$NoTriAvoF3Pai");
-	$NomeTriAvoM4 = strtoupper("$NoTriAvoM4Pai");
-	$NomeTriAvoF4 = strtoupper("$NoTriAvoF4Pai");
+	$NomeTriAvoM1 = mb_strtoupper("$NoTriAvoM1Pai");
+	$NomeTriAvoF1 = mb_strtoupper("$NoTriAvoF1Pai");
+	$NomeTriAvoM2 = mb_strtoupper("$NoTriAvoM2Pai");
+	$NomeTriAvoF2 = mb_strtoupper("$NoTriAvoF2Pai");
+	$NomeTriAvoM3 = mb_strtoupper("$NoTriAvoM3Pai");
+	$NomeTriAvoF3 = mb_strtoupper("$NoTriAvoF3Pai");
+	$NomeTriAvoM4 = mb_strtoupper("$NoTriAvoM4Pai");
+	$NomeTriAvoF4 = mb_strtoupper("$NoTriAvoF4Pai");
 
-	$NomeTriAvoM5 = strtoupper("$NoTriAvoM1Mae");
-	$NomeTriAvoF5 = strtoupper("$NoTriAvoF1Mae");
-	$NomeTriAvoM6 = strtoupper("$NoTriAvoM2Mae");
-	$NomeTriAvoF6 = strtoupper("$NoTriAvoF2Mae");
-	$NomeTriAvoM7 = strtoupper("$NoTriAvoM3Mae");
-	$NomeTriAvoF7 = strtoupper("$NoTriAvoF3Mae");
-	$NomeTriAvoM8 = strtoupper("$NoTriAvoM4Mae");
-	$NomeTriAvoF8 = strtoupper("$NoTriAvoF4Mae");
+	$NomeTriAvoM5 = mb_strtoupper("$NoTriAvoM1Mae");
+	$NomeTriAvoF5 = mb_strtoupper("$NoTriAvoF1Mae");
+	$NomeTriAvoM6 = mb_strtoupper("$NoTriAvoM2Mae");
+	$NomeTriAvoF6 = mb_strtoupper("$NoTriAvoF2Mae");
+	$NomeTriAvoM7 = mb_strtoupper("$NoTriAvoM3Mae");
+	$NomeTriAvoF7 = mb_strtoupper("$NoTriAvoF3Mae");
+	$NomeTriAvoM8 = mb_strtoupper("$NoTriAvoM4Mae");
+	$NomeTriAvoF8 = mb_strtoupper("$NoTriAvoF4Mae");
 
 $ColunaConvencoes = 1045;
 $LinhaConvencoes = 1043;
@@ -1007,7 +1007,7 @@ function RelFormatarTextoMaiusculo($Texto)
 	
 		if (strlen($palavra) > 2)
 		{
-			$parte1 = strtoupper(substr($palavra,0,1));
+			$parte1 = mb_strtoupper(substr($palavra,0,1));
 			$parte2 = strtolower(substr($palavra,1));
 			
 			$palavra = $parte1 . $parte2;

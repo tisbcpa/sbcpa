@@ -331,7 +331,7 @@ function FormatarTextoMaiusculo($Texto)
 	
 		if (strlen($palavra) > 2)
 		{
-			$parte1 = strtoupper(substr($palavra,0,1));
+			$parte1 = mb_strtoupper(substr($palavra,0,1));
 			$parte2 = strtolower(substr($palavra,1));
 			
 			$palavra = $parte1 . $parte2;
@@ -355,30 +355,30 @@ if ($DtNascimento != "")
 
 //$RegistroNacional = 'Nº SBCPA: ' . str_replace("SBCPA","",strtoupper($Valores[1]));
 $RegistroNacional = '                  ' . str_replace("SBCPA","",strtoupper($Valores[1]));
-//$Nome = 'Nome:  ' . strtoupper($Valores[0]);
+//$Nome = 'Nome:  ' . mb_strtoupper($Valores[0]);
 
 $RNome = str_replace("_"," ",$Valores[0]);
-$Nome = '           ' . strtoupper($RNome);
+$Nome = '           ' . mb_strtoupper($RNome);
 //$Sexo = 'Sexo: ' . $Sexo;
 $Sexo = '        ' . $Sexo;
 //$DataNascimento = 'Data de Nascimento: ' . $DtNascimento;
 $DataNascimento = '                                   ' . $DtNascimento;
-//$Cor = 'Cor: ' . strtoupper($Valores[3]);
-$Cor = '         ' . strtoupper($Valores[3]);
-//$Tatuagem = 'Tatuagem: ' . strtoupper($Valores[5]);
-$Tatuagem = '                 ' . strtoupper($Valores[5]);
+//$Cor = 'Cor: ' . mb_strtoupper($Valores[3]);
+$Cor = '         ' . mb_strtoupper($Valores[3]);
+//$Tatuagem = 'Tatuagem: ' . mb_strtoupper($Valores[5]);
+$Tatuagem = '                 ' . mb_strtoupper($Valores[5]);
 //$Microchip = 'Microchip: ';
 
 $Microchip = '                  ' . $Valores[13];
 //$Microchip = '  ' . $Valores[13];
 
-//$Criador = 'Criador:  ' . strtoupper($Valores[6]);
-$Criador = '             ' . strtoupper($Valores[6]);
+//$Criador = 'Criador:  ' . mb_strtoupper($Valores[6]);
+$Criador = '             ' . mb_strtoupper($Valores[6]);
 //$Endereco = 'Endereço:  '. $Valores[7];
-$Endereco = '                '. strtoupper($Valores[7]);
+$Endereco = '                '. mb_strtoupper($Valores[7]);
 //$Cidade = 'Cidade: ' . str_replace("'","´",strtoupper($Valores[8]));
 $Cidade = '             ' . str_replace("NÃO INFORMADO","",strtoupper($Valores[8]));
-//$Estado = 'Estado:  ' . strtoupper($Valores[9]);
+//$Estado = 'Estado:  ' . mb_strtoupper($Valores[9]);
 $Estado = '             ' . str_replace("ESTRANGEIRO","",strtoupper($Valores[9]));
 //$Ninhada = 'Ninhada: ' . $Valores[10];
 

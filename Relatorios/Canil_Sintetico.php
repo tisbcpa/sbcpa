@@ -41,42 +41,42 @@ while ($row = mysql_fetch_array($result))
 	//----------------------------------------------------------------------------------------
 	$LarguraPais = 55;
 	$ColunaPais = 30;
-	$NomePai = strtoupper("$NoPai");
+	$NomePai = mb_strtoupper("$NoPai");
 	list($SumulaPai,$JuizPai) = split(";",DadosSumula($IdPai));
 	if ($JuizPai != ""){ $JuizPai = "JUIZ: " . $JuizPai;}
 	$IrmaosPai = RetornarIrmaos($IdPai);
 
 	$LarguraMaes = $LarguraPais;
 	$ColunaMaes = $ColunaPais;
-	$NomeMae = strtoupper("$NoMae");
+	$NomeMae = mb_strtoupper("$NoMae");
 	list($SumulaMae,$JuizMae) = split(";",DadosSumula($IdMae));
 	if ($JuizMae != ""){ $JuizMae = "JUIZ: " . $JuizMae;}
 	$IrmaosMae = RetornarIrmaos($IdMae);	
 	
 	$LarguraAvo1 = 80;
 	$ColunaAvo1 = 275;
-	$NomeAvo1 = strtoupper("$NoAvoMPai");
+	$NomeAvo1 = mb_strtoupper("$NoAvoMPai");
 	list($SumulaAvo1,$JuizAvo1) = split(";",DadosSumula($IdAvoMPai));
 	if ($JuizAvo1 != ""){ $JuizAvo1 = "JUIZ: " . $JuizAvo1;}
 	$IrmaosAvo1 = RetornarIrmaos($IdAvoMPai);
 	
 	$LarguraAvo2 = $LarguraAvo1;
 	$ColunaAvo2 = $ColunaAvo1;
-	$NomeAvo2 = strtoupper("$NoAvoFPai");
+	$NomeAvo2 = mb_strtoupper("$NoAvoFPai");
 	list($SumulaAvo2,$JuizAvo2) = split(";",DadosSumula($IdAvoFPai));
 	if ($JuizAvo2 != ""){ $JuizAvo2 = "JUIZ: " . $JuizAvo2;}
 	$IrmaosAvo2 = RetornarIrmaos($IdAvoFPai);
 	
 	$LarguraAvo3 = $LarguraAvo1;
 	$ColunaAvo3 = $ColunaAvo1;
-	$NomeAvo3 = strtoupper("Odin de Isla Bonita");
+	$NomeAvo3 = mb_strtoupper("Odin de Isla Bonita");
 	$SumulaAvo3 = "Macho, medianamente forte. Boa cabeza. Muito boa pigmentação. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posição de garupa, algo curta. Boas angulações dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e espírito de luta pronunciados. Não larga sob comando.";
 	$JuizAvo3 = "Celso Roberto Machado Pinto";
 	$IrmaosAvo3 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraAvo4 = $LarguraAvo1;
 	$ColunaAvo4 = $ColunaAvo1;
-	$NomeAvo4 = strtoupper("Odin de Isla Bonita");
+	$NomeAvo4 = mb_strtoupper("Odin de Isla Bonita");
 	$SumulaAvo4 = "Macho, medianamente forte. Boa cabeza. Muito boa pigmentação. Ligeiramente alargado. Cernelha alta Dorso firme. Boa posição de garupa, algo curta. Boas angulações dianteiras, muito boa a posterior. Frente correta. Caminha correto visto de tras e de frente. Bon alcance. Boa linha inferior. Carater firme, dureza, corajem e espírito de luta pronunciados. Não larga sob comando.";
 	$JuizAvo4 = "Celso Roberto Machado Pinto";
 	$IrmaosAvo4 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
@@ -85,42 +85,42 @@ while ($row = mysql_fetch_array($result))
 
 	$LarguraBisAvo1 = 60;
 	$ColunaBisAvo1 = 595;
-	$NomeBisAvo1 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo1 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo1 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo2 = 60;
 	$ColunaBisAvo2 = 595;
-	$NomeBisAvo2 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo2 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo2 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo3 = 60;
 	$ColunaBisAvo3 = 595;
-	$NomeBisAvo3 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo3 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo3 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo4 = 60;
 	$ColunaBisAvo4 = 595;
-	$NomeBisAvo4 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo4 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo4 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo5 = 60;
 	$ColunaBisAvo5 = 595;
-	$NomeBisAvo5 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo5 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo5 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo6 = 60;
 	$ColunaBisAvo6 = 595;
-	$NomeBisAvo6 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo6 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo6 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo7 = 60;
 	$ColunaBisAvo7 = 595;
-	$NomeBisAvo7 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo7 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo7 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 	$LarguraBisAvo8 = 60;
 	$ColunaBisAvo8 = 595;
-	$NomeBisAvo8 = strtoupper("Odin de Isla Bonita");
+	$NomeBisAvo8 = mb_strtoupper("Odin de Isla Bonita");
 	$IrmaosBisAvo8 = "Uras von Steinwald, India v. d. Tefor, Leady v. Anker, Tea v. d. Tefor, Dummpy v. Wester, Xidy v. d. Tefor";
 
 
