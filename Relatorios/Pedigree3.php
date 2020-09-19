@@ -46,12 +46,15 @@ else
 	$IrmaosMae = RetornarIrmaos($IdMae);
 	if ($IrmaosMae != ''){$IrmaosMae = "IRMÃOS: ". $IrmaosMae;}
 
-	$findSelPai = strpos($NomePai,'+');
-	$findSelMae = strpos($NomeMae,'+');
+//	$findSelPai = strpos($NomePai,'+');
+//	$findSelMae = strpos($NomeMae,'+');
 
-    //$convencao = "branca";
-	//if($findSelPai ==! false && $findSelMae ==! false){
-	    $convencao = "rosa";
+$NomePai = strpos($NomePai,'+');
+$NomeMae = strpos($NomeMae,'+');
+
+//    $convencao = "branca";
+//	if($findSelPai ==! false && $findSelMae ==! false){
+//	    $convencao = "rosa";
 //    }elseif($findSelPai ==! false || $findSelMae ==! false){
 //        $convencao = "azul";
 //    }
