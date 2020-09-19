@@ -313,7 +313,7 @@ for ($i=0; $i<=$Tam; $i++)
 
 
 
-$PosLinha = $PosLinhaInicial + $PosLinhaInicialPagina1 + 22;
+$PosLinha = $PosLinhaInicial + $PosLinhaInicialPagina1;
 $LarguraCao = 30;
 $TexoRet = QuebraLinhaTexto($Irmaos,$LarguraCao);
 $Tam = substr_count($TexoRet,"]");
