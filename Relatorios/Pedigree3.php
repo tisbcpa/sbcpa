@@ -159,7 +159,7 @@ $LinhaConvencoes = 1043;
 $pdf =& new Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
 $rs = $pdf->ezImage('/var/www/SIPA/Imagens/frente_pedigree.png');
-$pdf -> addText(1,1,1,$rs,'full');
+$pdf -> addText(1,1,1,'texto','full');
 
 //-------------- LADO ESQUERDO DA PRIMEIRA PÁGINA -------------------------------------
 /*
