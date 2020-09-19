@@ -290,8 +290,8 @@ $pdf -> addText(675,$LinhaAgora,12,$Presidente,'full');
 //$pdf -> addText(750,38,10,'PRESIDENTE','full');
 
 //$pdf -> addText(920,62,10,'________________________________________________','full');
-$LinhaAgora = 70 + $PosLinhaInicialPagina1;
-$pdf -> addText(900,$LinhaAgora,12,$Diretor,'full');
+$LinhaAgora = 60 + $PosLinhaInicialPagina1;
+$pdf -> addText(920,$LinhaAgora,12,$Diretor,'full');
 //$pdf -> addText(950,38,10,'DIRETOR DE REGISTRO GENEALÓGICO','full');
 
 $PosLinhaInicial = $PosLinhaInicialPagina2;
