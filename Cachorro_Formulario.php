@@ -207,7 +207,8 @@ function Imprimir3(id)
           <td> | </td>
           <td><a href="JavaScript:Imprimir2(<? echo($Id);?>)">2ª via</a></td>
           <td> | </td>
-          <td><a href="JavaScript:Imprimir3(<? echo($Id);?>)">Pedrigree Novo</a></td>
+<!--          <td><a href="JavaScript:Imprimir3(--><?// echo($Id);?><!--)">Pedrigree Novo</a></td>-->
+        <td><a href="Relatorios/Pedigree3.php?Id=<?php echo $Id?>" target="_blank"></td>
 	<? }?>
         </tr>
       </table>
