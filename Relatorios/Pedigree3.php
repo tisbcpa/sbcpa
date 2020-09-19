@@ -47,9 +47,12 @@ else
 	if ($IrmaosMae != ''){$IrmaosMae = "IRMÃOS: ". $IrmaosMae;}
 
 	$convencao = "branca";
-	if(strpos($NomePai,"+") ==! false && strpos($NoMae,"+") ==! false){
+	$findSelPai = strpos($NomePai,'+');
+	$findSelMae = strpos($NomeMae,'+');
+
+	if($findSelPai ==! false && $findSelMae ==! false){
 	    $convencao = "rosa";
-    }elseif(strpos($NomePai,"+") ==! false || strpos($NoMae,"+") ==! false){
+    }elseif($findSelPai ==! false || $findSelMae ==! false){
         $convencao = "azul";
     }
 	
