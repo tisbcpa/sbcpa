@@ -246,7 +246,7 @@ $pdf -> addText(910,$LinhaAgora,12,$Cidade,'full');
 $LinhaAgora = 341 + $PosLinhaInicialPagina1;
 $pdf -> addText(910,$LinhaAgora,12,$Estado,'full');
 $LinhaAgora = 328 + $PosLinhaInicialPagina1;
-$pdf -> addText(970,$LinhaAgora,12,$Ninhada,'full');
+$pdf -> addText(910,$LinhaAgora,12,$Ninhada,'full');
 
 /*
 $pdf -> addText(700,420,10,'_______________','full');
@@ -323,7 +323,7 @@ for ($i=1; $i<=$Tam; $i++)
 {
 	$PosLinha = $PosLinha - 15;
 	$Frase = $Valores[$i];
-	$pdf -> addText(930,$PosLinha,11,$Frase,'full');
+	$pdf -> addText(970,$PosLinha,11,$Frase,'full');
 }
 
 $pdf -> ezNewPage();
