@@ -321,9 +321,9 @@ $Valores = split("]",$TexoRet);
 $Frase = "";
 for ($i=1; $i<=$Tam; $i++)
 {
-	$PosLinha = $PosLinha - 15;
+	$PosLinha = $PosLinha - 10;
 	$Frase = $Valores[$i];
-	$pdf -> addText(970,$PosLinha,11,$Frase,'full');
+	$pdf -> addText(1000,$PosLinha,11,$Frase,'full');
 }
 
 $pdf -> ezNewPage();
