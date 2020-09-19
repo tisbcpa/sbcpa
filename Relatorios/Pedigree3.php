@@ -286,7 +286,7 @@ $pdf -> addText(820,120,12,$DataImpressao,'full');
 
 //$pdf -> addText(650,62,10,'____________________________________________________','full');
 $LinhaAgora = 70 + $PosLinhaInicialPagina1;
-$pdf -> addText(700,$LinhaAgora,12,$Presidente,'full');
+$pdf -> addText(680,$LinhaAgora,12,$Presidente,'full');
 //$pdf -> addText(750,38,10,'PRESIDENTE','full');
 
 //$pdf -> addText(920,62,10,'________________________________________________','full');
