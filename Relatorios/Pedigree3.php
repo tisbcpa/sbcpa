@@ -313,7 +313,7 @@ for ($i=0; $i<=$Tam; $i++)
 
 
 
-$PosLinha = $PosLinhaInicial + $PosLinhaInicialPagina1 + 12;
+$PosLinha = $PosLinhaInicial + $PosLinhaInicialPagina1 + 22;
 $LarguraCao = 30;
 $TexoRet = QuebraLinhaTexto($Irmaos,$LarguraCao);
 $Tam = substr_count($TexoRet,"]");
@@ -321,7 +321,7 @@ $Valores = split("]",$TexoRet);
 $Frase = "";
 for ($i=1; $i<=$Tam; $i++)
 {
-	$PosLinha = $PosLinha - 10;
+	$PosLinha = $PosLinha - 15;
 	$Frase = $Valores[$i];
 	$pdf -> addText(1000,$PosLinha,11,$Frase,'full');
 }
