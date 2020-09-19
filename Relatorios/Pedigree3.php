@@ -158,7 +158,9 @@ $LinhaConvencoes = 1043;
 
 $pdf =& new Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
-
+//$pdf->ezImage('../Imagens/frente_pedigree.png');
+$img = ImageCreatefromjpeg('../Imagens/frente_pedigree.png');
+$pdf->addImage($img, 50, 697, 47, 50);
 
 //-------------- LADO ESQUERDO DA PRIMEIRA PÁGINA -------------------------------------
 /*
@@ -873,8 +875,6 @@ $PosLinha = $PosLinha - 30;
 $pdf -> addText($ColunaTriAvoM1,$PosLinha,8,"$NomeTriAvoF8",'full');
 $PosLinha = $PosLinha - 20;
 $pdf -> addText($ColunaTriAvoM1,$PosLinha,8,RetornarInformacoesCao($IdTriAvoF4Mae),'full');
-
-$pdf->ezImage('../Imagens/frente_pedigree.png');
 
 function zQuebraLinhaTexto($Texto,$Largura)
 {
