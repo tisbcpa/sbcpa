@@ -30,7 +30,7 @@ else
 	//----------------------------------------------------------------------------------------
 	$LarguraPais = 50;
 	$ColunaPais = 30;
-	$NomePai = strtoupper("$NoPai");
+	$NomePai = mb_strtoupper("$NoPai");
 	list($SumulaPai,$JuizPai) = split(";",DadosSumula($IdPai));
 	if ($SumulaPai == ""){ $SumulaPai = "";}
 	if ($JuizPai != ""){ $JuizPai = "JUIZ: " . $JuizPai;}
@@ -39,7 +39,7 @@ else
 
 	$LarguraMaes = $LarguraPais;
 	$ColunaMaes = $ColunaPais;
-	$NomeMae = strtoupper("$NoMae");
+	$NomeMae = mb_strtoupper("$NoMae");
 	list($SumulaMae,$JuizMae) = split(";",DadosSumula($IdMae));
 	if ($SumulaMae == ""){ $SumulaMae = "";}
 	if ($JuizMae != ""){ $JuizMae = "JUIZ: " . $JuizMae;}
