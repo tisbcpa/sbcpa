@@ -158,8 +158,8 @@ $LinhaConvencoes = 1043;
 
 $pdf =& new Cezpdf('a3','landscape');
 $pdf -> selectFont('../Funcoes/Relatorios/fonts/Times-Roman.afm');
-$pdf->ezSetMargins(10,10,10,10);
-$pdf->ezImage('/var/www/SIPA/Imagens/Frente_branca.jpg',0,1146,'none','left');
+$pdf->ezSetMargins(10,10,10,5);
+$pdf->ezImage('/var/www/SIPA/Imagens/Frente_branca.jpg',0,1147,'none','left');
 
 //-------------- LADO ESQUERDO DA PRIMEIRA PÁGINA -------------------------------------
 /*
