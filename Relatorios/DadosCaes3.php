@@ -213,7 +213,17 @@ function RetornarInformacoesCao($Id)
 	if ($Id != "")
 	{
 	require("../Funcoes/Conexao.php");
-	$query = "Select e.NoQualificacaoCao, a.NuRegistroNacional, b.NoSelecao, c.NoRaioX, d.NoAdestramento, a.NoTatuagem, a.DaSelecao, a.TPSexo From (((TBCachorro as a left join TBSelecao as b on a.IdSelecao = b.IdSelecao) Left Join TBRaioX as c on a.IdRaioX = c.IdRaioX) left join TBAdestramento as d on a.IDAdestramento = d.IDAdestramento) left join TBQualificacaoCao as e On a.IdQualificacaoCao = e.IdQualificacaoCao Where a.IDCachorro = $Id";
+	$query = "Select e.NoQualificacaoCao, a.NuRegistroNacional, b.NoSelecao, c.NoRaioX, c1.NoRaioX as NoRaioX1, c2.NoRaioX as NoRaioX2, d.NoAdestramento, a.NoTatuagem, a.DaSelecao, a.TPSexo 
+		From (
+			(
+				(TBCachorro as a left join TBSelecao as b on a.IdSelecao = b.IdSelecao) 
+				Left Join TBRaioX as c on a.IdRaioX = c.IdRaioX
+				Left Join TBRaioX as c1 on a.IdRaioX1 = c1.IdRaioX
+				Left Join TBRaioX as c2 on a.IdRaioX2 = c2.IdRaioX
+			)
+			left join TBAdestramento as d on a.IDAdestramento = d.IDAdestramento	
+		)
+	 	left join TBQualificacaoCao as e On a.IdQualificacaoCao = e.IdQualificacaoCao Where a.IDCachorro = $Id";
 
 	$result = mysql_query($query) or die("Erro7: " . $query);
 	while ($row = mysql_fetch_array($result))
@@ -257,9 +267,19 @@ function RetornarInformacoesCao($Id)
 			$Retorno = $Retorno . "      $row[NoQualificacaoCao]";
 		}
 
-		if ($row["NoRaioX"] != "")
+//		if ($row["NoRaioX"] != "")
+//		{
+//			$Retorno = $Retorno . "      RX: $row[NoRaioX]"; 	//Tat.: $row[NoTatuagem]
+//		}
+
+		if ($row["NoRaioX1"] != "")
 		{
-			$Retorno = $Retorno . "      RX: $row[NoRaioX]"; 	//Tat.: $row[NoTatuagem]
+			$Retorno = $Retorno . "      HD: $row[NoRaioX1]";
+		}
+
+		if ($row["NoRaioX2"] != "")
+		{
+			$Retorno = $Retorno . "      ED: $row[NoRaioX2]"; 	//Tat.: $row[NoTatuagem]
 		}
 	}
 	}
