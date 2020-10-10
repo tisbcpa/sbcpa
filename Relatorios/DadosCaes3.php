@@ -153,7 +153,6 @@ function RetornarIrmaos($Id)
 
 			//$Retorno = $Retorno . PrimeiroNome($row["NoCachorro"]);
 			$Retorno = $Retorno . " " . FormatarTextoMaiusculo($v[0]);
-            //$Retorno = $Retorno . " " . $v[0];
 		}
 	}
 
