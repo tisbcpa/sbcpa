@@ -27,8 +27,8 @@ var $ezPageCount=0;
 
 function addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0){
     //$text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
-    //$text = mb_convert_encoding($text,"ISO-8859-1","UTF-8"); // or use mb_convert_encoding(), according to your needs
-    $text = mb_convert_encoding($text,"UTF-8", "ISO-8859-1"); // or use mb_convert_encoding(), according to your needs
+    $text = mb_convert_encoding($text,"ISO-8859-1","UTF-8"); // or use mb_convert_encoding(), according to your needs
+    //$text = mb_convert_encoding($text,"UTF-8", "ISO-8859-1"); // or use mb_convert_encoding(), according to your needs
     return parent::addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0);
 }
 
