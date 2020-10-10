@@ -152,8 +152,8 @@ function RetornarIrmaos($Id)
 			$v = explode(" ",$row["NoCachorro"]);
 
 			//$Retorno = $Retorno . PrimeiroNome($row["NoCachorro"]);
-			//$Retorno = $Retorno . " " . FormatarTextoMaiusculo($v[0]);
-            $Retorno = $Retorno . " " . $v[0];
+			$Retorno = $Retorno . " " . FormatarTextoMaiusculo($v[0]);
+            //$Retorno = $Retorno . " " . $v[0];
 		}
 	}
 
@@ -289,7 +289,7 @@ function RetornarInformacoesCao($Id)
 
 function FormatarTextoMaiusculo($Texto)
 {
-	$v = split(" ",$Texto);
+	$v = explode(" ",$Texto);
 	$Tam = substr_count($Texto," ");
 	$Retorno = ""; 
 	
