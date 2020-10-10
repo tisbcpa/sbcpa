@@ -3,7 +3,7 @@ require_once("Funcoes/Funcoes.php");
 
 function Limpar($nome)
 {
-	$nome = strtolower($nome);
+	$nome = mb_mb_strtolower($nome);
 	$result = str_replace("á","a",$nome);
 	$result = str_replace("é","e",$result);
 	$result = str_replace("í","i",$result);

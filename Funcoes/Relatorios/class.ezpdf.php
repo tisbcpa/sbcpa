@@ -26,7 +26,8 @@ var $ezPageCount=0;
 // ------------------------------------------------------------------------------
 
 function addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0){
-    $text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
+    //$text = utf8_decode($text); // or use mb_convert_encoding(), according to your needs
+    $text = mb_convert_encoding($text,"UTF-8", "ISO-8859-1"); // or use mb_convert_encoding(), according to your needs
     return parent::addText($x,$y,$size,$text,$angle=0,$wordSpaceAdjust=0);
 }
 
@@ -97,7 +98,7 @@ function Cezpdf($paper='a4',$orientation='portrait'){
 			case 'EXECUTIVE': {$size = array(0,0,521.86,756.00); break;}
 			case 'FOLIO': {$size = array(0,0,612.00,936.00); break;}
 		}
-		switch (strtolower($orientation)){
+		switch (mb_strtolower($orientation)){
 			case 'landscape':
 				$a=$size[3];
 				$size[3]=$size[2];

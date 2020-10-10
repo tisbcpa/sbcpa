@@ -327,12 +327,12 @@ function FormatarTextoMaiusculo($Texto)
 	
 	for($i=0; $i<=$Tam; $i++)
 	{
-		$palavra = strtolower($v[$i]);
+		$palavra = mb_strtolower($v[$i]);
 	
 		if (strlen($palavra) > 2)
 		{
 			$parte1 = mb_strtoupper(substr($palavra,0,1));
-			$parte2 = strtolower(substr($palavra,1));
+			$parte2 = mb_strtolower(substr($palavra,1));
 			
 			$palavra = $parte1 . $parte2;
 		}
