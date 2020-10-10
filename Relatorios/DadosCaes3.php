@@ -306,7 +306,7 @@ function FormatarTextoMaiusculo($Texto)
 		
 		$Retorno = $Retorno ." ". $palavra;
 	}
-	return trim(utf8_encode($Retorno));
+	return trim(utf8_decode($Retorno));
 }
 
 $Valores = split(";",RetornarTodasInformacoesCao($IdCachorro));
