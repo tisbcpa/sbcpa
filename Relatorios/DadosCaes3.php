@@ -149,7 +149,7 @@ function RetornarIrmaos($Id)
 			}
 						
 			//$v = split(" ",$row["NoCachorro"]);
-			$v = split(" ",$row["NoCachorro"]);
+			$v = explode(" ",$row["NoCachorro"]);
 
 			//$Retorno = $Retorno . PrimeiroNome($row["NoCachorro"]);
 			$Retorno = $Retorno . " " . FormatarTextoMaiusculo($v[0]);
